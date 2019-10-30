@@ -1,0 +1,15 @@
+{
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"files.exclude": {
+		"**/._*": true,
+		"_xmsgs": true,
+		"ipcore_dir": true,
+		"iseconfig": true,
+		"*.v": true,
+		"*.gise": true,
+		"*.xise": true,
+		"*.prj": true,
+		"*.html": true
+	}
+}
