@@ -49,6 +49,7 @@
     <transform xil_pn:end_ts="1572435914" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-1926798855416067152" xil_pn:start_ts="1572435914">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
   </transforms>
 

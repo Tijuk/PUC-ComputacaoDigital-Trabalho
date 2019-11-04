@@ -12,7 +12,7 @@ NET "SF_D<3>" LOC = "M15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
 //Clock
 NET "CLK" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
 
-// Cuida de LEDs, sendo que um deles n„o usamos j· que precisamos sÛ de 7 
+// Cuida de LEDs, sendo que um deles n√£o usamos j√° que precisamos s√≥ de 7 
 //NET "LED<7>" LOC = "F9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
 NET "NEGATIVE" LOC = "E9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
 NET "ZERO" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
