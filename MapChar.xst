@@ -1,0 +1,5 @@
+set -tmpdir "E:/repos/PUC-ComputacaoDigital-Trabalho/xst/projnav.tmp"
+set -xsthdpdir "E:/repos/PUC-ComputacaoDigital-Trabalho/xst"
+elaborate
+-ifn MapChar.prj
+-ifmt mixed
