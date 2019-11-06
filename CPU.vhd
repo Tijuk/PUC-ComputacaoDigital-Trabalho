@@ -6,7 +6,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity CPU is
 	generic( N: integer := 9 );
 end CPU;
-
+architecture Behavioral of CPU is
 constant MOV_A_FROM_END : std_logic_vector(4 downto 0) := "00001";
 constant MOV_END_FROM_A : std_logic_vector(4 downto 0) := "00010";
 constant MOV_A_FROM_B	: std_logic_vector(4 downto 0) := "00011";
@@ -27,7 +27,7 @@ constant INC_B 			: std_logic_vector(4 downto 0) := "10001";
 constant DEC_A 			: std_logic_vector(4 downto 0) := "10010";
 constant DEC_B 			: std_logic_vector(4 downto 0) := "10011";
 
-architecture Behavioral of CPU is
+
 
 	type state is (
 		mov_a_from_end, 

@@ -30,11 +30,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity MapChar is
-	signal INSTRUCTION: in std_logic_vector(4 downto 0);
-	signal CHAR_AT: in unsigned(4 downto 0);
-	signal LEFT: in std_logic;
-	signal OUTPUT: out std_logic_vector(7 downto 0);
-
+	port(
+		INSTRUCTION: in std_logic_vector(4 downto 0);
+		CHAR_AT: in unsigned(4 downto 0);
+		LEFT: in std_logic;
+		OUTPUT: out std_logic_vector(7 downto 0));
 
 end MapChar;
 
@@ -294,8 +294,7 @@ begin
 			when others =>
 				OUTPUT <= (others => "00100000");
 		end case;
-	end process update_out
-
+	end process update_out;
 
 end Behavioral;
 

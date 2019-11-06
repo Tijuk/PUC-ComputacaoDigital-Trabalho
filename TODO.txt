@@ -1,0 +1,9 @@
+TODOS
+- Acionar tanto o LCD quanto a instrução.
+- Verificar que varremos todas as instruções pelo LCD
+- Fazer Iterador de instruções
+- Finalizar o MapChar
+- Escrever dependencias entre as partes do código.
+
+FOCOS
+- Deixar o MOVAMOVB por ultimo. Operacoes booleans sao mais faceis.

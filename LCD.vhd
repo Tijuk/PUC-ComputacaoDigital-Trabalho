@@ -9,8 +9,8 @@ entity LCD is
 			LCD_RW : out std_logic; -- read or write
 			LCD_RS : out std_logic; -- data manipulation or addressing
 			DISABLE_STRATA_FLASH: out std_logic;
-			SF_D: out std_logic_vector(3 downto 0));
-			INSTRUCTION: in std_logic_vector(4 downto 0);
+			SF_D: out std_logic_vector(3 downto 0);
+			INSTRUCTION: in std_logic_vector(4 downto 0));
 end LCD;
 
 architecture Behavioral of LCD is
@@ -48,20 +48,7 @@ architecture Behavioral of LCD is
 		writingChar_1, writingChar_2, writingChar_3, writingChar_4, writingChar_5, writingChar_6,
 
 		-- Idle State
-		idle
-		
-		-- initial,
-		-- write_1,
-		-- wait_1,
-		-- write_2, wait_2, write_3, wait_3, write_4, wait_4,
-		-- function_set_1, function_set_2, function_set_3, function_set_4, function_wait_long, wait_function_set_operation_time,
-		-- entry_set_1, entry_set_2, entry_set_3, entry_set_4, entry_wait_long, wait_entry_set_operation_time,
-		-- display_on_off_1, display_on_off_2, display_on_off_3, display_on_off_4, display_on_off_wait_long, wait_display_on_off_operation_time,
-		-- clear_display_1, clear_display_2, clear_display_3, clear_display_4, clear_display_wait_long, wait_clear_display_operation_time,
-		-- set_dd_ram_1_1, set_dd_ram_1_2, set_dd_ram_1_3, set_dd_ram_1_4, set_dd_ram_1_wait_long, wait_set_dd_ram_1_operation_time,
-		-- writingChar_1, writingChar_2, writingChar_3, writingChar_4, writingChar_5, writingChar_6,
-		-- idle
-		);
+		idle);
 	signal state_reg, state_next : state := initial;
 	signal count: unsigned((N-1) downto 0) := to_unsigned(750000, N);
 	signal count_next, count_reg : unsigned ((N-1) downto 0) := to_unsigned(0,N);
@@ -86,6 +73,7 @@ begin
 
 	count_next <= to_unsigned(0,N) when count_reg = (count - 1) else count_reg + 1;
 	count_tick <='1' when count_reg = (count - 1) else '0';
+	mapChar : entity work.MapChar(Behavioral) port map (INPUT=>"01001101",OUTPUT=>data_buffer);
 
 	combinatorial: process (CLK)
 	begin
@@ -343,7 +331,6 @@ begin
 				-- Write Character
 				when writingChar_1 =>
 					LCD_RS <= '1';
-					mapChar : entity work.MapChar(Behavioral) port map (INPUT=>"01001101",OUTPUT=>data_buffer);
 					data_buffer <= "0101";
 					count <= to_unsigned(10,N);
 					if (count_tick = '1') then
@@ -387,7 +374,10 @@ begin
 				-- Write Character
 				when writingChar_1 =>
 				LCD_RS <= '1';
-				mapChar : entity work.MapChar(Behavioral) port map (INPUT=>"01001101",OUTPUT=>data_buffer);
+				INSTRUCTION<="01001101";
+				OUTPUT<=data_buffer;
+				CHAR_AT<="0000";
+				LEFT<="0";
 				data_buffer <= "0101";
 				count <= to_unsigned(10,N);
 				if (count_tick = '1') then
@@ -431,7 +421,8 @@ begin
 				-- Write Character
 				when writingChar_1 =>
 				LCD_RS <= '1';
-				mapChar : entity work.MapChar(Behavioral) port map (INSTRUCTION=>INSTRUCTION,OUTPUT=>data_buffer);
+				INPUT<=INSTRUCTION;
+				OUTPUT<=data_buffer;
 				data_buffer <= "0101";
 				count <= to_unsigned(10,N);
 				if (count_tick = '1') then
@@ -470,52 +461,6 @@ begin
 				count <= to_unsigned(85000,N);
 					if (count_tick = '1') then
 						state_next <= o_1;
-					end if;
-					
-				-- Write Character
-				when writingChar_1 =>
-				LCD_RS <= '1';
-				mapChar : entity work.MapChar(Behavioral)
-				port map (INSTRUCTION=>INSTRUCTION=>INSTRUCTION,CHAR_AT=>charAt, LEFT=>'1', OUTPUT=>data_buffer);
-				count <= to_unsigned(10,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_2;
-				end if;
-			when writingChar_2 =>
-				LCD_RS <= '1';
-				LCD_E <= '1';
-				count <= to_unsigned(120,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_3;
-					LCD_E <= '0';
-				end if;
-			when writingChar_3 =>
-				LCD_RS <= '1';
-				count <= to_unsigned(50,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_4;
-				end if;
-			when writingChar_4 =>
-				LCD_RS <= '1';
-				mapChar : entity work.MapChar(Behavioral)
-				port map (INSTRUCTION=>INSTRUCTION=>INSTRUCTION,CHAR_AT=>charAt, LEFT=>'0', OUTPUT=>data_buffer);
-				count <= to_unsigned(10,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_5;
-				end if;
-			when writingChar_5 =>
-				LCD_RS <= '1';
-				LCD_E <= '1';
-				count <= to_unsigned(120,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_6;
-					LCD_E <= '0';
-				end if;
-			when writingChar_6 =>
-				count <= to_unsigned(85000,N);
-					if (count_tick = '1') then
-						state_next <= writingChar_1;
-						charAt <= 0 when charAt == to_unsigned(11, 4) else charAt + 1;
 					end if;
 				when idle =>
 			end case;
