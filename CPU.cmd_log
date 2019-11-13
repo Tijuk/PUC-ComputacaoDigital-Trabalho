@@ -1,0 +1,17 @@
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+vhdtdtfi -lib work CPU.vhd -prj trabalho -o CPU.spl -module CPU -template C:/Xilinx/14.5/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e CPU.spl E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.sym 
+xst -intstyle ise -filter "E:/repos/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter" -ifn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.xst" -ofn "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  

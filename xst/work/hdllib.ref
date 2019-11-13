@@ -1,1 +1,6 @@
+AR alu aluarch E:/repos/PUC-ComputacaoDigital-Trabalho/ALU.vhd sub00/vhpl05 1573650833
+EN cpu NULL E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd sub00/vhpl01 1573651202
+AR cpu behavioral E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd sub00/vhpl02 1573651203
 EN mapchar NULL E:/repos/PUC-ComputacaoDigital-Trabalho/MapChar.vhd sub00/vhpl00 1573049183
+AR alu behavioral E:/repos/PUC-ComputacaoDigital-Trabalho/ALU.vhd sub00/vhpl04 1573650831
+EN alu NULL E:/repos/PUC-ComputacaoDigital-Trabalho/ALU.vhd sub00/vhpl03 1573650832

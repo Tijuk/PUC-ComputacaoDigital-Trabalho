@@ -7,7 +7,7 @@ entity MapChar is
 		INSTRUCTION: in std_logic_vector(4 downto 0);
 		CHAR_AT: in unsigned(4 downto 0);
 		LEFT: in std_logic;
-		OUTPUT: out std_logic_vector(7 downto 0)
+		OUTPUT_BUFFER: out std_logic_vector(7 downto 0)
 	);
 
 end MapChar;
@@ -59,7 +59,7 @@ architecture Behavioral of MapChar is
 		8 => alpha_e_lc(7 downto 0),
 		9 => alpha_n_lc(7 downto 0),
 		10 => alpha_d_lc(7 downto 0),
-		11 => symbol_bracket_close(7 downto 0),
+		11 => symbol_bracket_close(7 downto 0)
 	);
 
 
@@ -75,7 +75,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_bracket_close(7 downto 0),
 		9 => symbol_comma(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => alpha_a_uc(7 downto 0),
+		11 => alpha_a_uc(7 downto 0)
 	);
 
 
@@ -91,7 +91,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -107,7 +107,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -123,7 +123,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -139,7 +139,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -155,7 +155,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -171,7 +171,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -187,7 +187,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -203,7 +203,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -219,7 +219,7 @@ architecture Behavioral of MapChar is
 		8 => alpha_b_uc(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -235,7 +235,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -251,7 +251,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -267,7 +267,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -283,7 +283,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_bracket_close(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -299,7 +299,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -315,7 +315,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -331,7 +331,7 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
@@ -347,567 +347,567 @@ architecture Behavioral of MapChar is
 		8 => symbol_space(7 downto 0),
 		9 => symbol_space(7 downto 0),
 		10 => symbol_space(7 downto 0),
-		11 => symbol_space(7 downto 0),
+		11 => symbol_space(7 downto 0)
 	);
 
 
 
 begin
-	-- update_out: process(CLK)
-	-- begin
-	-- 	if ( INSTRUCTIONS = "00001") then -- MOV A, [end]
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- M
-	-- 				OUTPUT <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
-	-- 			when 1 => -- O
-	-- 				OUTPUT <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
-	-- 			when 2 => -- V
-	-- 				OUTPUT <= alpha_v_uc(7 downto 4) when LEFT = '0' else alpha_v_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- [
-	-- 				OUTPUT <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
-	-- 			when 8 => -- e
-	-- 				OUTPUT <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
-	-- 			when 9 => -- n
-	-- 				OUTPUT <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
-	-- 			when 10 => -- d
-	-- 				OUTPUT <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
-	-- 			when 11 => -- ]
-	-- 				OUTPUT <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "00010") then -- MOV [end], A
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- M
-	-- 				OUTPUT <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
-	-- 			when 1 => -- O
-	-- 				OUTPUT <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
-	-- 			when 2 => -- V
-	-- 				OUTPUT <= alpha_v_uc(7 downto 4) when LEFT = '0' else alpha_v_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- [
-	-- 				OUTPUT <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
-	-- 			when 5 => -- e
-	-- 				OUTPUT <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
-	-- 			when 6 => -- n
-	-- 				OUTPUT <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
-	-- 			when 7 => -- d
-	-- 				OUTPUT <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
-	-- 			when 8 => -- ]
-	-- 				OUTPUT <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
-	-- 			when 9 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "00011") then -- MOV A, B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- M
-	-- 				OUTPUT <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
-	-- 			when 1 => -- O
-	-- 				OUTPUT <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
-	-- 			when 2 => -- V
-	-- 				OUTPUT <= alpha_v_uc(7 downto 4) when LEFT = '0' else alpha_v_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "00100") then -- MOV B, A
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- M
-	-- 				OUTPUT <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
-	-- 			when 1 => -- O
-	-- 				OUTPUT <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
-	-- 			when 2 => -- V
-	-- 				OUTPUT <= alpha_v_uc(7 downto 4) when LEFT = '0' else alpha_v_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 5 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "00101") then -- ADD A, B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 1 => -- D
-	-- 				OUTPUT <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
-	-- 			when 2 => -- D
-	-- 				OUTPUT <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "00110") then -- SUB A, B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- S
-	-- 				OUTPUT <= alpha_s_uc(7 downto 4) when LEFT = '0' else alpha_s_uc(3 downto 0);
-	-- 			when 1 => -- U
-	-- 				OUTPUT <= alpha_u_uc(7 downto 4) when LEFT = '0' else alpha_u_uc(3 downto 0);
-	-- 			when 2 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "00111") then -- AND A, B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 1 => -- N
-	-- 				OUTPUT <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
-	-- 			when 2 => -- D
-	-- 				OUTPUT <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "01000") then -- OR A, B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- O
-	-- 				OUTPUT <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
-	-- 			when 1 => -- R
-	-- 				OUTPUT <= alpha_r_uc(7 downto 4) when LEFT = '0' else alpha_r_uc(3 downto 0);
-	-- 			when 2 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 3 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 4 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 5 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 6 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 7 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "01001") then -- XOR A, B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- X
-	-- 				OUTPUT <= alpha_x_uc(7 downto 4) when LEFT = '0' else alpha_x_uc(3 downto 0);
-	-- 			when 1 => -- O
-	-- 				OUTPUT <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
-	-- 			when 2 => -- R
-	-- 				OUTPUT <= alpha_r_uc(7 downto 4) when LEFT = '0' else alpha_r_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "01010") then -- NOT A
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- N
-	-- 				OUTPUT <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
-	-- 			when 1 => -- O
-	-- 				OUTPUT <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
-	-- 			when 2 => -- T
-	-- 				OUTPUT <= alpha_t_uc(7 downto 4) when LEFT = '0' else alpha_t_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "01011") then -- NAND A, B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- N
-	-- 				OUTPUT <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
-	-- 			when 1 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 2 => -- N
-	-- 				OUTPUT <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
-	-- 			when 3 => -- D
-	-- 				OUTPUT <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
-	-- 			when 4 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 5 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 6 => -- ,
-	-- 				OUTPUT <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
-	-- 			when 7 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 8 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "01100") then -- JZ [end]
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- J
-	-- 				OUTPUT <= alpha_j_uc(7 downto 4) when LEFT = '0' else alpha_j_uc(3 downto 0);
-	-- 			when 1 => -- Z
-	-- 				OUTPUT <= alpha_z_uc(7 downto 4) when LEFT = '0' else alpha_z_uc(3 downto 0);
-	-- 			when 2 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 3 => -- [
-	-- 				OUTPUT <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
-	-- 			when 4 => -- e
-	-- 				OUTPUT <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
-	-- 			when 5 => -- n
-	-- 				OUTPUT <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
-	-- 			when 6 => -- d
-	-- 				OUTPUT <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
-	-- 			when 7 => -- ]
-	-- 				OUTPUT <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "01101") then -- JN [end]
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- J
-	-- 				OUTPUT <= alpha_j_uc(7 downto 4) when LEFT = '0' else alpha_j_uc(3 downto 0);
-	-- 			when 1 => -- N
-	-- 				OUTPUT <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
-	-- 			when 2 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 3 => -- [
-	-- 				OUTPUT <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
-	-- 			when 4 => -- e
-	-- 				OUTPUT <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
-	-- 			when 5 => -- n
-	-- 				OUTPUT <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
-	-- 			when 6 => -- d
-	-- 				OUTPUT <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
-	-- 			when 7 => -- ]
-	-- 				OUTPUT <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "01110") then -- HALT
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- H
-	-- 				OUTPUT <= alpha_h_uc(7 downto 4) when LEFT = '0' else alpha_h_uc(3 downto 0);
-	-- 			when 1 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 2 => -- L
-	-- 				OUTPUT <= alpha_l_uc(7 downto 4) when LEFT = '0' else alpha_l_uc(3 downto 0);
-	-- 			when 3 => -- T
-	-- 				OUTPUT <= alpha_t_uc(7 downto 4) when LEFT = '0' else alpha_t_uc(3 downto 0);
-	-- 			when 4 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 5 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "01111") then -- JMP [end]
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- J
-	-- 				OUTPUT <= alpha_j_uc(7 downto 4) when LEFT = '0' else alpha_j_uc(3 downto 0);
-	-- 			when 1 => -- M
-	-- 				OUTPUT <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
-	-- 			when 2 => -- P
-	-- 				OUTPUT <= alpha_p_uc(7 downto 4) when LEFT = '0' else alpha_p_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- [
-	-- 				OUTPUT <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
-	-- 			when 5 => -- e
-	-- 				OUTPUT <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
-	-- 			when 6 => -- n
-	-- 				OUTPUT <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
-	-- 			when 7 => -- d
-	-- 				OUTPUT <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
-	-- 			when 8 => -- ]
-	-- 				OUTPUT <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "10000") then -- INC A
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- I
-	-- 				OUTPUT <= alpha_i_uc(7 downto 4) when LEFT = '0' else alpha_i_uc(3 downto 0);
-	-- 			when 1 => -- N
-	-- 				OUTPUT <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
-	-- 			when 2 => -- C
-	-- 				OUTPUT <= alpha_c_uc(7 downto 4) when LEFT = '0' else alpha_c_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "10001") then -- INC B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- I
-	-- 				OUTPUT <= alpha_i_uc(7 downto 4) when LEFT = '0' else alpha_i_uc(3 downto 0);
-	-- 			when 1 => -- N
-	-- 				OUTPUT <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
-	-- 			when 2 => -- C
-	-- 				OUTPUT <= alpha_c_uc(7 downto 4) when LEFT = '0' else alpha_c_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 5 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "10010") then -- DEC A
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- D
-	-- 				OUTPUT <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
-	-- 			when 1 => -- E
-	-- 				OUTPUT <= alpha_e_uc(7 downto 4) when LEFT = '0' else alpha_e_uc(3 downto 0);
-	-- 			when 2 => -- C
-	-- 				OUTPUT <= alpha_c_uc(7 downto 4) when LEFT = '0' else alpha_c_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- A
-	-- 				OUTPUT <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
-	-- 			when 5 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
-	-- 	if ( INSTRUCTIONS = "10011") then -- DEC B
-	-- 		case to_unsigned(CHAR_AT, 4) is
-	-- 			when 0 => -- D
-	-- 				OUTPUT <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
-	-- 			when 1 => -- E
-	-- 				OUTPUT <= alpha_e_uc(7 downto 4) when LEFT = '0' else alpha_e_uc(3 downto 0);
-	-- 			when 2 => -- C
-	-- 				OUTPUT <= alpha_c_uc(7 downto 4) when LEFT = '0' else alpha_c_uc(3 downto 0);
-	-- 			when 3 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 4 => -- B
-	-- 				OUTPUT <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
-	-- 			when 5 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 6 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 7 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 8 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 9 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 10 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when 11 => -- ' '
-	-- 				OUTPUT <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
-	-- 			when others =>;
-	-- 		end case;
-	-- 	end if;
+	update_out: process(CLK)
+	begin
+		if ( INSTRUCTIONS = 1) then -- MOV A, [end]
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- M
+					OUTPUT_BUFFER <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
+				when 1 => -- O
+					OUTPUT_BUFFER <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
+				when 2 => -- V
+					OUTPUT_BUFFER <= alpha_v_uc(7 downto 4) when LEFT = '0' else alpha_v_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- [
+					OUTPUT_BUFFER <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
+				when 8 => -- e
+					OUTPUT_BUFFER <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
+				when 9 => -- n
+					OUTPUT_BUFFER <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
+				when 10 => -- d
+					OUTPUT_BUFFER <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
+				when 11 => -- ]
+					OUTPUT_BUFFER <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 2) then -- MOV [end], A
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- M
+					OUTPUT_BUFFER <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
+				when 1 => -- O
+					OUTPUT_BUFFER <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
+				when 2 => -- V
+					OUTPUT_BUFFER <= alpha_v_uc(7 downto 4) when LEFT = '0' else alpha_v_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- [
+					OUTPUT_BUFFER <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
+				when 5 => -- e
+					OUTPUT_BUFFER <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
+				when 6 => -- n
+					OUTPUT_BUFFER <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
+				when 7 => -- d
+					OUTPUT_BUFFER <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
+				when 8 => -- ]
+					OUTPUT_BUFFER <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
+				when 9 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 3) then -- MOV A, B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- M
+					OUTPUT_BUFFER <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
+				when 1 => -- O
+					OUTPUT_BUFFER <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
+				when 2 => -- V
+					OUTPUT_BUFFER <= alpha_v_uc(7 downto 4) when LEFT = '0' else alpha_v_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 4) then -- MOV B, A
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- M
+					OUTPUT_BUFFER <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
+				when 1 => -- O
+					OUTPUT_BUFFER <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
+				when 2 => -- V
+					OUTPUT_BUFFER <= alpha_v_uc(7 downto 4) when LEFT = '0' else alpha_v_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 5 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 5) then -- ADD A, B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 1 => -- D
+					OUTPUT_BUFFER <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
+				when 2 => -- D
+					OUTPUT_BUFFER <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 6) then -- SUB A, B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- S
+					OUTPUT_BUFFER <= alpha_s_uc(7 downto 4) when LEFT = '0' else alpha_s_uc(3 downto 0);
+				when 1 => -- U
+					OUTPUT_BUFFER <= alpha_u_uc(7 downto 4) when LEFT = '0' else alpha_u_uc(3 downto 0);
+				when 2 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 7) then -- AND A, B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 1 => -- N
+					OUTPUT_BUFFER <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
+				when 2 => -- D
+					OUTPUT_BUFFER <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 8) then -- OR A, B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- O
+					OUTPUT_BUFFER <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
+				when 1 => -- R
+					OUTPUT_BUFFER <= alpha_r_uc(7 downto 4) when LEFT = '0' else alpha_r_uc(3 downto 0);
+				when 2 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 3 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 4 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 5 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 6 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 7 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 9) then -- XOR A, B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- X
+					OUTPUT_BUFFER <= alpha_x_uc(7 downto 4) when LEFT = '0' else alpha_x_uc(3 downto 0);
+				when 1 => -- O
+					OUTPUT_BUFFER <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
+				when 2 => -- R
+					OUTPUT_BUFFER <= alpha_r_uc(7 downto 4) when LEFT = '0' else alpha_r_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 10) then -- NOT A
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- N
+					OUTPUT_BUFFER <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
+				when 1 => -- O
+					OUTPUT_BUFFER <= alpha_o_uc(7 downto 4) when LEFT = '0' else alpha_o_uc(3 downto 0);
+				when 2 => -- T
+					OUTPUT_BUFFER <= alpha_t_uc(7 downto 4) when LEFT = '0' else alpha_t_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 11) then -- NAND A, B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- N
+					OUTPUT_BUFFER <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
+				when 1 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 2 => -- N
+					OUTPUT_BUFFER <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
+				when 3 => -- D
+					OUTPUT_BUFFER <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
+				when 4 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 5 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 6 => -- ,
+					OUTPUT_BUFFER <= symbol_comma(7 downto 4) when LEFT = '0' else symbol_comma(3 downto 0);
+				when 7 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 8 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 12 ) then -- JZ [end]
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- J
+					OUTPUT_BUFFER <= alpha_j_uc(7 downto 4) when LEFT = '0' else alpha_j_uc(3 downto 0);
+				when 1 => -- Z
+					OUTPUT_BUFFER <= alpha_z_uc(7 downto 4) when LEFT = '0' else alpha_z_uc(3 downto 0);
+				when 2 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 3 => -- [
+					OUTPUT_BUFFER <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
+				when 4 => -- e
+					OUTPUT_BUFFER <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
+				when 5 => -- n
+					OUTPUT_BUFFER <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
+				when 6 => -- d
+					OUTPUT_BUFFER <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
+				when 7 => -- ]
+					OUTPUT_BUFFER <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 13) then -- JN [end]
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- J
+					OUTPUT_BUFFER <= alpha_j_uc(7 downto 4) when LEFT = '0' else alpha_j_uc(3 downto 0);
+				when 1 => -- N
+					OUTPUT_BUFFER <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
+				when 2 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 3 => -- [
+					OUTPUT_BUFFER <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
+				when 4 => -- e
+					OUTPUT_BUFFER <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
+				when 5 => -- n
+					OUTPUT_BUFFER <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
+				when 6 => -- d
+					OUTPUT_BUFFER <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
+				when 7 => -- ]
+					OUTPUT_BUFFER <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 14) then -- HALT
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- H
+					OUTPUT_BUFFER <= alpha_h_uc(7 downto 4) when LEFT = '0' else alpha_h_uc(3 downto 0);
+				when 1 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 2 => -- L
+					OUTPUT_BUFFER <= alpha_l_uc(7 downto 4) when LEFT = '0' else alpha_l_uc(3 downto 0);
+				when 3 => -- T
+					OUTPUT_BUFFER <= alpha_t_uc(7 downto 4) when LEFT = '0' else alpha_t_uc(3 downto 0);
+				when 4 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 5 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 15) then -- JMP [end]
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- J
+					OUTPUT_BUFFER <= alpha_j_uc(7 downto 4) when LEFT = '0' else alpha_j_uc(3 downto 0);
+				when 1 => -- M
+					OUTPUT_BUFFER <= alpha_m_uc(7 downto 4) when LEFT = '0' else alpha_m_uc(3 downto 0);
+				when 2 => -- P
+					OUTPUT_BUFFER <= alpha_p_uc(7 downto 4) when LEFT = '0' else alpha_p_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- [
+					OUTPUT_BUFFER <= symbol_bracket_open(7 downto 4) when LEFT = '0' else symbol_bracket_open(3 downto 0);
+				when 5 => -- e
+					OUTPUT_BUFFER <= alpha_e_lc(7 downto 4) when LEFT = '0' else alpha_e_lc(3 downto 0);
+				when 6 => -- n
+					OUTPUT_BUFFER <= alpha_n_lc(7 downto 4) when LEFT = '0' else alpha_n_lc(3 downto 0);
+				when 7 => -- d
+					OUTPUT_BUFFER <= alpha_d_lc(7 downto 4) when LEFT = '0' else alpha_d_lc(3 downto 0);
+				when 8 => -- ]
+					OUTPUT_BUFFER <= symbol_bracket_close(7 downto 4) when LEFT = '0' else symbol_bracket_close(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 16) then -- INC A
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- I
+					OUTPUT_BUFFER <= alpha_i_uc(7 downto 4) when LEFT = '0' else alpha_i_uc(3 downto 0);
+				when 1 => -- N
+					OUTPUT_BUFFER <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
+				when 2 => -- C
+					OUTPUT_BUFFER <= alpha_c_uc(7 downto 4) when LEFT = '0' else alpha_c_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 17) then -- INC B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- I
+					OUTPUT_BUFFER <= alpha_i_uc(7 downto 4) when LEFT = '0' else alpha_i_uc(3 downto 0);
+				when 1 => -- N
+					OUTPUT_BUFFER <= alpha_n_uc(7 downto 4) when LEFT = '0' else alpha_n_uc(3 downto 0);
+				when 2 => -- C
+					OUTPUT_BUFFER <= alpha_c_uc(7 downto 4) when LEFT = '0' else alpha_c_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 5 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 18) then -- DEC A
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- D
+					OUTPUT_BUFFER <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
+				when 1 => -- E
+					OUTPUT_BUFFER <= alpha_e_uc(7 downto 4) when LEFT = '0' else alpha_e_uc(3 downto 0);
+				when 2 => -- C
+					OUTPUT_BUFFER <= alpha_c_uc(7 downto 4) when LEFT = '0' else alpha_c_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- A
+					OUTPUT_BUFFER <= alpha_a_uc(7 downto 4) when LEFT = '0' else alpha_a_uc(3 downto 0);
+				when 5 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
+		if ( INSTRUCTIONS = 19) then -- DEC B
+			case to_unsigned(CHAR_AT, 4) is
+				when 0 => -- D
+					OUTPUT_BUFFER <= alpha_d_uc(7 downto 4) when LEFT = '0' else alpha_d_uc(3 downto 0);
+				when 1 => -- E
+					OUTPUT_BUFFER <= alpha_e_uc(7 downto 4) when LEFT = '0' else alpha_e_uc(3 downto 0);
+				when 2 => -- C
+					OUTPUT_BUFFER <= alpha_c_uc(7 downto 4) when LEFT = '0' else alpha_c_uc(3 downto 0);
+				when 3 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 4 => -- B
+					OUTPUT_BUFFER <= alpha_b_uc(7 downto 4) when LEFT = '0' else alpha_b_uc(3 downto 0);
+				when 5 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 6 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 7 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 8 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 9 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 10 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				when 11 => -- ' '
+					OUTPUT_BUFFER <= symbol_space(7 downto 4) when LEFT = '0' else symbol_space(3 downto 0);
+				-- when others =>;
+			end case;
+		end if;
 
-	-- end process update_out;
+	end process update_out;
 
 end Behavioral;
 
@@ -916,254 +916,254 @@ end Behavioral;
 -- 	begin
 -- 		case INSTRUCTION is
 -- 			when "00001" => -- MOV A, [end]
--- 				OUTPUT(0) <= "01001101"; -- M
--- 				OUTPUT(1) <= "01001111"; -- O
--- 				OUTPUT(2) <= "01010110"; -- V
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00101100"; -- ,
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "01011011"; -- [
--- 				OUTPUT(8) <= "01100101"; -- e
--- 				OUTPUT(9) <= "01101110"; -- n
--- 				OUTPUT(10) <= "01100100"; -- d
--- 				OUTPUT(11) <= "01011101"; -- ]
+-- 				OUTPUT_BUFFER(0) <= "01001101"; -- M
+-- 				OUTPUT_BUFFER(1) <= "01001111"; -- O
+-- 				OUTPUT_BUFFER(2) <= "01010110"; -- V
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "01011011"; -- [
+-- 				OUTPUT_BUFFER(8) <= "01100101"; -- e
+-- 				OUTPUT_BUFFER(9) <= "01101110"; -- n
+-- 				OUTPUT_BUFFER(10) <= "01100100"; -- d
+-- 				OUTPUT_BUFFER(11) <= "01011101"; -- ]
 -- 			when "00010" => -- MOV [end], A
--- 				OUTPUT(0) <= "01001101"; -- M
--- 				OUTPUT(1) <= "01001111"; -- O
--- 				OUTPUT(2) <= "01010110"; -- V
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01011011"; -- [
--- 				OUTPUT(5) <= "01100101"; -- e
--- 				OUTPUT(6) <= "01101110"; -- n
--- 				OUTPUT(7) <= "01100100"; -- d
--- 				OUTPUT(8) <= "01011101"; -- ]
--- 				OUTPUT(9) <= "00101100"; -- ,
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(0) <= "01001101"; -- M
+-- 				OUTPUT_BUFFER(1) <= "01001111"; -- O
+-- 				OUTPUT_BUFFER(2) <= "01010110"; -- V
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01011011"; -- [
+-- 				OUTPUT_BUFFER(5) <= "01100101"; -- e
+-- 				OUTPUT_BUFFER(6) <= "01101110"; -- n
+-- 				OUTPUT_BUFFER(7) <= "01100100"; -- d
+-- 				OUTPUT_BUFFER(8) <= "01011101"; -- ]
+-- 				OUTPUT_BUFFER(9) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "01000001"; -- A
 -- 			when "00011" => -- MOV A, B
--- 				OUTPUT(0) <= "01001101"; -- M
--- 				OUTPUT(1) <= "01001111"; -- O
--- 				OUTPUT(2) <= "01010110"; -- V
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00101100"; -- ,
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "01000010"; -- B
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001101"; -- M
+-- 				OUTPUT_BUFFER(1) <= "01001111"; -- O
+-- 				OUTPUT_BUFFER(2) <= "01010110"; -- V
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "00100" => -- MOV B, A
--- 				OUTPUT(0) <= "01001101"; -- M
--- 				OUTPUT(1) <= "01001111"; -- O
--- 				OUTPUT(2) <= "01010110"; -- V
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000010"; -- B
--- 				OUTPUT(5) <= "00101100"; -- ,
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "01000001"; -- A
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001101"; -- M
+-- 				OUTPUT_BUFFER(1) <= "01001111"; -- O
+-- 				OUTPUT_BUFFER(2) <= "01010110"; -- V
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(5) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "00101" => -- ADD A, B
--- 				OUTPUT(0) <= "01000001"; -- A
--- 				OUTPUT(1) <= "01000100"; -- D
--- 				OUTPUT(2) <= "01000100"; -- D
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00101100"; -- ,
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "01000010"; -- B
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(1) <= "01000100"; -- D
+-- 				OUTPUT_BUFFER(2) <= "01000100"; -- D
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "00110" => -- SUB A, B
--- 				OUTPUT(0) <= "01010011"; -- S
--- 				OUTPUT(1) <= "01010101"; -- U
--- 				OUTPUT(2) <= "01000010"; -- B
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00101100"; -- ,
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "01000010"; -- B
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01010011"; -- S
+-- 				OUTPUT_BUFFER(1) <= "01010101"; -- U
+-- 				OUTPUT_BUFFER(2) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "00111" => -- AND A, B
--- 				OUTPUT(0) <= "01000001"; -- A
--- 				OUTPUT(1) <= "01001110"; -- N
--- 				OUTPUT(2) <= "01000100"; -- D
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00101100"; -- ,
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "01000010"; -- B
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(1) <= "01001110"; -- N
+-- 				OUTPUT_BUFFER(2) <= "01000100"; -- D
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "01000" => -- OR A, B
--- 				OUTPUT(0) <= "01001111"; -- O
--- 				OUTPUT(1) <= "01010010"; -- R
--- 				OUTPUT(2) <= "00100000"; -- ' '
--- 				OUTPUT(3) <= "01000001"; -- A
--- 				OUTPUT(4) <= "00101100"; -- ,
--- 				OUTPUT(5) <= "00100000"; -- ' '
--- 				OUTPUT(6) <= "01000010"; -- B
--- 				OUTPUT(7) <= "00100000"; -- ' '
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001111"; -- O
+-- 				OUTPUT_BUFFER(1) <= "01010010"; -- R
+-- 				OUTPUT_BUFFER(2) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(3) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(4) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(5) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(6) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(7) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "01001" => -- XOR A, B
--- 				OUTPUT(0) <= "01011000"; -- X
--- 				OUTPUT(1) <= "01001111"; -- O
--- 				OUTPUT(2) <= "01010010"; -- R
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00101100"; -- ,
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "01000010"; -- B
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01011000"; -- X
+-- 				OUTPUT_BUFFER(1) <= "01001111"; -- O
+-- 				OUTPUT_BUFFER(2) <= "01010010"; -- R
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "01010" => -- NOT A
--- 				OUTPUT(0) <= "01001110"; -- N
--- 				OUTPUT(1) <= "01001111"; -- O
--- 				OUTPUT(2) <= "01010100"; -- T
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00100000"; -- ' '
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "00100000"; -- ' '
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001110"; -- N
+-- 				OUTPUT_BUFFER(1) <= "01001111"; -- O
+-- 				OUTPUT_BUFFER(2) <= "01010100"; -- T
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "01011" => -- NAND A, B
--- 				OUTPUT(0) <= "01001110"; -- N
--- 				OUTPUT(1) <= "01000001"; -- A
--- 				OUTPUT(2) <= "01001110"; -- N
--- 				OUTPUT(3) <= "01000100"; -- D
--- 				OUTPUT(4) <= "00100000"; -- ' '
--- 				OUTPUT(5) <= "01000001"; -- A
--- 				OUTPUT(6) <= "00101100"; -- ,
--- 				OUTPUT(7) <= "00100000"; -- ' '
--- 				OUTPUT(8) <= "01000010"; -- B
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001110"; -- N
+-- 				OUTPUT_BUFFER(1) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(2) <= "01001110"; -- N
+-- 				OUTPUT_BUFFER(3) <= "01000100"; -- D
+-- 				OUTPUT_BUFFER(4) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(5) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(6) <= "00101100"; -- ,
+-- 				OUTPUT_BUFFER(7) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(8) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "01100" => -- JZ [end]
--- 				OUTPUT(0) <= "01001010"; -- J
--- 				OUTPUT(1) <= "01011010"; -- Z
--- 				OUTPUT(2) <= "00100000"; -- ' '
--- 				OUTPUT(3) <= "01011011"; -- [
--- 				OUTPUT(4) <= "01100101"; -- e
--- 				OUTPUT(5) <= "01101110"; -- n
--- 				OUTPUT(6) <= "01100100"; -- d
--- 				OUTPUT(7) <= "01011101"; -- ]
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001010"; -- J
+-- 				OUTPUT_BUFFER(1) <= "01011010"; -- Z
+-- 				OUTPUT_BUFFER(2) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(3) <= "01011011"; -- [
+-- 				OUTPUT_BUFFER(4) <= "01100101"; -- e
+-- 				OUTPUT_BUFFER(5) <= "01101110"; -- n
+-- 				OUTPUT_BUFFER(6) <= "01100100"; -- d
+-- 				OUTPUT_BUFFER(7) <= "01011101"; -- ]
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "01101" => -- JN [end]
--- 				OUTPUT(0) <= "01001010"; -- J
--- 				OUTPUT(1) <= "01001110"; -- N
--- 				OUTPUT(2) <= "00100000"; -- ' '
--- 				OUTPUT(3) <= "01011011"; -- [
--- 				OUTPUT(4) <= "01100101"; -- e
--- 				OUTPUT(5) <= "01101110"; -- n
--- 				OUTPUT(6) <= "01100100"; -- d
--- 				OUTPUT(7) <= "01011101"; -- ]
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001010"; -- J
+-- 				OUTPUT_BUFFER(1) <= "01001110"; -- N
+-- 				OUTPUT_BUFFER(2) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(3) <= "01011011"; -- [
+-- 				OUTPUT_BUFFER(4) <= "01100101"; -- e
+-- 				OUTPUT_BUFFER(5) <= "01101110"; -- n
+-- 				OUTPUT_BUFFER(6) <= "01100100"; -- d
+-- 				OUTPUT_BUFFER(7) <= "01011101"; -- ]
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "01110" => -- HALT
--- 				OUTPUT(0) <= "01001000"; -- H
--- 				OUTPUT(1) <= "01000001"; -- A
--- 				OUTPUT(2) <= "01001100"; -- L
--- 				OUTPUT(3) <= "01010100"; -- T
--- 				OUTPUT(4) <= "00100000"; -- ' '
--- 				OUTPUT(5) <= "00100000"; -- ' '
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "00100000"; -- ' '
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001000"; -- H
+-- 				OUTPUT_BUFFER(1) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(2) <= "01001100"; -- L
+-- 				OUTPUT_BUFFER(3) <= "01010100"; -- T
+-- 				OUTPUT_BUFFER(4) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(5) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "01111" => -- JMP [end]
--- 				OUTPUT(0) <= "01001010"; -- J
--- 				OUTPUT(1) <= "01001101"; -- M
--- 				OUTPUT(2) <= "01010000"; -- P
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01011011"; -- [
--- 				OUTPUT(5) <= "01100101"; -- e
--- 				OUTPUT(6) <= "01101110"; -- n
--- 				OUTPUT(7) <= "01100100"; -- d
--- 				OUTPUT(8) <= "01011101"; -- ]
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001010"; -- J
+-- 				OUTPUT_BUFFER(1) <= "01001101"; -- M
+-- 				OUTPUT_BUFFER(2) <= "01010000"; -- P
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01011011"; -- [
+-- 				OUTPUT_BUFFER(5) <= "01100101"; -- e
+-- 				OUTPUT_BUFFER(6) <= "01101110"; -- n
+-- 				OUTPUT_BUFFER(7) <= "01100100"; -- d
+-- 				OUTPUT_BUFFER(8) <= "01011101"; -- ]
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "10000" => -- INC A
--- 				OUTPUT(0) <= "01001001"; -- I
--- 				OUTPUT(1) <= "01001110"; -- N
--- 				OUTPUT(2) <= "01000011"; -- C
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00100000"; -- ' '
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "00100000"; -- ' '
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001001"; -- I
+-- 				OUTPUT_BUFFER(1) <= "01001110"; -- N
+-- 				OUTPUT_BUFFER(2) <= "01000011"; -- C
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "10001" => -- INC B
--- 				OUTPUT(0) <= "01001001"; -- I
--- 				OUTPUT(1) <= "01001110"; -- N
--- 				OUTPUT(2) <= "01000011"; -- C
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000010"; -- B
--- 				OUTPUT(5) <= "00100000"; -- ' '
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "00100000"; -- ' '
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01001001"; -- I
+-- 				OUTPUT_BUFFER(1) <= "01001110"; -- N
+-- 				OUTPUT_BUFFER(2) <= "01000011"; -- C
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(5) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "10010" => -- DEC A
--- 				OUTPUT(0) <= "01000100"; -- D
--- 				OUTPUT(1) <= "01000101"; -- E
--- 				OUTPUT(2) <= "01000011"; -- C
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000001"; -- A
--- 				OUTPUT(5) <= "00100000"; -- ' '
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "00100000"; -- ' '
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(0) <= "01000100"; -- D
+-- 				OUTPUT_BUFFER(1) <= "01000101"; -- E
+-- 				OUTPUT_BUFFER(2) <= "01000011"; -- C
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000001"; -- A
+-- 				OUTPUT_BUFFER(5) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
 -- 			when "10011" => -- DEC B
--- 				OUTPUT(0) <= "01000100"; -- D
--- 				OUTPUT(1) <= "01000101"; -- E
--- 				OUTPUT(2) <= "01000011"; -- C
--- 				OUTPUT(3) <= "00100000"; -- ' '
--- 				OUTPUT(4) <= "01000010"; -- B
--- 				OUTPUT(5) <= "00100000"; -- ' '
--- 				OUTPUT(6) <= "00100000"; -- ' '
--- 				OUTPUT(7) <= "00100000"; -- ' '
--- 				OUTPUT(8) <= "00100000"; -- ' '
--- 				OUTPUT(9) <= "00100000"; -- ' '
--- 				OUTPUT(10) <= "00100000"; -- ' '
--- 				OUTPUT(11) <= "00100000"; -- ' '
--- 			when others =>;
--- 				OUTPUT <= (others => "00100000");
+-- 				OUTPUT_BUFFER(0) <= "01000100"; -- D
+-- 				OUTPUT_BUFFER(1) <= "01000101"; -- E
+-- 				OUTPUT_BUFFER(2) <= "01000011"; -- C
+-- 				OUTPUT_BUFFER(3) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(4) <= "01000010"; -- B
+-- 				OUTPUT_BUFFER(5) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(6) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(7) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(8) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(9) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(10) <= "00100000"; -- ' '
+-- 				OUTPUT_BUFFER(11) <= "00100000"; -- ' '
+-- 			-- when others =>;
+-- 				OUTPUT_BUFFER <= (others => "00100000");
 -- 		end case;
 -- 	end process update_out;
 

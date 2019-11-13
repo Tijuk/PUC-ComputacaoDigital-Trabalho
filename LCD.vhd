@@ -4,13 +4,15 @@ use IEEE.numeric_std.ALL;
 
 entity LCD is
 	generic(	N: integer :=20 );
-	port(	CLK : in std_logic;
-			LCD_E : out std_logic; -- Enable do LCD
-			LCD_RW : out std_logic; -- read or write
-			LCD_RS : out std_logic; -- data manipulation or addressing
-			DISABLE_STRATA_FLASH: out std_logic;
-			SF_D: out std_logic_vector(3 downto 0);
-			INSTRUCTION: in std_logic_vector(4 downto 0));
+	port(	
+		CLK : in std_logic;
+		LCD_E : out std_logic; -- Enable do LCD
+		LCD_RW : out std_logic; -- read or write
+		LCD_RS : out std_logic; -- data manipulation or addressing
+		DISABLE_STRATA_FLASH: out std_logic;
+		SF_D: out std_logic_vector(3 downto 0);
+		INSTRUCTION: in integer
+	);
 end LCD;
 
 architecture Behavioral of LCD is
@@ -56,8 +58,33 @@ architecture Behavioral of LCD is
 	signal data_buffer: std_logic_vector(3 downto 0);
 
 	signal charAt: unsigned(3 downto 0) := to_unsigned(0, 4);
+
+	component MapCharComponent
+		port(
+			INSTRUCTION: in std_logic_vector(4 downto 0);
+			CHAR_AT: in unsigned(4 downto 0);
+			LEFT: in std_logic;
+			OUTPUT_BUFFER: out std_logic_vector(7 downto 0)
+		);
+	end component;
+
+	signal CHAR_AT : unsigned(4 downto 0) := to_unsigned(0, 5);
+	signal LEFT : std_logic := '0';
+	signal OUTPUT_BUFFER: std_logic_vector(3 downto 0) := (others => '0');
+
+	signal stateChanged : std_logic := '0';
+
 begin
+	LEFT <= '0' when state_reg = writingChar_6 else '1';
 	
+	MapChar: MapCharComponent port map (
+		INSTRUCTION => INSTRUCTION,
+		CHAR_AT => CHAR_AT,
+		LEFT => LEFT,
+		OUTPUT_BUFFER => OUTPUT_BUFFER
+	);
+
+
 	sincrono: process (CLK)
 	begin
 		if (rising_edge(CLK)) then
@@ -73,7 +100,11 @@ begin
 
 	count_next <= to_unsigned(0,N) when count_reg = (count - 1) else count_reg + 1;
 	count_tick <='1' when count_reg = (count - 1) else '0';
-	mapChar : entity work.MapChar(Behavioral) port map (INPUT=>"01001101",OUTPUT=>data_buffer);
+
+	onInstructionChange: process (INSTRUCTION)
+	begin
+		stateChanged <= '1';
+	end process onInstructionChange;
 
 	combinatorial: process (CLK)
 	begin
@@ -327,11 +358,10 @@ begin
 						if (count_tick = '1') then
 							state_next <= writingChar_1;
 						end if;
-
 				-- Write Character
 				when writingChar_1 =>
 					LCD_RS <= '1';
-					data_buffer <= "0101";
+					data_buffer <= OUTPUT_BUFFER;
 					count <= to_unsigned(10,N);
 					if (count_tick = '1') then
 						state_next <= writingChar_2;
@@ -352,7 +382,7 @@ begin
 					end if;
 				when writingChar_4 =>
 					LCD_RS <= '1';
-					data_buffer <= "0010";
+					data_buffer <= OUTPUT_BUFFER;
 					count <= to_unsigned(10,N);
 					if (count_tick = '1') then
 						state_next <= writingChar_5;
@@ -368,101 +398,20 @@ begin
 				when writingChar_6 =>
 					count <= to_unsigned(85000,N);
 						if (count_tick = '1') then
-							state_next <= o_1;
+							if CHAR_AT = 11 then
+								CHAR_AT <= 0;
+								state_next <= idle;
+							else
+								CHAR_AT <= CHAR_AT + 1;
+								state_next <= writingChar_1;
+
+							end if;
 						end if;
-						
-				-- Write Character
-				when writingChar_1 =>
-				LCD_RS <= '1';
-				INSTRUCTION<="01001101";
-				OUTPUT<=data_buffer;
-				CHAR_AT<="0000";
-				LEFT<="0";
-				data_buffer <= "0101";
-				count <= to_unsigned(10,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_2;
-				end if;
-			when writingChar_2 =>
-				LCD_RS <= '1';
-				LCD_E <= '1';
-				count <= to_unsigned(120,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_3;
-					LCD_E <= '0';
-				end if;
-			when writingChar_3 =>
-				LCD_RS <= '1';
-				count <= to_unsigned(50,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_4;
-				end if;
-			when writingChar_4 =>
-				LCD_RS <= '1';
-				data_buffer <= "0010";
-				count <= to_unsigned(10,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_5;
-				end if;
-			when writingChar_5 =>
-				LCD_RS <= '1';
-				LCD_E <= '1';
-				count <= to_unsigned(120,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_6;
-					LCD_E <= '0';
-				end if;
-			when writingChar_6 =>
-				count <= to_unsigned(85000,N);
-					if (count_tick = '1') then
-						state_next <= o_1;
-					end if;
-					
-				-- Write Character
-				when writingChar_1 =>
-				LCD_RS <= '1';
-				INPUT<=INSTRUCTION;
-				OUTPUT<=data_buffer;
-				data_buffer <= "0101";
-				count <= to_unsigned(10,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_2;
-				end if;
-			when writingChar_2 =>
-				LCD_RS <= '1';
-				LCD_E <= '1';
-				count <= to_unsigned(120,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_3;
-					LCD_E <= '0';
-				end if;
-			when writingChar_3 =>
-				LCD_RS <= '1';
-				count <= to_unsigned(50,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_4;
-				end if;
-			when writingChar_4 =>
-				LCD_RS <= '1';
-				data_buffer <= "0010";
-				count <= to_unsigned(10,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_5;
-				end if;
-			when writingChar_5 =>
-				LCD_RS <= '1';
-				LCD_E <= '1';
-				count <= to_unsigned(120,N);
-				if (count_tick = '1') then
-					state_next <= writingChar_6;
-					LCD_E <= '0';
-				end if;
-			when writingChar_6 =>
-				count <= to_unsigned(85000,N);
-					if (count_tick = '1') then
-						state_next <= o_1;
-					end if;
 				when idle =>
+					if (stateChanged = '1') then
+						statechange <= '0';
+						state_next <= clear_display_1;
+					end if;
 			end case;
 		end if;
 	end process combinatorial;

@@ -1,0 +1,478 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd" in Library work.
+Architecture behavioral of Entity cpu is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CPU> in library <work> (architecture <behavioral>) with generics.
+	CLOCK_COUNT_BUFFER_SIZE = 10
+	MAX_CLOCK_COUNT = "0110110000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <CPU> in library <work> (Architecture <behavioral>).
+	CLOCK_COUNT_BUFFER_SIZE = 10
+	MAX_CLOCK_COUNT = "0110110000"
+WARNING:Xst:2211 - "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd" line 151: Instantiating black box module <RAMComponent>.
+WARNING:Xst:2211 - "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd" line 159: Instantiating black box module <ALUComponent>.
+WARNING:Xst:2211 - "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd" line 168: Instantiating black box module <LCDComponent>.
+INFO:Xst:1432 - Contents of array <instruction_array> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <instruction_array> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:2679 - Register <processCount> in unit <CPU> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <CPU> analyzed. Unit <CPU> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <CPU>.
+    Related source file is "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd".
+WARNING:Xst:1306 - Output <CLK_OUT> is never assigned.
+WARNING:Xst:1306 - Output <LEDS> is never assigned.
+WARNING:Xst:1780 - Signal <slow_clk_count> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <result> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <opcode> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:653 - Signal <opB> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:653 - Signal <opA> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:646 - Signal <instruction_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1781 - Signal <instruction_array> is used but never assigned. Tied to default value.
+WARNING:Xst:646 - Signal <RAMData> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <INSTRUCTION> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+    Using one-hot encoding for signal <state_reg>.
+    Found 32-bit register for signal <RegistradorIns>.
+    Found 1-bit register for signal <slow_clk>.
+    Found 10-bit up counter for signal <slow_clk_count_reg>.
+    Found 4-bit register for signal <state_next>.
+    Found 4-bit register for signal <state_reg>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  41 D-type flip-flop(s).
+Unit <CPU> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 10-bit up counter                                     : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <state_next_3> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_31> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_30> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_29> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_28> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_27> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_26> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_25> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_24> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_23> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_22> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_21> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_20> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_19> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_18> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_17> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_0> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_1> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_2> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_3> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_5> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_6> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_7> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_8> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_9> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_10> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_11> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_12> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_13> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_14> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_15> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_16> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_reg_3> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <state_next_0> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_next_1> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_next_2> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_reg_0> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_reg_1> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_reg_2> of sequential type is unconnected in block <CPU>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 10-bit up counter                                     : 1
+# Registers                                            : 41
+ Flip-Flops                                            : 41
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <state_next_3> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_31> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_30> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_29> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_28> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_27> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_26> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_25> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_24> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_23> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_22> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_21> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_20> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_19> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_18> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_17> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_0> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_1> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_2> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_3> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_5> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_6> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_7> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_8> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_9> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_10> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_11> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_12> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_13> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_14> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_15> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RegistradorIns_16> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_reg_3> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <state_next_0> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_next_1> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_next_2> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_reg_0> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_reg_1> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_reg_2> of sequential type is unconnected in block <CPU>.
+
+Optimizing unit <CPU> ...
+
+Mapping all equations...
+WARNING:Xst:2036 - Inserting OBUF on port <LCD_E> driven by black box <LCDComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <LCD_RS> driven by black box <LCDComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <LCD_RW> driven by black box <LCDComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <NEGATIVE> driven by black box <ALUComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <DISABLE_STRATA_FLASH> driven by black box <LCDComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <ZERO> driven by black box <ALUComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <SF_D<3>> driven by black box <LCDComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <SF_D<2>> driven by black box <LCDComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <SF_D<1>> driven by black box <LCDComponent>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <SF_D<0>> driven by black box <LCDComponent>. Possible simulation mismatch.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 11
+ Flip-Flops                                            : 11
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CPU.ngr
+Top Level Output File Name         : CPU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 35
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 9
+#      LUT4                        : 2
+#      LUT4_L                      : 1
+#      MUXCY                       : 9
+#      VCC                         : 1
+#      XORCY                       : 10
+# FlipFlops/Latches                : 11
+#      FD                          : 10
+#      FDE                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 1
+#      OBUF                        : 10
+# Others                           : 3
+#      ALUComponent                : 1
+#      LCDComponent                : 1
+#      RAMComponent                : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                        7  out of   4656     0%  
+ Number of Slice Flip Flops:             11  out of   9312     0%  
+ Number of 4 input LUTs:                 14  out of   9312     0%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  12  out of    232     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 11    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.020ns (Maximum Frequency: 248.756MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 1.011ns
+   Maximum combinational path delay: 3.692ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.020ns (frequency: 248.756MHz)
+  Total number of paths / destination ports: 66 / 12
+-------------------------------------------------------------------------
+Delay:               4.020ns (Levels of Logic = 2)
+  Source:            slow_clk_count_reg_8 (FF)
+  Destination:       slow_clk (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: slow_clk_count_reg_8 to slow_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.622  slow_clk_count_reg_8 (slow_clk_count_reg_8)
+     LUT4:I0->O            1   0.704   0.424  slow_clk_tick_cmp_eq000011 (slow_clk_tick_cmp_eq000011)
+     LUT4:I3->O            1   0.704   0.420  slow_clk_tick_cmp_eq000032 (slow_clk_tick)
+     FDE:CE                    0.555          slow_clk
+    ----------------------------------------
+    Total                      4.020ns (2.554ns logic, 1.466ns route)
+                                       (63.5% logic, 36.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.011ns (Levels of Logic = 0)
+  Source:            slow_clk (FF)
+  Destination:       RAM:clk (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: slow_clk to RAM:clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  slow_clk (slow_clk)
+    RAMComponent:clk           0.000          RAM
+    ----------------------------------------
+    Total                      1.011ns (0.591ns logic, 0.420ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Delay:               3.692ns (Levels of Logic = 1)
+  Source:            LCD:LCD_E (PAD)
+  Destination:       LCD_E (PAD)
+
+  Data Path: LCD:LCD_E to LCD_E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    LCDComponent:LCD_E     1   0.000   0.420  LCD (LCD_E_OBUF)
+     OBUF:I->O                 3.272          LCD_E_OBUF (LCD_E)
+    ----------------------------------------
+    Total                      3.692ns (3.272ns logic, 0.420ns route)
+                                       (88.6% logic, 11.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.20 secs
+ 
+--> 
+
+Total memory usage is 4472216 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  104 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

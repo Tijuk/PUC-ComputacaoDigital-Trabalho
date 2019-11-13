@@ -1,4 +1,18 @@
-V3 3
+V3 13
+FL E:/repos/PUC-ComputacaoDigital-Trabalho/ALU.vhd 2019/10/30.08:43:42 P.58f
+AR work/ALU/Behavioral -1 FL E:/repos/PUC-ComputacaoDigital-Trabalho/ALU.vhd \
+      EN work/ALU 1573650832
+EN work/ALU 1573650832 \
+      FL E:/repos/PUC-ComputacaoDigital-Trabalho/ALU.vhd PB ieee/std_logic_1164 1364358218 \
+      PB ieee/NUMERIC_STD 1364358223
+AR work/ALU/ALUArch 1573650833 \
+      FL E:/repos/PUC-ComputacaoDigital-Trabalho/ALU.vhd EN work/ALU 1573650832
+FL E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd 2019/11/13.10:10:42 P.58f
+EN work/CPU 1573651202 FL E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
+AR work/CPU/Behavioral 1573651203 \
+      FL E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.vhd EN work/CPU 1573651202 \
+      CP RAMComponent CP ALUComponent CP LCDComponent
 FL E:/repos/PUC-ComputacaoDigital-Trabalho/MapChar.vhd 2019/11/06.10:19:04 P.58f
 EN work/MapChar 0 FL E:/repos/PUC-ComputacaoDigital-Trabalho/MapChar.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223

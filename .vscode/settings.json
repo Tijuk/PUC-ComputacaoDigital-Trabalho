@@ -3,7 +3,10 @@
 	"editor.tabSize": 4,
 	"files.exclude": {
 		"**/._*": true,
+		"**/_*": true,
 		"_xmsgs": true,
+		"xlnx_auto*/**" : true,
+		"*.xml" : true,
 		"ipcore_dir": true,
 		"iseconfig": true,
 		"*.v": true,
@@ -14,6 +17,15 @@
 		"xst/**": true,
 		"*.xst": true,
 		"*.stx": true,
-		".lso": true
+		"*.lso": true,
+		"PC.vhd": true,
+		"*.sym": true,
+		"*.syr": true,
+		"*.spl": true,
+		"*.ngc": true,
+		"*.ngr": true,
+		"*.xrpt": true,
+		"*.cmd_log": true,
+		"*.bld" : true
 	}
 }
