@@ -11,7 +11,7 @@ entity LCD is
 		LCD_RS : out std_logic; -- data manipulation or addressing
 		DISABLE_STRATA_FLASH: out std_logic;
 		SF_D: out std_logic_vector(3 downto 0);
-		INSTRUCTION: in integer
+		INSTRUCTION: in integer range 0 to 31
 	);
 end LCD;
 
@@ -59,9 +59,10 @@ architecture Behavioral of LCD is
 
 	signal charAt: unsigned(3 downto 0) := to_unsigned(0, 4);
 
-	component MapCharComponent
+	component MapChar
 		port(
-			INSTRUCTION: in std_logic_vector(4 downto 0);
+			CLK: in std_logic;
+			INSTRUCTION: in integer range 0 to 31;
 			CHAR_AT: in unsigned(4 downto 0);
 			LEFT: in std_logic;
 			OUTPUT_BUFFER: out std_logic_vector(7 downto 0)
@@ -70,14 +71,15 @@ architecture Behavioral of LCD is
 
 	signal CHAR_AT : unsigned(4 downto 0) := to_unsigned(0, 5);
 	signal LEFT : std_logic := '0';
-	signal OUTPUT_BUFFER: std_logic_vector(3 downto 0) := (others => '0');
+	signal OUTPUT_BUFFER: std_logic_vector(7 downto 0) := (others => '0');
 
 	signal stateChanged : std_logic := '0';
 
 begin
 	LEFT <= '0' when state_reg = writingChar_6 else '1';
 	
-	MapChar: MapCharComponent port map (
+	u_MapChar : MapChar port map (
+		CLK => CLK,
 		INSTRUCTION => INSTRUCTION,
 		CHAR_AT => CHAR_AT,
 		LEFT => LEFT,
@@ -361,7 +363,7 @@ begin
 				-- Write Character
 				when writingChar_1 =>
 					LCD_RS <= '1';
-					data_buffer <= OUTPUT_BUFFER;
+					data_buffer <= OUTPUT_BUFFER(7 downto 4);
 					count <= to_unsigned(10,N);
 					if (count_tick = '1') then
 						state_next <= writingChar_2;
@@ -382,7 +384,7 @@ begin
 					end if;
 				when writingChar_4 =>
 					LCD_RS <= '1';
-					data_buffer <= OUTPUT_BUFFER;
+					data_buffer <= OUTPUT_BUFFER(3 downto 0);
 					count <= to_unsigned(10,N);
 					if (count_tick = '1') then
 						state_next <= writingChar_5;
@@ -399,7 +401,7 @@ begin
 					count <= to_unsigned(85000,N);
 						if (count_tick = '1') then
 							if CHAR_AT = 11 then
-								CHAR_AT <= 0;
+								CHAR_AT <= to_unsigned(0, CHAR_AT'length);
 								state_next <= idle;
 							else
 								CHAR_AT <= CHAR_AT + 1;
@@ -409,7 +411,7 @@ begin
 						end if;
 				when idle =>
 					if (stateChanged = '1') then
-						statechange <= '0';
+						stateChanged <= '0';
 						state_next <= clear_display_1;
 					end if;
 			end case;

@@ -9,11 +9,10 @@ NET "SF_D<1>" LOC = "R16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
 NET "SF_D<2>" LOC = "P17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
 NET "SF_D<3>" LOC = "M15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
 
-//Clock
+# //Clock
 NET "CLK" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
 
-// Cuida de LEDs, sendo que um deles não usamos já que precisamos só de 7 
-//NET "LED<7>" LOC = "F9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+# // Cuida de LEDs, sendo que um deles não usamos já que precisamos só de 7 
 NET "NEGATIVE" LOC = "E9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
 NET "ZERO" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
 NET "LEDS<4>" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
@@ -21,6 +20,3 @@ NET "LEDS<3>" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
 NET "LEDS<2>" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
 NET "LEDS<1>" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
 NET "LEDS<0>" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
-
-//Chave
-NET "RESET" LOC = "L13" | IOSTANDARD=LVTTL | PULLUP ;

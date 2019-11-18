@@ -7,8 +7,10 @@ entity RAM is
 	port(
 		clk: in std_logic;
 		reset: in std_logic;
-		address: in integer;
+		we: in std_logic;
+		address: in integer range 0 to 31;
 		-- outAddress: out integer;
+		dataIn: in std_logic_vector(4 downto 0);
 		dataOut: out std_logic_vector(4 downto 0)
 	);
 end RAM;
@@ -16,7 +18,7 @@ end RAM;
 architecture Behavioral of RAM is
 	----Mem�ria RAM com os endere�os e suas infos---------
 	type memory_type is array (0 to 31) of std_logic_vector(4 downto 0); 
-	signal ram, initial_ram : memory_type := (
+	signal ram_i, initial_ram : memory_type := (
 		0=> "00001", -- MOV A, [end]                                                                                                                                
 		1=> "11101", -- [end] 29                                                                                                                                  
 		2=> "00100", -- MOV B, A                                                                                                                                 
@@ -53,18 +55,25 @@ architecture Behavioral of RAM is
 		);
 
 		signal tempAddress: integer := 0;
+		
+		signal dataOut_next : std_logic_vector(4 downto 0);
 begin
 	process(clk, reset)
 	begin
 		if reset = '1' then
 			--outAddress <= 0;
-			dataOut <= initial_ram(0);
-			ram <= initial_ram;
-		end if;	
+			tempAddress <= 0;
+			ram_i <= initial_ram;
+		elsif (clk'event and clk = '1') then
+			tempAddress <= address;
+			if (we = '1') then
+				ram_i(tempAddress) <= dataIn;
+			end if;
+		end if;
 	end process;
 
 	-- outAddress <= address;
-	dataOut <= ram(address);
+	dataOut <= ram_i(tempAddress);
 
 end Behavioral;
 

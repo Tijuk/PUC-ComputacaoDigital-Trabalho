@@ -31,7 +31,7 @@ entity ALU is
 	);
 end ALU;
 
-architecture ALUArch of ALU is
+architecture Behavioral of ALU is
 	signal inResult : std_logic_vector(opN-1 downto 0) := (others => '0');
 begin
 	-- Result
@@ -54,5 +54,5 @@ begin
 	negative <= inResult(inResult'high);
 	
 	result <= inResult;
-end ALUArch;
+end Behavioral;
 

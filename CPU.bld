@@ -5,7 +5,7 @@ Command Line: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -filter
 iseconfig/filter.filter -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf
 -p xc3s500e-fg320-4 CPU.ngc CPU.ngd
 
-Reading NGO file "E:/repos/PUC-ComputacaoDigital-Trabalho/CPU.ngc" ...
+Reading NGO file "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -15,21 +15,6 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-ERROR:NgdBuild:604 - logical block 'RAM' with type 'RAMComponent' could not be
-   resolved. A pin name misspelling can cause this, a missing edif or ngc file,
-   case mismatch between the block name and the edif or ngc file name, or the
-   misspelling of a type name. Symbol 'RAMComponent' is not supported in target
-   'spartan3e'.
-ERROR:NgdBuild:604 - logical block 'ALU' with type 'ALUComponent' could not be
-   resolved. A pin name misspelling can cause this, a missing edif or ngc file,
-   case mismatch between the block name and the edif or ngc file name, or the
-   misspelling of a type name. Symbol 'ALUComponent' is not supported in target
-   'spartan3e'.
-ERROR:NgdBuild:604 - logical block 'LCD' with type 'LCDComponent' could not be
-   resolved. A pin name misspelling can cause this, a missing edif or ngc file,
-   case mismatch between the block name and the edif or ngc file name, or the
-   misspelling of a type name. Symbol 'LCDComponent' is not supported in target
-   'spartan3e'.
 
 Partition Implementation Status
 -------------------------------
@@ -39,14 +24,13 @@ Partition Implementation Status
 -------------------------------
 
 NGDBUILD Design Results Summary:
-  Number of errors:     3
+  Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 4400124 kilobytes
+Total memory usage is 4400164 kilobytes
 
+Writing NGD file "CPU.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec
 Total CPU time to NGDBUILD completion:   3 sec
-
-One or more errors were found during NGDBUILD.  No NGD file will be written.
 
 Writing NGDBUILD log file "CPU.bld"...
