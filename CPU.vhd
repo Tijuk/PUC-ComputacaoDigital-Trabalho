@@ -95,6 +95,7 @@ architecture Behavioral of CPU is
 		);
 	end component;
 
+
 	component ALU
 		port(
 			reset: in std_logic;
@@ -199,8 +200,9 @@ begin
 							when mov_a_from_end =>
 								if readingAddress = '0' then
 									writeEnabled <= '1';
-									dataIn <= reg_b;
+									dataIn <= reg_a;
 									processCount <= processCount_next;
+									instruction_next <= to_integer(unsigned(RAMData));
 								else
 									writeEnabled <= '0';
 									state_next <= reading;

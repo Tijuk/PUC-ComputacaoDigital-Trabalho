@@ -32,7 +32,7 @@
 <msg type="warning" file="HDLParsers" num="3532" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">79</arg>.  Ignoring null range. <arg fmt="%d" index="3">0</arg> is not included in the Null range, <arg fmt="%d" index="4">0</arg> <arg fmt="%s" index="5">downto</arg> <arg fmt="%d" index="6">31</arg>
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3532" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">181</arg>.  Ignoring null range. <arg fmt="%d" index="3">0</arg> is not included in the Null range, <arg fmt="%d" index="4">0</arg> <arg fmt="%s" index="5">downto</arg> <arg fmt="%d" index="6">31</arg>
+<msg type="warning" file="HDLParsers" num="3532" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">182</arg>.  Ignoring null range. <arg fmt="%d" index="3">0</arg> is not included in the Null range, <arg fmt="%d" index="4">0</arg> <arg fmt="%s" index="5">downto</arg> <arg fmt="%d" index="6">31</arg>
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">LCD_RW</arg>&gt; in unit &lt;<arg fmt="%s" index="2">LCD</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
@@ -422,7 +422,7 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -437,25 +437,25 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">4</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">4</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -683,22 +683,22 @@
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">opcode_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">CPU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_27_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_26_1&gt; &lt;ram_i_25_1&gt; &lt;ram_i_24_1&gt; &lt;ram_i_23_1&gt; &lt;ram_i_22_1&gt; &lt;ram_i_21_1&gt; &lt;ram_i_20_1&gt; &lt;ram_i_19_1&gt; &lt;ram_i_18_1&gt; &lt;ram_i_5_1&gt; &lt;ram_i_4_1&gt; &lt;ram_i_3_1&gt; &lt;ram_i_2_1&gt; &lt;ram_i_1_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_27_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">17 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_26_1&gt; &lt;ram_i_25_1&gt; &lt;ram_i_24_1&gt; &lt;ram_i_23_1&gt; &lt;ram_i_22_1&gt; &lt;ram_i_21_1&gt; &lt;ram_i_20_1&gt; &lt;ram_i_19_1&gt; &lt;ram_i_18_1&gt; &lt;ram_i_8_1&gt; &lt;ram_i_7_1&gt; &lt;ram_i_6_1&gt; &lt;ram_i_5_1&gt; &lt;ram_i_4_1&gt; &lt;ram_i_3_1&gt; &lt;ram_i_2_1&gt; &lt;ram_i_1_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_1&gt; &lt;ram_i_28_1&gt; &lt;ram_i_17_1&gt; &lt;ram_i_16_1&gt; &lt;ram_i_15_1&gt; &lt;ram_i_14_1&gt; &lt;ram_i_13_1&gt; &lt;ram_i_12_1&gt; &lt;ram_i_11_1&gt; &lt;ram_i_10_1&gt; &lt;ram_i_9_1&gt; &lt;ram_i_8_1&gt; &lt;ram_i_7_1&gt; &lt;ram_i_6_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_1&gt; &lt;ram_i_28_1&gt; &lt;ram_i_17_1&gt; &lt;ram_i_16_1&gt; &lt;ram_i_15_1&gt; &lt;ram_i_14_1&gt; &lt;ram_i_13_1&gt; &lt;ram_i_12_1&gt; &lt;ram_i_11_1&gt; &lt;ram_i_10_1&gt; &lt;ram_i_9_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">17 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_2&gt; &lt;ram_i_28_2&gt; &lt;ram_i_27_2&gt; &lt;ram_i_26_2&gt; &lt;ram_i_25_2&gt; &lt;ram_i_24_2&gt; &lt;ram_i_23_2&gt; &lt;ram_i_22_2&gt; &lt;ram_i_21_2&gt; &lt;ram_i_20_2&gt; &lt;ram_i_19_2&gt; &lt;ram_i_18_2&gt; &lt;ram_i_15_2&gt; &lt;ram_i_12_2&gt; &lt;ram_i_9_2&gt; &lt;ram_i_6_2&gt; &lt;ram_i_3_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">19 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_2&gt; &lt;ram_i_28_2&gt; &lt;ram_i_27_2&gt; &lt;ram_i_26_2&gt; &lt;ram_i_25_2&gt; &lt;ram_i_24_2&gt; &lt;ram_i_23_2&gt; &lt;ram_i_22_2&gt; &lt;ram_i_21_2&gt; &lt;ram_i_20_2&gt; &lt;ram_i_19_2&gt; &lt;ram_i_18_2&gt; &lt;ram_i_15_2&gt; &lt;ram_i_12_2&gt; &lt;ram_i_9_2&gt; &lt;ram_i_8_2&gt; &lt;ram_i_7_2&gt; &lt;ram_i_6_2&gt; &lt;ram_i_3_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_17_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_16_2&gt; &lt;ram_i_14_2&gt; &lt;ram_i_13_2&gt; &lt;ram_i_11_2&gt; &lt;ram_i_10_2&gt; &lt;ram_i_8_2&gt; &lt;ram_i_7_2&gt; &lt;ram_i_5_2&gt; &lt;ram_i_4_2&gt; &lt;ram_i_2_2&gt; &lt;ram_i_1_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_17_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">9 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_16_2&gt; &lt;ram_i_14_2&gt; &lt;ram_i_13_2&gt; &lt;ram_i_11_2&gt; &lt;ram_i_10_2&gt; &lt;ram_i_5_2&gt; &lt;ram_i_4_2&gt; &lt;ram_i_2_2&gt; &lt;ram_i_1_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">22 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_3&gt; &lt;ram_i_28_3&gt; &lt;ram_i_27_3&gt; &lt;ram_i_26_3&gt; &lt;ram_i_25_3&gt; &lt;ram_i_24_3&gt; &lt;ram_i_23_3&gt; &lt;ram_i_22_3&gt; &lt;ram_i_21_3&gt; &lt;ram_i_20_3&gt; &lt;ram_i_19_3&gt; &lt;ram_i_18_3&gt; &lt;ram_i_15_3&gt; &lt;ram_i_14_3&gt; &lt;ram_i_12_3&gt; &lt;ram_i_11_3&gt; &lt;ram_i_9_3&gt; &lt;ram_i_8_3&gt; &lt;ram_i_6_3&gt; &lt;ram_i_5_3&gt; &lt;ram_i_3_3&gt; &lt;ram_i_2_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">23 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_3&gt; &lt;ram_i_28_3&gt; &lt;ram_i_27_3&gt; &lt;ram_i_26_3&gt; &lt;ram_i_25_3&gt; &lt;ram_i_24_3&gt; &lt;ram_i_23_3&gt; &lt;ram_i_22_3&gt; &lt;ram_i_21_3&gt; &lt;ram_i_20_3&gt; &lt;ram_i_19_3&gt; &lt;ram_i_18_3&gt; &lt;ram_i_15_3&gt; &lt;ram_i_14_3&gt; &lt;ram_i_12_3&gt; &lt;ram_i_11_3&gt; &lt;ram_i_9_3&gt; &lt;ram_i_8_3&gt; &lt;ram_i_7_3&gt; &lt;ram_i_6_3&gt; &lt;ram_i_5_3&gt; &lt;ram_i_3_3&gt; &lt;ram_i_2_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_17_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_16_3&gt; &lt;ram_i_13_3&gt; &lt;ram_i_10_3&gt; &lt;ram_i_7_3&gt; &lt;ram_i_4_3&gt; &lt;ram_i_1_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_17_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_16_3&gt; &lt;ram_i_13_3&gt; &lt;ram_i_10_3&gt; &lt;ram_i_4_3&gt; &lt;ram_i_1_3&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">26 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_0&gt; &lt;ram_i_28_0&gt; &lt;ram_i_27_0&gt; &lt;ram_i_26_0&gt; &lt;ram_i_25_0&gt; &lt;ram_i_24_0&gt; &lt;ram_i_23_0&gt; &lt;ram_i_22_0&gt; &lt;ram_i_21_0&gt; &lt;ram_i_20_0&gt; &lt;ram_i_19_0&gt; &lt;ram_i_18_0&gt; &lt;ram_i_17_0&gt; &lt;ram_i_16_0&gt; &lt;ram_i_15_0&gt; &lt;ram_i_14_0&gt; &lt;ram_i_13_0&gt; &lt;ram_i_12_0&gt; &lt;ram_i_11_0&gt; &lt;ram_i_10_0&gt; &lt;ram_i_9_0&gt; &lt;ram_i_8_0&gt; &lt;ram_i_7_0&gt; &lt;ram_i_6_0&gt; &lt;ram_i_4_0&gt; &lt;ram_i_2_0&gt; </arg>
@@ -707,10 +707,10 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_5_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_3_0&gt; &lt;ram_i_1_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">23 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_4&gt; &lt;ram_i_28_4&gt; &lt;ram_i_27_4&gt; &lt;ram_i_26_4&gt; &lt;ram_i_25_4&gt; &lt;ram_i_24_4&gt; &lt;ram_i_23_4&gt; &lt;ram_i_22_4&gt; &lt;ram_i_21_4&gt; &lt;ram_i_20_4&gt; &lt;ram_i_19_4&gt; &lt;ram_i_18_4&gt; &lt;ram_i_17_4&gt; &lt;ram_i_15_4&gt; &lt;ram_i_14_4&gt; &lt;ram_i_12_4&gt; &lt;ram_i_11_4&gt; &lt;ram_i_9_4&gt; &lt;ram_i_8_4&gt; &lt;ram_i_6_4&gt; &lt;ram_i_5_4&gt; &lt;ram_i_3_4&gt; &lt;ram_i_2_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_30_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">24 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_29_4&gt; &lt;ram_i_28_4&gt; &lt;ram_i_27_4&gt; &lt;ram_i_26_4&gt; &lt;ram_i_25_4&gt; &lt;ram_i_24_4&gt; &lt;ram_i_23_4&gt; &lt;ram_i_22_4&gt; &lt;ram_i_21_4&gt; &lt;ram_i_20_4&gt; &lt;ram_i_19_4&gt; &lt;ram_i_18_4&gt; &lt;ram_i_17_4&gt; &lt;ram_i_15_4&gt; &lt;ram_i_14_4&gt; &lt;ram_i_12_4&gt; &lt;ram_i_11_4&gt; &lt;ram_i_9_4&gt; &lt;ram_i_8_4&gt; &lt;ram_i_7_4&gt; &lt;ram_i_6_4&gt; &lt;ram_i_5_4&gt; &lt;ram_i_3_4&gt; &lt;ram_i_2_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_16_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_13_4&gt; &lt;ram_i_10_4&gt; &lt;ram_i_7_4&gt; &lt;ram_i_4_4&gt; &lt;ram_i_1_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ram_i_16_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">RAM</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ram_i_13_4&gt; &lt;ram_i_10_4&gt; &lt;ram_i_4_4&gt; &lt;ram_i_1_4&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ram_i_31_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">RAM</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

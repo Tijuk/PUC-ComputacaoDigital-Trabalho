@@ -28,9 +28,6 @@ architecture Behavioral of RAM is
 	 3=> "00001", -- MOV A, [end]                                                                                                                                
 	 4=> "11100", -- [end] 30                                                                                                                            
 	 5=> "00101", -- ADD A,B -- 4
-	 6=> "00010", -- MOV [end], A
-	 7=> "11110", -- [end] 30
-	 8=> "00110", -- SUB A,B -- 2
 	 9=> "00010", -- MOV [end], A                                                                                                                               
 	10=> "11110", -- end 30                                                                                                                              
 	11=> "00110", -- SUB A,B -- 0                                                                                                                             
@@ -56,12 +53,13 @@ architecture Behavioral of RAM is
 	31=> "10101",
 	others=> "00000"
 	);
-	signal addressTemp: integer range 0 to 31:= 0;
 
-	begin
-	addressTemp <= 0 when reset = '1' else address;
-	ram_i(addressOut) <= dataIn when we = '1' else ram_i(addressTemp);
-	dataOut <= ram_i(addressOut);
+	signal address_next : integer range 0 to 31 := 0;
+
+begin
+	address_next <= 0 when reset = '1' else address;
+	ram_i(addressOut) <= dataIn when we = '1' else ram_i(address_next);
+	dataOut <= ram_i(address_next);
 	dataAt30 <= ram_i(30);
 end Behavioral;
 

@@ -46,8 +46,8 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-RESET       |    2.908(R)|    0.086(R)|CLK_BUFGP         |   0.000|
-            |    8.603(F)|   -0.220(F)|CLK_BUFGP         |   0.000|
+RESET       |    3.034(R)|   -0.554(R)|CLK_BUFGP         |   0.000|
+            |    8.212(F)|   -0.726(F)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -56,13 +56,13 @@ Clock CLK to Pad
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
 LCD_E       |    9.952(F)|CLK_BUFGP         |   0.000|
-LCD_RS      |    9.516(F)|CLK_BUFGP         |   0.000|
-NEGATIVE    |   15.740(F)|CLK_BUFGP         |   0.000|
-SF_D<0>     |   11.205(F)|CLK_BUFGP         |   0.000|
-SF_D<1>     |   11.218(F)|CLK_BUFGP         |   0.000|
-SF_D<2>     |   11.082(F)|CLK_BUFGP         |   0.000|
-SF_D<3>     |   11.125(F)|CLK_BUFGP         |   0.000|
-ZERO        |   18.908(F)|CLK_BUFGP         |   0.000|
+LCD_RS      |    9.800(F)|CLK_BUFGP         |   0.000|
+NEGATIVE    |   17.415(F)|CLK_BUFGP         |   0.000|
+SF_D<0>     |   11.435(F)|CLK_BUFGP         |   0.000|
+SF_D<1>     |   11.202(F)|CLK_BUFGP         |   0.000|
+SF_D<2>     |   11.072(F)|CLK_BUFGP         |   0.000|
+SF_D<3>     |   10.559(F)|CLK_BUFGP         |   0.000|
+ZERO        |   17.391(F)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -70,19 +70,19 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    7.004|    8.502|    8.498|   15.259|
+CLK            |    6.809|    8.178|    8.165|   13.918|
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-RESET          |NEGATIVE       |   10.034|
-RESET          |ZERO           |   10.858|
+RESET          |NEGATIVE       |   10.120|
+RESET          |ZERO           |   10.442|
 ---------------+---------------+---------+
 
 
-Analysis completed Fri Nov 22 13:19:49 2019 
+Analysis completed Fri Nov 22 14:17:42 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
