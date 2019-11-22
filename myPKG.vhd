@@ -3,30 +3,30 @@ use IEEE.STD_LOGIC_1164.all;
 
 package myPKG is
 
-	-- Characters
-	constant alpha_a_uc : std_logic_vector(7 downto 0) := "01000001";
-	constant alpha_b_uc : std_logic_vector(7 downto 0) := "01000010";
-	constant alpha_c_uc : std_logic_vector(7 downto 0) := "01000011";
-	constant alpha_d_uc : std_logic_vector(7 downto 0) := "01000100";
-	constant alpha_d_lc : std_logic_vector(7 downto 0) := "01100100";
-	constant alpha_e_uc : std_logic_vector(7 downto 0) := "01000101";
-	constant alpha_e_lc : std_logic_vector(7 downto 0) := "01100101";
-	constant alpha_h_uc : std_logic_vector(7 downto 0) := "01001000";
-	constant alpha_i_uc : std_logic_vector(7 downto 0) := "01001001";
-	constant alpha_j_uc : std_logic_vector(7 downto 0) := "01001010";
-	constant alpha_l_uc : std_logic_vector(7 downto 0) := "01001100";
-	constant alpha_m_uc : std_logic_vector(7 downto 0) := "01001101";
-	constant alpha_n_uc : std_logic_vector(7 downto 0) := "01001110";
-	constant alpha_n_lc : std_logic_vector(7 downto 0) := "01101110";
-	constant alpha_o_uc : std_logic_vector(7 downto 0) := "01001111";
-	constant alpha_p_uc : std_logic_vector(7 downto 0) := "01010000";
-	constant alpha_r_uc : std_logic_vector(7 downto 0) := "01010010";
-	constant alpha_s_uc : std_logic_vector(7 downto 0) := "01010011";
-	constant alpha_t_uc : std_logic_vector(7 downto 0) := "01010100";
-	constant alpha_u_uc : std_logic_vector(7 downto 0) := "01010101";
-	constant alpha_v_uc : std_logic_vector(7 downto 0) := "01010110";
-	constant alpha_x_uc : std_logic_vector(7 downto 0) := "01011000";
-	constant alpha_z_uc : std_logic_vector(7 downto 0) := "01011010";
+	-- -- Characters
+	-- constant alpha_a_uc : std_logic_vector(7 downto 0) := "01000001";
+	-- constant alpha_b_uc : std_logic_vector(7 downto 0) := "01000010";
+	-- constant alpha_c_uc : std_logic_vector(7 downto 0) := "01000011";
+	-- constant alpha_d_uc : std_logic_vector(7 downto 0) := "01000100";
+	-- constant alpha_d_lc : std_logic_vector(7 downto 0) := "01100100";
+	-- constant alpha_e_uc : std_logic_vector(7 downto 0) := "01000101";
+	-- constant alpha_e_lc : std_logic_vector(7 downto 0) := "01100101";
+	-- constant alpha_h_uc : std_logic_vector(7 downto 0) := "01001000";
+	-- constant alpha_i_uc : std_logic_vector(7 downto 0) := "01001001";
+	-- constant alpha_j_uc : std_logic_vector(7 downto 0) := "01001010";
+	-- constant alpha_l_uc : std_logic_vector(7 downto 0) := "01001100";
+	-- constant alpha_m_uc : std_logic_vector(7 downto 0) := "01001101";
+	-- constant alpha_n_uc : std_logic_vector(7 downto 0) := "01001110";
+	-- constant alpha_n_lc : std_logic_vector(7 downto 0) := "01101110";
+	-- constant alpha_o_uc : std_logic_vector(7 downto 0) := "01001111";
+	-- constant alpha_p_uc : std_logic_vector(7 downto 0) := "01010000";
+	-- constant alpha_r_uc : std_logic_vector(7 downto 0) := "01010010";
+	-- constant alpha_s_uc : std_logic_vector(7 downto 0) := "01010011";
+	-- constant alpha_t_uc : std_logic_vector(7 downto 0) := "01010100";
+	-- constant alpha_u_uc : std_logic_vector(7 downto 0) := "01010101";
+	-- constant alpha_v_uc : std_logic_vector(7 downto 0) := "01010110";
+	-- constant alpha_x_uc : std_logic_vector(7 downto 0) := "01011000";
+	-- constant alpha_z_uc : std_logic_vector(7 downto 0) := "01011010";
 
 
 -- type <new_type> is

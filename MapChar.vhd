@@ -9,7 +9,6 @@ entity MapChar is
 		CLK: in std_logic;
 		INSTRUCTION: in integer range 0 to 31;
 		CHAR_AT: in unsigned(4 downto 0);
-		LEFT: in std_logic;
 		OUTPUT_BUFFER: out std_logic_vector(7 downto 0)
 	);
 
@@ -19,38 +18,36 @@ architecture Behavioral of MapChar is
 
 	type string is array (0 to 11) of std_logic_vector(7 downto 0);
 
-
-
---	-- Characters
---	constant alpha_a_uc : std_logic_vector(7 downto 0) := "01000001";
---	constant alpha_b_uc : std_logic_vector(7 downto 0) := "01000010";
---	constant alpha_c_uc : std_logic_vector(7 downto 0) := "01000011";
---	constant alpha_d_uc : std_logic_vector(7 downto 0) := "01000100";
---	constant alpha_d_lc : std_logic_vector(7 downto 0) := "01100100";
---	constant alpha_e_uc : std_logic_vector(7 downto 0) := "01000101";
---	constant alpha_e_lc : std_logic_vector(7 downto 0) := "01100101";
---	constant alpha_h_uc : std_logic_vector(7 downto 0) := "01001000";
---	constant alpha_i_uc : std_logic_vector(7 downto 0) := "01001001";
---	constant alpha_j_uc : std_logic_vector(7 downto 0) := "01001010";
---	constant alpha_l_uc : std_logic_vector(7 downto 0) := "01001100";
---	constant alpha_m_uc : std_logic_vector(7 downto 0) := "01001101";
---	constant alpha_n_uc : std_logic_vector(7 downto 0) := "01001110";
---	constant alpha_n_lc : std_logic_vector(7 downto 0) := "01101110";
---	constant alpha_o_uc : std_logic_vector(7 downto 0) := "01001111";
---	constant alpha_p_uc : std_logic_vector(7 downto 0) := "01010000";
---	constant alpha_r_uc : std_logic_vector(7 downto 0) := "01010010";
---	constant alpha_s_uc : std_logic_vector(7 downto 0) := "01010011";
---	constant alpha_t_uc : std_logic_vector(7 downto 0) := "01010100";
---	constant alpha_u_uc : std_logic_vector(7 downto 0) := "01010101";
---	constant alpha_v_uc : std_logic_vector(7 downto 0) := "01010110";
---	constant alpha_x_uc : std_logic_vector(7 downto 0) := "01011000";
---	constant alpha_z_uc : std_logic_vector(7 downto 0) := "01011010";
+	-- Characters
+	constant alpha_a_uc : std_logic_vector(7 downto 0) := "01000001"; -- A
+	constant alpha_b_uc : std_logic_vector(7 downto 0) := "01000010"; -- B
+	constant alpha_c_uc : std_logic_vector(7 downto 0) := "01000011"; -- C
+	constant alpha_d_uc : std_logic_vector(7 downto 0) := "01000100"; -- D
+	constant alpha_d_lc : std_logic_vector(7 downto 0) := "01100100"; -- d
+	constant alpha_e_uc : std_logic_vector(7 downto 0) := "01000101"; -- E
+	constant alpha_e_lc : std_logic_vector(7 downto 0) := "01100101"; -- e
+	constant alpha_h_uc : std_logic_vector(7 downto 0) := "01001000"; -- H
+	constant alpha_i_uc : std_logic_vector(7 downto 0) := "01001001"; -- I
+	constant alpha_j_uc : std_logic_vector(7 downto 0) := "01001010"; -- J
+	constant alpha_l_uc : std_logic_vector(7 downto 0) := "01001100"; -- L
+	constant alpha_m_uc : std_logic_vector(7 downto 0) := "01001101"; -- M
+	constant alpha_n_uc : std_logic_vector(7 downto 0) := "01001110"; -- N
+	constant alpha_n_lc : std_logic_vector(7 downto 0) := "01101110"; -- n
+	constant alpha_o_uc : std_logic_vector(7 downto 0) := "01001111"; -- O
+	constant alpha_p_uc : std_logic_vector(7 downto 0) := "01010000"; -- P
+	constant alpha_r_uc : std_logic_vector(7 downto 0) := "01010010"; -- R
+	constant alpha_s_uc : std_logic_vector(7 downto 0) := "01010011"; -- S
+	constant alpha_t_uc : std_logic_vector(7 downto 0) := "01010100"; -- T
+	constant alpha_u_uc : std_logic_vector(7 downto 0) := "01010101"; -- U
+	constant alpha_v_uc : std_logic_vector(7 downto 0) := "01010110"; -- V
+	constant alpha_x_uc : std_logic_vector(7 downto 0) := "01011000"; -- X
+	constant alpha_z_uc : std_logic_vector(7 downto 0) := "01011010"; -- Z
 
 	-- Symbols
-	constant symbol_comma			:std_logic_vector(7 downto 0) := "00101100";
-	constant symbol_bracket_open	:std_logic_vector(7 downto 0) := "01011011";
-	constant symbol_bracket_close	:std_logic_vector(7 downto 0) := "01011101";
-	constant symbol_space			:std_logic_vector(7 downto 0) := "00100000";
+	constant symbol_comma			:std_logic_vector(7 downto 0) := "00101100"; -- ,
+	constant symbol_bracket_open	:std_logic_vector(7 downto 0) := "01011011"; -- [
+	constant symbol_bracket_close	:std_logic_vector(7 downto 0) := "01011101"; -- ]
+	constant symbol_space			:std_logic_vector(7 downto 0) := "00100000"; -- (space)
 
 	constant MOV_A_TO_END : string := (
 		0 => alpha_m_uc(7 downto 0),
@@ -355,31 +352,72 @@ architecture Behavioral of MapChar is
 		11 => symbol_space(7 downto 0)
 	);
 
-begin
+	constant EMPTY_STRING: string := (
+		0 => symbol_bracket_open(7 downto 0),
+		1 => symbol_space(7 downto 0),
+		2 => symbol_space(7 downto 0),
+		3 => symbol_space(7 downto 0),
+		4 => symbol_space(7 downto 0),
+		5 => symbol_space(7 downto 0),
+		6 => symbol_space(7 downto 0),
+		7 => symbol_space(7 downto 0),
+		8 => symbol_space(7 downto 0),
+		9 => symbol_space(7 downto 0),
+		10 => symbol_space(7 downto 0),
+		11 => symbol_bracket_close(7 downto 0)
+	);
 
-	OUTPUT_BUFFER <=
-		alpha_m_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 0) else
-		alpha_o_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 1) else
-		alpha_v_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 2) else
-		symbol_space when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 3) else
-		alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 4) else
-		alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 5) else
-		alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 6) else
-		alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 7) else
-		alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 8) else
-		alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 9) else
+	type char_table_type is array (0 to 19) of string;
+
+	constant CHAR_TABLE : char_table_type := (
+		0 => EMPTY_STRING,
+		1 => MOV_A_TO_END,
+		2 => MOV_END_TO_A,
+		3 => MOV_A_TO_B,
+		4 => MOV_B_TO_A,
+		5 => ADD_A_TO_B,
+		6 => SUB_A_TO_B,
+		7 => AND_A_TO_B,
+		8 => OR_A_TO_B,
+		9 => XOR_A_TO_B,
+		10 => NOT_A,
+		11 => NAND_A_TO_B,
+		12 => JZ_END,
+		13 => JN_END,
+		14 => HALT,
+		15 => JMP_END,
+		16 => INC_A,
+		17 => INC_B,
+		18 => DEC_A,
+		19 => DEC_B
+	);
+
+begin
+	OUTPUT_BUFFER <= CHAR_TABLE(INSTRUCTION)(to_integer(CHAR_AT));
+
+	-- OUTPUT_BUFFER <=
+	-- 	alpha_m_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 0) else
+	-- 	alpha_o_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 1) else
+	-- 	alpha_v_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 2) else
+	-- 	symbol_space when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 3) else
+	-- 	alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 4) else
+	-- 	alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 5) else
+	-- 	alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 6) else
+	-- 	alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 7) else
+	-- 	alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 8) else
+	-- 	alpha_a_uc when (INSTRUCTION = 0 and to_integer(CHAR_AT) = 9) else
 		
-		alpha_m_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 0) else
-		alpha_o_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 1) else
-		alpha_v_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 2) else
-		symbol_space when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 3) else
-		alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 4) else
-		alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 5) else
-		alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 6) else
-		alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 7) else
-		alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 8) else
-		alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 9) else
-		symbol_bracket_close;
+	-- 	alpha_m_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 0) else
+	-- 	alpha_o_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 1) else
+	-- 	alpha_v_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 2) else
+	-- 	symbol_space when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 3) else
+	-- 	alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 4) else
+	-- 	alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 5) else
+	-- 	alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 6) else
+	-- 	alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 7) else
+	-- 	alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 8) else
+	-- 	alpha_b_uc when (INSTRUCTION = 1 and to_integer(CHAR_AT) = 9) else
+	-- 	symbol_bracket_close;
 
 	-- update_out: process(CLK)
 	-- begin

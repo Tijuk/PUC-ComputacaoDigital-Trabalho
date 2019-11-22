@@ -109,7 +109,8 @@ Architecture mypkg of Entity mypkg is up to date.
 Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/_T_/MapChar.vhd" in Library work.
 Architecture behavioral of Entity mapchar is up to date.
 Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/_T_/RAM.vhd" in Library work.
-Architecture behavioral of Entity ram is up to date.
+Entity <ram> compiled.
+Entity <ram> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/_T_/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 WARNING:HDLParsers:3353 - "C:/Users/aula.ELE.000/Documents/System/_T_/ALU.vhd" Line 20. Primary unit ALU is being redefined within the file. Prior definition (on line 5) is discarded. (LRM 11.1)
@@ -117,21 +118,22 @@ Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/_T_/LCD.vhd" in Library work.
 Architecture behavioral of Entity lcd is up to date.
 Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" in Library work.
-Entity <cpu> compiled.
-WARNING:HDLParsers:3350 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 97. Null range: 0 downto 31
-WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 97.  Ignoring null range. 0 is not included in the Null range, 0 downto 31
-WARNING:HDLParsers:3350 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 102. Null range: 0 downto 31
-WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 102.  Ignoring null range. 0 is not included in the Null range, 0 downto 31
-WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 208.  Ignoring null range. 0 is not included in the Null range, 0 downto 31
-WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 223.  Ignoring null range. 0 is not included in the Null range, 0 downto 31
-Entity <cpu> (Architecture <behavioral>) compiled.
+WARNING:HDLParsers:3350 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 60. Null range: 0 downto 31
+WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 60.  Ignoring null range. 0 is not included in the Null range, 0 downto 31
+WARNING:HDLParsers:3350 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 61. Null range: 0 downto 31
+WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 61.  Ignoring null range. 1 is not included in the Null range, 0 downto 31
+WARNING:HDLParsers:3350 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 78. Null range: 0 downto 31
+WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 78.  Ignoring null range. 0 is not included in the Null range, 0 downto 31
+WARNING:HDLParsers:3350 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 79. Null range: 0 downto 31
+WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 79.  Ignoring null range. 0 is not included in the Null range, 0 downto 31
+WARNING:HDLParsers:3532 - "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd" Line 181.  Ignoring null range. 0 is not included in the Null range, 0 downto 31
+Architecture behavioral of Entity cpu is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <CPU> in library <work> (architecture <behavioral>) with generics.
-	CLOCK_COUNT_BUFFER_SIZE = 32
-	MAX_CLOCK_COUNT = "00000010111110101111000010000000"
+	CLOCK_COUNT_BUFFER_SIZE = 25
 
 Analyzing hierarchy for entity <RAM> in library <work> (architecture <behavioral>).
 
@@ -148,18 +150,10 @@ Analyzing hierarchy for entity <MapChar> in library <work> (architecture <behavi
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing generic Entity <CPU> in library <work> (Architecture <behavioral>).
-	CLOCK_COUNT_BUFFER_SIZE = 32
-	MAX_CLOCK_COUNT = "00000010111110101111000010000000"
-INFO:Xst:1433 - Contents of array <instruction_array> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+	CLOCK_COUNT_BUFFER_SIZE = 25
 Entity <CPU> analyzed. Unit <CPU> generated.
 
 Analyzing Entity <RAM> in library <work> (Architecture <behavioral>).
-INFO:Xst:1432 - Contents of array <ram_i> may be accessed with a negative index, causing simulation mismatch.
-INFO:Xst:1433 - Contents of array <ram_i> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:819 - "C:/Users/aula.ELE.000/Documents/System/_T_/RAM.vhd" line 61: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <initial_ram>
-INFO:Xst:1432 - Contents of array <ram_i> may be accessed with a negative index, causing simulation mismatch.
-INFO:Xst:1433 - Contents of array <ram_i> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <RAM> analyzed. Unit <RAM> generated.
 
 Analyzing generic Entity <ALU> in library <work> (Architecture <behavioral>).
@@ -173,6 +167,7 @@ INFO:Xst:2679 - Register <stateChanged> in unit <LCD> has a constant value of 0 
 Entity <LCD> analyzed. Unit <LCD> generated.
 
 Analyzing Entity <MapChar> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/aula.ELE.000/Documents/System/_T_/MapChar.vhd" line 396: Index value(s) does not match array range, simulation mismatch.
 Entity <MapChar> analyzed. Unit <MapChar> generated.
 
 
@@ -184,21 +179,51 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <RAM>.
     Related source file is "C:/Users/aula.ELE.000/Documents/System/_T_/RAM.vhd".
-WARNING:Xst:646 - Signal <tempAddress<31:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1781 - Signal <initial_ram> is used but never assigned. Tied to default value.
-WARNING:Xst:1780 - Signal <dataOut_next> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <initial_ram> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 5-bit 32-to-1 multiplexer for signal <dataOut>.
-    Found 32-bit register for signal <tempAddress>.
+    Found 5-bit 32-to-1 multiplexer for signal <$varindex0000> created at line 63.
     Summary:
-	inferred 192 D-type flip-flop(s).
-	inferred   5 Multiplexer(s).
+	inferred  10 Multiplexer(s).
 Unit <RAM> synthesized.
 
 
 Synthesizing Unit <ALU>.
     Related source file is "C:/Users/aula.ELE.000/Documents/System/_T_/ALU.vhd".
     Found 5-bit addsub for signal <inResult$addsub0000>.
-    Found 5-bit xor2 for signal <inResult$xor0000> created at line 38.
+    Found 5-bit xor2 for signal <inResult$xor0000> created at line 42.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <ALU> synthesized.
@@ -207,7 +232,11 @@ Unit <ALU> synthesized.
 Synthesizing Unit <MapChar>.
     Related source file is "C:/Users/aula.ELE.000/Documents/System/_T_/MapChar.vhd".
 WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <LEFT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32x12-bit ROM for signal <INSTRUCTION$rom0000>.
+    Found 8-bit 12-to-1 multiplexer for signal <OUTPUT_BUFFER>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   8 Multiplexer(s).
 Unit <MapChar> synthesized.
 
 
@@ -219,9 +248,9 @@ WARNING:Xst:1780 - Signal <charAt> is never used or assigned. This unconnected s
     Found 1-bit register for signal <LCD_RS>.
     Found 5-bit up counter for signal <CHAR_AT>.
     Found 20-bit register for signal <count>.
-    Found 20-bit adder for signal <count_next$addsub0000> created at line 103.
-    Found 20-bit comparator equal for signal <count_next$cmp_eq0000> created at line 103.
-    Found 20-bit subtractor for signal <count_next$sub0000> created at line 103.
+    Found 20-bit adder for signal <count_next$addsub0000> created at line 100.
+    Found 20-bit comparator equal for signal <count_next$cmp_eq0000> created at line 100.
+    Found 20-bit subtractor for signal <count_next$sub0000> created at line 100.
     Found 20-bit register for signal <count_reg>.
     Found 4-bit register for signal <data_buffer>.
     Found 46-bit register for signal <state_next>.
@@ -237,32 +266,31 @@ Unit <LCD> synthesized.
 Synthesizing Unit <CPU>.
     Related source file is "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd".
 WARNING:Xst:1306 - Output <CLK_OUT> is never assigned.
-WARNING:Xst:653 - Signal <writeEnabled> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:1780 - Signal <slow_clk_count> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <result> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <opB> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
-WARNING:Xst:653 - Signal <opA> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
-WARNING:Xst:1781 - Signal <instruction_array> is used but never assigned. Tied to default value.
-WARNING:Xst:653 - Signal <dataIn> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:1780 - Signal <storedRamData> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <address> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:1780 - Signal <INSTRUCTION> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <state_reg>.
-    Found 14x4-bit ROM for signal <$varindex0000> created at line 221.
-    Found 4-bit register for signal <instruction_next>.
-    Found 4-bit register for signal <instruction_reg>.
+    Found 5-bit register for signal <address_next>.
+    Found 5-bit register for signal <dataIn>.
+    Found 5-bit register for signal <instruction_next>.
+    Found 5-bit register for signal <instruction_reg>.
     Found 5-bit register for signal <opcode>.
-    Found 5-bit 14-to-1 multiplexer for signal <opcode$mux0000> created at line 229.
-    Found 5-bit up counter for signal <processCount>.
-    Found 5-bit register for signal <RegistradorIns>.
+    Found 5-bit register for signal <processCount>.
+    Found 5-bit adder for signal <processCount_next$add0000> created at line 136.
+    Found 1-bit register for signal <readingAddress>.
+    Found 5-bit register for signal <reg_A>.
+    Found 5-bit addsub for signal <reg_A$addsub0000>.
+    Found 5-bit register for signal <reg_B>.
+    Found 5-bit addsub for signal <reg_B$addsub0000>.
     Found 1-bit register for signal <slow_clk>.
-    Found 32-bit adder for signal <slow_clk_count_next$addsub0000> created at line 167.
-    Found 32-bit register for signal <slow_clk_count_reg>.
+    Found 25-bit up counter for signal <slow_clk_count_reg>.
     Found 6-bit register for signal <state_next>.
     Found 6-bit register for signal <state_reg>.
+    Found 1-bit register for signal <writeEnabled>.
     Summary:
-	inferred   1 ROM(s).
 	inferred   1 Counter(s).
-	inferred  63 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred   5 Multiplexer(s).
+	inferred  55 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
 Unit <CPU> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -272,27 +300,29 @@ HDL Synthesis Report
 
 Macro Statistics
 # ROMs                                                 : 1
- 14x4-bit ROM                                          : 1
-# Adders/Subtractors                                   : 4
+ 32x12-bit ROM                                         : 1
+# Adders/Subtractors                                   : 6
  20-bit adder                                          : 1
  20-bit subtractor                                     : 1
- 32-bit adder                                          : 1
- 5-bit addsub                                          : 1
+ 5-bit adder                                           : 1
+ 5-bit addsub                                          : 3
 # Counters                                             : 2
- 5-bit up counter                                      : 2
-# Registers                                            : 176
- 1-bit register                                        : 163
+ 25-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 20
+ 1-bit register                                        : 5
  20-bit register                                       : 2
- 32-bit register                                       : 2
- 4-bit register                                        : 3
+ 4-bit register                                        : 1
  46-bit register                                       : 2
- 5-bit register                                        : 2
+ 5-bit register                                        : 8
  6-bit register                                        : 2
+# Latches                                              : 32
+ 5-bit latch                                           : 32
 # Comparators                                          : 1
  20-bit comparator equal                               : 1
-# Multiplexers                                         : 2
- 5-bit 14-to-1 multiplexer                             : 1
- 5-bit 32-to-1 multiplexer                             : 1
+# Multiplexers                                         : 10
+ 1-bit 12-to-1 multiplexer                             : 8
+ 5-bit 32-to-1 multiplexer                             : 2
 # Xors                                                 : 1
  5-bit xor2                                            : 1
 
@@ -302,115 +332,198 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <ram_i<0>_4> in Unit <u_RAM> is equivalent to the following 24 FFs/Latches, which will be removed : <ram_i<11>_4> <ram_i<2>_4> <ram_i<12>_4> <ram_i<3>_4> <ram_i<14>_4> <ram_i<5>_4> <ram_i<15>_4> <ram_i<20>_4> <ram_i<6>_4> <ram_i<21>_4> <ram_i<17>_4> <ram_i<22>_4> <ram_i<8>_4> <ram_i<18>_4> <ram_i<23>_4> <ram_i<9>_4> <ram_i<19>_4> <ram_i<24>_4> <ram_i<25>_4> <ram_i<30>_4> <ram_i<26>_4> <ram_i<27>_4> <ram_i<28>_4> <ram_i<29>_4> 
-INFO:Xst:2261 - The FF/Latch <ram_i<0>_1> in Unit <u_RAM> is equivalent to the following 16 FFs/Latches, which will be removed : <ram_i<1>_1> <ram_i<2>_1> <ram_i<3>_1> <ram_i<4>_1> <ram_i<5>_1> <ram_i<20>_1> <ram_i<21>_1> <ram_i<22>_1> <ram_i<18>_1> <ram_i<23>_1> <ram_i<19>_1> <ram_i<24>_1> <ram_i<25>_1> <ram_i<26>_1> <ram_i<31>_1> <ram_i<27>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<0>_0> in Unit <u_RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<1>_0> <ram_i<3>_0> <ram_i<5>_0> <ram_i<31>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<10>_4> in Unit <u_RAM> is equivalent to the following 6 FFs/Latches, which will be removed : <ram_i<1>_4> <ram_i<13>_4> <ram_i<4>_4> <ram_i<16>_4> <ram_i<7>_4> <ram_i<31>_4> 
-INFO:Xst:2261 - The FF/Latch <ram_i<0>_2> in Unit <u_RAM> is equivalent to the following 18 FFs/Latches, which will be removed : <ram_i<12>_2> <ram_i<3>_2> <ram_i<15>_2> <ram_i<20>_2> <ram_i<6>_2> <ram_i<21>_2> <ram_i<22>_2> <ram_i<18>_2> <ram_i<23>_2> <ram_i<9>_2> <ram_i<19>_2> <ram_i<24>_2> <ram_i<25>_2> <ram_i<30>_2> <ram_i<26>_2> <ram_i<27>_2> <ram_i<28>_2> <ram_i<29>_2> 
-INFO:Xst:2261 - The FF/Latch <ram_i<10>_3> in Unit <u_RAM> is equivalent to the following 6 FFs/Latches, which will be removed : <ram_i<1>_3> <ram_i<13>_3> <ram_i<4>_3> <ram_i<16>_3> <ram_i<7>_3> <ram_i<17>_3> 
-INFO:Xst:2261 - The FF/Latch <ram_i<0>_3> in Unit <u_RAM> is equivalent to the following 24 FFs/Latches, which will be removed : <ram_i<11>_3> <ram_i<2>_3> <ram_i<12>_3> <ram_i<3>_3> <ram_i<14>_3> <ram_i<5>_3> <ram_i<15>_3> <ram_i<20>_3> <ram_i<6>_3> <ram_i<21>_3> <ram_i<22>_3> <ram_i<8>_3> <ram_i<18>_3> <ram_i<23>_3> <ram_i<9>_3> <ram_i<19>_3> <ram_i<24>_3> <ram_i<25>_3> <ram_i<30>_3> <ram_i<26>_3> <ram_i<31>_3> <ram_i<27>_3> <ram_i<28>_3> <ram_i<29>_3> 
-INFO:Xst:2261 - The FF/Latch <ram_i<10>_0> in Unit <u_RAM> is equivalent to the following 26 FFs/Latches, which will be removed : <ram_i<11>_0> <ram_i<2>_0> <ram_i<12>_0> <ram_i<13>_0> <ram_i<4>_0> <ram_i<14>_0> <ram_i<15>_0> <ram_i<20>_0> <ram_i<6>_0> <ram_i<16>_0> <ram_i<21>_0> <ram_i<7>_0> <ram_i<17>_0> <ram_i<22>_0> <ram_i<8>_0> <ram_i<18>_0> <ram_i<23>_0> <ram_i<9>_0> <ram_i<19>_0> <ram_i<24>_0> <ram_i<25>_0> <ram_i<30>_0> <ram_i<26>_0> <ram_i<27>_0> <ram_i<28>_0> <ram_i<29>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<10>_2> in Unit <u_RAM> is equivalent to the following 12 FFs/Latches, which will be removed : <ram_i<1>_2> <ram_i<11>_2> <ram_i<2>_2> <ram_i<13>_2> <ram_i<4>_2> <ram_i<14>_2> <ram_i<5>_2> <ram_i<16>_2> <ram_i<7>_2> <ram_i<17>_2> <ram_i<8>_2> <ram_i<31>_2> 
-INFO:Xst:2261 - The FF/Latch <ram_i<10>_1> in Unit <u_RAM> is equivalent to the following 14 FFs/Latches, which will be removed : <ram_i<11>_1> <ram_i<12>_1> <ram_i<13>_1> <ram_i<14>_1> <ram_i<15>_1> <ram_i<6>_1> <ram_i<16>_1> <ram_i<7>_1> <ram_i<17>_1> <ram_i<8>_1> <ram_i<9>_1> <ram_i<30>_1> <ram_i<28>_1> <ram_i<29>_1> 
-WARNING:Xst:1710 - FF/Latch <ram_i<0>_3> (without init value) has a constant value of 0 in block <u_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ram_i<0>_4> (without init value) has a constant value of 0 in block <u_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ram_i<0>_2> (without init value) has a constant value of 0 in block <u_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ram_i<0>_1> (without init value) has a constant value of 0 in block <u_RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ram_i<10>_0> (without init value) has a constant value of 0 in block <u_RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <count_0> has a constant value of 0 in block <u_LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <count_15> has a constant value of 0 in block <u_LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <count_18> has a constant value of 0 in block <u_LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <tempAddress_5> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_6> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_7> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_8> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_9> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_10> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_11> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_12> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_13> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_14> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_15> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_16> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_17> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_18> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_19> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_20> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_21> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_22> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_23> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_24> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_25> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_26> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_27> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_28> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_29> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_30> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <tempAddress_31> of sequential type is unconnected in block <u_RAM>.
-WARNING:Xst:2677 - Node <state_reg_0> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <state_reg_4> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <state_reg_5> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <opcode_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <state_next_0> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <state_next_4> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <state_next_5> of sequential type is unconnected in block <CPU>.
-
-Synthesizing (advanced) Unit <CPU>.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom__varindex0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-Unit <CPU> synthesized (advanced).
-WARNING:Xst:2677 - Node <tempAddress_5> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_6> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_7> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_8> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_9> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_10> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_11> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_12> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_13> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_14> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_15> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_16> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_17> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_18> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_19> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_20> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_21> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_22> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_23> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_24> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_25> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_26> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_27> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_28> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_29> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_30> of sequential type is unconnected in block <RAM>.
-WARNING:Xst:2677 - Node <tempAddress_31> of sequential type is unconnected in block <RAM>.
 WARNING:Xst:2677 - Node <state_reg_0> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <state_reg_4> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <state_reg_5> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <0>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <1>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <2>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <3>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
 WARNING:Xst:2677 - Node <state_next_0> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <state_next_4> of sequential type is unconnected in block <CPU>.
-WARNING:Xst:2677 - Node <state_next_5> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <state_reg_0> of sequential type is unconnected in block <CPU>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # ROMs                                                 : 1
- 14x4-bit ROM                                          : 1
-# Adders/Subtractors                                   : 4
+ 32x12-bit ROM                                         : 1
+# Adders/Subtractors                                   : 6
  20-bit adder                                          : 1
  20-bit subtractor                                     : 1
- 32-bit adder                                          : 1
- 5-bit addsub                                          : 1
+ 5-bit adder                                           : 1
+ 5-bit addsub                                          : 3
 # Counters                                             : 2
- 5-bit up counter                                      : 2
-# Registers                                            : 360
- Flip-Flops                                            : 360
+ 25-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 191
+ Flip-Flops                                            : 191
+# Latches                                              : 32
+ 5-bit latch                                           : 32
 # Comparators                                          : 1
  20-bit comparator equal                               : 1
-# Multiplexers                                         : 2
- 5-bit 14-to-1 multiplexer                             : 1
- 5-bit 32-to-1 multiplexer                             : 1
+# Multiplexers                                         : 10
+ 1-bit 12-to-1 multiplexer                             : 8
+ 5-bit 32-to-1 multiplexer                             : 2
 # Xors                                                 : 1
  5-bit xor2                                            : 1
 
@@ -422,101 +535,66 @@ Macro Statistics
 WARNING:Xst:1293 - FF/Latch <count_0> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_15> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_18> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <ram_i<20>_2> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<20>_4> <ram_i<20>_3> <ram_i<20>_1> <ram_i<20>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<2>_4> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<2>_3> <ram_i<2>_1> <ram_i<2>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<14>_4> in Unit <RAM> is equivalent to the following 2 FFs/Latches, which will be removed : <ram_i<14>_3> <ram_i<14>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<17>_1> in Unit <RAM> is equivalent to the following 2 FFs/Latches, which will be removed : <ram_i<17>_3> <ram_i<17>_2> 
-INFO:Xst:2261 - The FF/Latch <ram_i<16>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<16>_4> <ram_i<16>_3> <ram_i<16>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<8>_1> in Unit <RAM> is equivalent to the following FF/Latch, which will be removed : <ram_i<8>_2> 
-INFO:Xst:2261 - The FF/Latch <ram_i<4>_2> in Unit <RAM> is equivalent to the following 2 FFs/Latches, which will be removed : <ram_i<4>_4> <ram_i<4>_3> 
-INFO:Xst:2261 - The FF/Latch <ram_i<25>_4> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<25>_1> <ram_i<25>_3> <ram_i<25>_2> <ram_i<25>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<28>_4> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<28>_3> <ram_i<28>_2> <ram_i<28>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<17>_4> in Unit <RAM> is equivalent to the following FF/Latch, which will be removed : <ram_i<17>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<9>_4> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<9>_3> <ram_i<9>_2> <ram_i<9>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<4>_1> in Unit <RAM> is equivalent to the following FF/Latch, which will be removed : <ram_i<4>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<26>_4> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<26>_1> <ram_i<26>_3> <ram_i<26>_2> <ram_i<26>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<0>_3> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<0>_4> <ram_i<0>_2> <ram_i<0>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<5>_2> in Unit <RAM> is equivalent to the following FF/Latch, which will be removed : <ram_i<5>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<1>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<1>_4> <ram_i<1>_3> <ram_i<1>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<6>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<6>_4> <ram_i<6>_3> <ram_i<6>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<22>_4> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<22>_1> <ram_i<22>_3> <ram_i<22>_2> <ram_i<22>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<12>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<12>_4> <ram_i<12>_3> <ram_i<12>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<5>_4> in Unit <RAM> is equivalent to the following 2 FFs/Latches, which will be removed : <ram_i<5>_3> <ram_i<5>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<13>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<13>_4> <ram_i<13>_3> <ram_i<13>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<19>_4> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<19>_1> <ram_i<19>_3> <ram_i<19>_2> <ram_i<19>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<31>_1> in Unit <RAM> is equivalent to the following FF/Latch, which will be removed : <ram_i<31>_3> 
-INFO:Xst:2261 - The FF/Latch <ram_i<21>_2> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<21>_4> <ram_i<21>_3> <ram_i<21>_1> <ram_i<21>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<18>_4> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<18>_1> <ram_i<18>_3> <ram_i<18>_2> <ram_i<18>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<11>_2> in Unit <RAM> is equivalent to the following FF/Latch, which will be removed : <ram_i<11>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<8>_4> in Unit <RAM> is equivalent to the following 2 FFs/Latches, which will be removed : <ram_i<8>_3> <ram_i<8>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<3>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<3>_4> <ram_i<3>_3> <ram_i<3>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<15>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<15>_4> <ram_i<15>_3> <ram_i<15>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<11>_4> in Unit <RAM> is equivalent to the following 2 FFs/Latches, which will be removed : <ram_i<11>_3> <ram_i<11>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<7>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<7>_4> <ram_i<7>_3> <ram_i<7>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<24>_4> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<24>_1> <ram_i<24>_3> <ram_i<24>_2> <ram_i<24>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<27>_4> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<27>_1> <ram_i<27>_3> <ram_i<27>_2> <ram_i<27>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<23>_4> in Unit <RAM> is equivalent to the following 4 FFs/Latches, which will be removed : <ram_i<23>_1> <ram_i<23>_3> <ram_i<23>_2> <ram_i<23>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<31>_4> in Unit <RAM> is equivalent to the following 2 FFs/Latches, which will be removed : <ram_i<31>_2> <ram_i<31>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<30>_4> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<30>_3> <ram_i<30>_2> <ram_i<30>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<29>_4> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<29>_3> <ram_i<29>_2> <ram_i<29>_0> 
-INFO:Xst:2261 - The FF/Latch <ram_i<14>_2> in Unit <RAM> is equivalent to the following FF/Latch, which will be removed : <ram_i<14>_1> 
-INFO:Xst:2261 - The FF/Latch <ram_i<10>_2> in Unit <RAM> is equivalent to the following 3 FFs/Latches, which will be removed : <ram_i<10>_4> <ram_i<10>_3> <ram_i<10>_1> 
-WARNING:Xst:1710 - FF/Latch <ram_i<29>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<28>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<27>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<31>_1> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<26>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<30>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<25>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<24>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<19>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<9>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<23>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<18>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<8>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<22>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<7>_0> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<17>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<21>_2> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<16>_0> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<6>_2> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<20>_2> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<15>_2> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<5>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<14>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<4>_1> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<13>_0> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<3>_2> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<12>_2> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<2>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<11>_4> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<1>_1> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<10>_0> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ram_i<0>_3> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <ram_i<0>_0> in Unit <RAM> is equivalent to the following 21 FFs/Latches, which will be removed : <ram_i<10>_2> <ram_i<1>_2> <ram_i<11>_2> <ram_i<2>_2> <ram_i<12>_1> <ram_i<3>_0> <ram_i<13>_2> <ram_i<4>_2> <ram_i<14>_2> <ram_i<5>_2> <ram_i<15>_1> <ram_i<6>_1> <ram_i<16>_2> <ram_i<7>_2> <ram_i<17>_1> <ram_i<8>_1> <ram_i<9>_1> <ram_i<30>_1> <ram_i<31>_4> <ram_i<28>_1> <ram_i<29>_1> 
+WARNING:Xst:1293 - FF/Latch <opcode_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ram_i_27_1> in Unit <RAM> is equivalent to the following 14 FFs/Latches, which will be removed : <ram_i_26_1> <ram_i_25_1> <ram_i_24_1> <ram_i_23_1> <ram_i_22_1> <ram_i_21_1> <ram_i_20_1> <ram_i_19_1> <ram_i_18_1> <ram_i_5_1> <ram_i_4_1> <ram_i_3_1> <ram_i_2_1> <ram_i_1_1> 
+INFO:Xst:2261 - The FF/Latch <ram_i_30_1> in Unit <RAM> is equivalent to the following 14 FFs/Latches, which will be removed : <ram_i_29_1> <ram_i_28_1> <ram_i_17_1> <ram_i_16_1> <ram_i_15_1> <ram_i_14_1> <ram_i_13_1> <ram_i_12_1> <ram_i_11_1> <ram_i_10_1> <ram_i_9_1> <ram_i_8_1> <ram_i_7_1> <ram_i_6_1> 
+INFO:Xst:2261 - The FF/Latch <ram_i_30_2> in Unit <RAM> is equivalent to the following 17 FFs/Latches, which will be removed : <ram_i_29_2> <ram_i_28_2> <ram_i_27_2> <ram_i_26_2> <ram_i_25_2> <ram_i_24_2> <ram_i_23_2> <ram_i_22_2> <ram_i_21_2> <ram_i_20_2> <ram_i_19_2> <ram_i_18_2> <ram_i_15_2> <ram_i_12_2> <ram_i_9_2> <ram_i_6_2> <ram_i_3_2> 
+INFO:Xst:2261 - The FF/Latch <ram_i_17_2> in Unit <RAM> is equivalent to the following 11 FFs/Latches, which will be removed : <ram_i_16_2> <ram_i_14_2> <ram_i_13_2> <ram_i_11_2> <ram_i_10_2> <ram_i_8_2> <ram_i_7_2> <ram_i_5_2> <ram_i_4_2> <ram_i_2_2> <ram_i_1_2> 
+INFO:Xst:2261 - The FF/Latch <ram_i_30_3> in Unit <RAM> is equivalent to the following 22 FFs/Latches, which will be removed : <ram_i_29_3> <ram_i_28_3> <ram_i_27_3> <ram_i_26_3> <ram_i_25_3> <ram_i_24_3> <ram_i_23_3> <ram_i_22_3> <ram_i_21_3> <ram_i_20_3> <ram_i_19_3> <ram_i_18_3> <ram_i_15_3> <ram_i_14_3> <ram_i_12_3> <ram_i_11_3> <ram_i_9_3> <ram_i_8_3> <ram_i_6_3> <ram_i_5_3> <ram_i_3_3> <ram_i_2_3> 
+INFO:Xst:2261 - The FF/Latch <ram_i_17_3> in Unit <RAM> is equivalent to the following 6 FFs/Latches, which will be removed : <ram_i_16_3> <ram_i_13_3> <ram_i_10_3> <ram_i_7_3> <ram_i_4_3> <ram_i_1_3> 
+INFO:Xst:2261 - The FF/Latch <ram_i_30_0> in Unit <RAM> is equivalent to the following 26 FFs/Latches, which will be removed : <ram_i_29_0> <ram_i_28_0> <ram_i_27_0> <ram_i_26_0> <ram_i_25_0> <ram_i_24_0> <ram_i_23_0> <ram_i_22_0> <ram_i_21_0> <ram_i_20_0> <ram_i_19_0> <ram_i_18_0> <ram_i_17_0> <ram_i_16_0> <ram_i_15_0> <ram_i_14_0> <ram_i_13_0> <ram_i_12_0> <ram_i_11_0> <ram_i_10_0> <ram_i_9_0> <ram_i_8_0> <ram_i_7_0> <ram_i_6_0> <ram_i_4_0> <ram_i_2_0> 
+INFO:Xst:2261 - The FF/Latch <ram_i_5_0> in Unit <RAM> is equivalent to the following 2 FFs/Latches, which will be removed : <ram_i_3_0> <ram_i_1_0> 
+INFO:Xst:2261 - The FF/Latch <ram_i_30_4> in Unit <RAM> is equivalent to the following 23 FFs/Latches, which will be removed : <ram_i_29_4> <ram_i_28_4> <ram_i_27_4> <ram_i_26_4> <ram_i_25_4> <ram_i_24_4> <ram_i_23_4> <ram_i_22_4> <ram_i_21_4> <ram_i_20_4> <ram_i_19_4> <ram_i_18_4> <ram_i_17_4> <ram_i_15_4> <ram_i_14_4> <ram_i_12_4> <ram_i_11_4> <ram_i_9_4> <ram_i_8_4> <ram_i_6_4> <ram_i_5_4> <ram_i_3_4> <ram_i_2_4> 
+INFO:Xst:2261 - The FF/Latch <ram_i_16_4> in Unit <RAM> is equivalent to the following 5 FFs/Latches, which will be removed : <ram_i_13_4> <ram_i_10_4> <ram_i_7_4> <ram_i_4_4> <ram_i_1_4> 
+WARNING:Xst:1293 - FF/Latch <ram_i_31_0> has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_31_1> has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_31_2> has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_31_3> has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_31_4> has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_30_0> has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_30_1> has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_30_2> has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_30_3> has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_30_4> has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_27_1> has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_17_2> has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_17_3> has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_16_4> has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_i_5_0> has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <ram_i_0_0> is equivalent to a wire in block <RAM>.
+WARNING:Xst:1294 - Latch <ram_i_0_1> is equivalent to a wire in block <RAM>.
+WARNING:Xst:1294 - Latch <ram_i_0_2> is equivalent to a wire in block <RAM>.
+WARNING:Xst:1294 - Latch <ram_i_0_3> is equivalent to a wire in block <RAM>.
+WARNING:Xst:1294 - Latch <ram_i_0_4> is equivalent to a wire in block <RAM>.
 WARNING:Xst:1293 - FF/Latch <state_next_6> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_reg_6> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <state_next_3> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_reg_3> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: Mmux__varindex000011, ram_i<0><4>, Mmux__varindex000012, _varindex0000<4>.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: ram_i<0><3>, _varindex0000<3>, Mmux__varindex000010, Mmux__varindex00009.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: ram_i<0><2>, Mmux__varindex00005, Mmux__varindex00007, _varindex0000<2>, Mmux__varindex00004.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: ram_i<0><1>, _varindex0000<1>, Mmux__varindex00002.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: Mmux__varindex0000, Mmux__varindex00001, ram_i<0><0>, _varindex0000<0>.
 
 Optimizing unit <CPU> ...
-WARNING:Xst:1293 - FF/Latch <opcode_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <opcode_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <opcode_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <opcode_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <ALU> ...
 
 Optimizing unit <MapChar> ...
 
 Optimizing unit <RAM> ...
 
-Optimizing unit <ALU> ...
-
 Optimizing unit <LCD> ...
-WARNING:Xst:2677 - Node <opcode_0> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <slow_clk> of sequential type is unconnected in block <CPU>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 4.
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 7.
+FlipFlop instruction_reg_0 has been replicated 2 time(s)
+FlipFlop instruction_reg_1 has been replicated 2 time(s)
+FlipFlop instruction_reg_2 has been replicated 2 time(s)
+FlipFlop instruction_reg_4 has been replicated 1 time(s)
+FlipFlop u_LCD/state_reg_0 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -524,8 +602,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 202
- Flip-Flops                                            : 202
+# Registers                                            : 220
+ Flip-Flops                                            : 220
 
 =========================================================================
 
@@ -554,32 +632,30 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 545
+# BELS                             : 855
 #      GND                         : 1
 #      INV                         : 23
-#      LUT1                        : 51
-#      LUT2                        : 49
-#      LUT2_L                      : 1
-#      LUT3                        : 39
-#      LUT3_D                      : 2
-#      LUT3_L                      : 1
-#      LUT4                        : 145
-#      LUT4_D                      : 7
-#      LUT4_L                      : 35
-#      MUXCY                       : 87
-#      MUXF5                       : 30
-#      MUXF6                       : 1
-#      MUXF7                       : 1
+#      LUT1                        : 44
+#      LUT2                        : 82
+#      LUT2_D                      : 5
+#      LUT2_L                      : 3
+#      LUT3                        : 94
+#      LUT3_D                      : 4
+#      LUT3_L                      : 6
+#      LUT4                        : 292
+#      LUT4_D                      : 16
+#      LUT4_L                      : 48
+#      MUXCY                       : 83
+#      MUXF5                       : 80
+#      MUXF6                       : 4
 #      VCC                         : 1
-#      XORCY                       : 71
-# FlipFlops/Latches                : 202
-#      FD                          : 44
+#      XORCY                       : 69
+# FlipFlops/Latches                : 220
+#      FD                          : 70
 #      FD_1                        : 43
-#      FDC                         : 5
-#      FDCPE                       : 1
-#      FDE                         : 13
-#      FDE_1                       : 15
-#      FDR                         : 52
+#      FDE                         : 17
+#      FDE_1                       : 41
+#      FDR                         : 20
 #      FDR_1                       : 1
 #      FDRE                        : 5
 #      FDS_1                       : 23
@@ -595,9 +671,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      204  out of   4656     4%  
- Number of Slice Flip Flops:            202  out of   9312     2%  
- Number of 4 input LUTs:                353  out of   9312     3%  
+ Number of Slices:                      329  out of   4656     7%  
+ Number of Slice Flip Flops:            220  out of   9312     2%  
+ Number of 4 input LUTs:                617  out of   9312     6%  
  Number of IOs:                          18
  Number of bonded IOBs:                  17  out of    232     7%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -623,28 +699,21 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 196   |
-slow_clk                           | NONE(u_RAM/ram_i<0>_0) | 6     |
+CLK                                | BUFGP                  | 220   |
 -----------------------------------+------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+------------------------+-------+
-Control Signal                     | Buffer(FF name)        | Load  |
------------------------------------+------------------------+-------+
-RESET                              | IBUF                   | 6     |
-N0(XST_GND:G)                      | NONE(u_RAM/ram_i<0>_0) | 1     |
------------------------------------+------------------------+-------+
+No asynchronous control signals found in this design
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 16.852ns (Maximum Frequency: 59.340MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 5.749ns
-   Maximum combinational path delay: No path found
+   Minimum period: 17.825ns (Maximum Frequency: 56.101MHz)
+   Minimum input arrival time before clock: 8.210ns
+   Maximum output required time after clock: 14.059ns
+   Maximum combinational path delay: 6.884ns
 
 Timing Detail:
 --------------
@@ -652,62 +721,118 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 16.852ns (frequency: 59.340MHz)
-  Total number of paths / destination ports: 27824 / 310
+  Clock period: 17.825ns (frequency: 56.101MHz)
+  Total number of paths / destination ports: 30377 / 332
 -------------------------------------------------------------------------
-Delay:               8.426ns (Levels of Logic = 6)
-  Source:            u_LCD/state_reg_33 (FF)
-  Destination:       u_LCD/state_next_44 (FF)
+Delay:               8.912ns (Levels of Logic = 8)
+  Source:            instruction_reg_3 (FF)
+  Destination:       u_LCD/data_buffer_1 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK falling
 
-  Data Path: u_LCD/state_reg_33 to u_LCD/state_next_44
+  Data Path: instruction_reg_3 to u_LCD/data_buffer_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              11   0.591   0.968  u_LCD/state_reg_33 (u_LCD/state_reg_33)
-     LUT4:I2->O            2   0.704   0.526  u_LCD/count_mux0000<1>19 (u_LCD/count_mux0000<1>19)
-     LUT4:I1->O           14   0.704   1.035  u_LCD/count_mux0000<3>21 (u_LCD/N56)
-     LUT3_D:I2->O          3   0.704   0.535  u_LCD/state_next_mux0001<10>112136 (u_LCD/N82)
-     LUT4:I3->O            2   0.704   0.622  u_LCD/state_next_mux0001<16>11 (u_LCD/N50)
-     LUT4:I0->O            1   0.704   0.000  u_LCD/state_next_mux0001<7>2 (u_LCD/state_next_mux0001<7>2)
-     MUXF5:I0->O           1   0.321   0.000  u_LCD/state_next_mux0001<7>_f5 (u_LCD/state_next_mux0001<7>)
-     FD_1:D                    0.308          u_LCD/state_next_38
+     FDE:C->Q             93   0.591   1.285  instruction_reg_3 (instruction_reg_3)
+     LUT4:I3->O            1   0.704   0.424  u_LCD/u_MapChar/OUTPUT_BUFFER_1_or0001_SW0 (N179)
+     LUT4:I3->O            1   0.704   0.000  u_LCD/u_MapChar/OUTPUT_BUFFER_1_or0001_F (N474)
+     MUXF5:I0->O           1   0.321   0.424  u_LCD/u_MapChar/OUTPUT_BUFFER_1_or0001 (u_LCD/u_MapChar/OUTPUT_BUFFER_1_or0001)
+     LUT4:I3->O            1   0.704   0.000  u_LCD/u_MapChar/Mmux_OUTPUT_BUFFER<1>_9 (u_LCD/u_MapChar/Mmux_OUTPUT_BUFFER<1>_9)
+     MUXF5:I0->O           1   0.321   0.455  u_LCD/u_MapChar/Mmux_OUTPUT_BUFFER<1>_7_f5 (u_LCD/u_MapChar/Mmux_OUTPUT_BUFFER<1>_7_f5)
+     LUT3_L:I2->LO         1   0.704   0.104  u_LCD/data_buffer_mux0000<1>89_SW0 (N368)
+     LUT4:I3->O            1   0.704   0.455  u_LCD/data_buffer_mux0000<1>89 (u_LCD/data_buffer_mux0000<1>89)
+     LUT3:I2->O            1   0.704   0.000  u_LCD/data_buffer_mux0000<1>1281 (u_LCD/data_buffer_mux0000<1>128)
+     FDS_1:D                   0.308          u_LCD/data_buffer_1
     ----------------------------------------
-    Total                      8.426ns (4.740ns logic, 3.686ns route)
-                                       (56.3% logic, 43.7% route)
+    Total                      8.912ns (5.765ns logic, 3.147ns route)
+                                       (64.7% logic, 35.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 72 / 15
+-------------------------------------------------------------------------
+Offset:              8.210ns (Levels of Logic = 6)
+  Source:            RESET (PAD)
+  Destination:       processCount_1 (FF)
+  Destination Clock: CLK falling
+
+  Data Path: RESET to processCount_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.218   1.243  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.704   0.451  u_ALU/zero275 (ZERO_OBUF)
+     LUT4:I3->O            1   0.704   0.455  processCount_mux0002<0>166 (processCount_mux0002<0>166)
+     LUT3:I2->O            1   0.704   0.424  processCount_mux0002<0>1108_SW0 (N410)
+     LUT4_D:I3->O          4   0.704   0.591  processCount_mux0002<0>1108 (N01)
+     LUT4:I3->O            1   0.704   0.000  processCount_mux0002<3>1 (processCount_mux0002<3>)
+     FDE_1:D                   0.308          processCount_3
+    ----------------------------------------
+    Total                      8.210ns (5.046ns logic, 3.164ns route)
+                                       (61.5% logic, 38.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 17 / 13
+  Total number of paths / destination ports: 319 / 8
 -------------------------------------------------------------------------
-Offset:              5.749ns (Levels of Logic = 2)
+Offset:              14.059ns (Levels of Logic = 13)
   Source:            opcode_1 (FF)
-  Destination:       NEGATIVE (PAD)
+  Destination:       ZERO (PAD)
   Source Clock:      CLK falling
 
-  Data Path: opcode_1 to NEGATIVE
+  Data Path: opcode_1 to ZERO
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE_1:C->Q            4   0.591   0.762  opcode_1 (opcode_1)
-     LUT3:I0->O            1   0.704   0.420  u_ALU/inResult<1>11 (NEGATIVE_OBUF)
-     OBUF:I->O                 3.272          NEGATIVE_OBUF (NEGATIVE)
+     FDE_1:C->Q           22   0.591   1.339  opcode_1 (opcode_1)
+     LUT2_L:I0->LO         1   0.704   0.104  u_ALU/inResult_mux0000<0>_SW0 (N31)
+     LUT4:I3->O            1   0.704   0.455  u_ALU/inResult_mux0000<0> (u_ALU/inResult_mux0000<0>)
+     LUT3:I2->O            1   0.704   0.000  u_ALU/Maddsub_inResult_addsub0000_lut<0> (u_ALU/Maddsub_inResult_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  u_ALU/Maddsub_inResult_addsub0000_cy<0> (u_ALU/Maddsub_inResult_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  u_ALU/Maddsub_inResult_addsub0000_cy<1> (u_ALU/Maddsub_inResult_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  u_ALU/Maddsub_inResult_addsub0000_cy<2> (u_ALU/Maddsub_inResult_addsub0000_cy<2>)
+     MUXCY:CI->O           0   0.059   0.000  u_ALU/Maddsub_inResult_addsub0000_cy<3> (u_ALU/Maddsub_inResult_addsub0000_cy<3>)
+     XORCY:CI->O           2   0.804   0.526  u_ALU/Maddsub_inResult_addsub0000_xor<4> (u_ALU/inResult_addsub0000<4>)
+     LUT2:I1->O            1   0.704   0.424  u_ALU/zero197_SW0 (N408)
+     LUT4_L:I3->LO         1   0.704   0.104  u_ALU/zero197 (u_ALU/zero197)
+     LUT4:I3->O            1   0.704   0.424  u_ALU/zero275_SW0 (N372)
+     LUT4:I3->O            2   0.704   0.447  u_ALU/zero275 (ZERO_OBUF)
+     OBUF:I->O                 3.272          ZERO_OBUF (ZERO)
     ----------------------------------------
-    Total                      5.749ns (4.567ns logic, 1.182ns route)
-                                       (79.4% logic, 20.6% route)
+    Total                     14.059ns (10.236ns logic, 3.823ns route)
+                                       (72.8% logic, 27.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               6.884ns (Levels of Logic = 3)
+  Source:            RESET (PAD)
+  Destination:       ZERO (PAD)
+
+  Data Path: RESET to ZERO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.218   1.243  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.704   0.447  u_ALU/zero275 (ZERO_OBUF)
+     OBUF:I->O                 3.272          ZERO_OBUF (ZERO)
+    ----------------------------------------
+    Total                      6.884ns (5.194ns logic, 1.690ns route)
+                                       (75.5% logic, 24.5% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.59 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.78 secs
  
 --> 
 
-Total memory usage is 4489648 kilobytes
+Total memory usage is 4505928 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  140 (   0 filtered)
-Number of infos    :   60 (   0 filtered)
+Number of warnings :  253 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 

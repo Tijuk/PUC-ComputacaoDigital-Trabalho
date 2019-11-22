@@ -217,3 +217,332 @@ map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter"
 par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
 trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
 bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -ifn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.xst" -ofn "C:/Users/aula.ELE.000/Documents/System/_T_/CPU.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s500e-fg320-4 CPU.ngc CPU.ngd  
+map -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
+par -filter "C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter" -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+trce -filter C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf constraints.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f CPU.ut CPU.ncd 

@@ -51,6 +51,7 @@ architecture Behavioral of LCD is
 
 		-- Idle State
 		idle);
+		
 	signal state_reg, state_next : state := initial;
 	signal count: unsigned((N-1) downto 0) := to_unsigned(750000, N);
 	signal count_next, count_reg : unsigned ((N-1) downto 0) := to_unsigned(0,N);
@@ -64,25 +65,21 @@ architecture Behavioral of LCD is
 			CLK: in std_logic;
 			INSTRUCTION: in integer range 0 to 31;
 			CHAR_AT: in unsigned(4 downto 0);
-			LEFT: in std_logic;
 			OUTPUT_BUFFER: out std_logic_vector(7 downto 0)
 		);
 	end component;
 
 	signal CHAR_AT : unsigned(4 downto 0) := to_unsigned(0, 5);
-	signal LEFT : std_logic := '0';
 	signal OUTPUT_BUFFER: std_logic_vector(7 downto 0) := (others => '0');
 
 	signal stateChanged : std_logic := '0';
 
 begin
-	LEFT <= '0' when state_reg = writingChar_6 else '1';
 	
 	u_MapChar : MapChar port map (
 		CLK => CLK,
 		INSTRUCTION => INSTRUCTION,
 		CHAR_AT => CHAR_AT,
-		LEFT => LEFT,
 		OUTPUT_BUFFER => OUTPUT_BUFFER
 	);
 
