@@ -42,14 +42,10 @@ architecture Behavioral of CPU is
 	constant dec_a 					: integer range 0 to 31 := 18; -- std_logic_vector(4 downto 0) := "10010";
 	constant dec_b 					: integer range 0 to 31 := 19; -- std_logic_vector(4 downto 0) := "10011";
 
-	type cpuState is (
-		start,
-		reading,
-		processInstruction,
-		running,
-		loadResult,
-		haltState
-	);
+	type cpuState is (start, leitura, interpreta_instrucao, pega_endereco,
+					 mov_a_from_end, mov_end_from_a, mov_a_from_b, mov_b_from_a, 
+					 add_a_to_b, sub_a_to_b, and_a_b, or_a_b, xor_a_b, load_result,
+					 not_a, nand_a_b, jz_end, jn_end, halt)
 
 	signal slow_clk : std_logic := '0';
 	signal slow_clk_tick: std_logic := '0';
@@ -130,7 +126,6 @@ begin
 	);
 
 	slow_clk_count_next <= slow_clk_count_reg + 1;
-	processCount_next <= processCount + 1;
 	slow_clk_tick <= '1' when slow_clk_count_reg = to_unsigned(0, CLOCK_COUNT_BUFFER_SIZE) else '0';
 
 	u_ALU: ALU port map (
