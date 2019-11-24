@@ -3,21 +3,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity ALU is
-end ALU;
-
-architecture Behavioral of ALU is
-
-begin
-
-
-end Behavioral;
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
-use IEEE.NUMERIC_STD.ALL;
-
-entity ALU is
 	generic(
 		opN: integer := 5
 	);

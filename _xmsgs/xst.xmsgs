@@ -5,43 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3353" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/ALU.vhd</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. <arg fmt="%s" index="3">Primary unit ALU</arg> is being redefined within the file. Prior definition (on line <arg fmt="%d" index="4">5</arg>) is discarded. (LRM 11.1)
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3350" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">60</arg>. Null range: <arg fmt="%d" index="3">0</arg> downto <arg fmt="%d" index="4">31</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3532" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">60</arg>.  Ignoring null range. <arg fmt="%d" index="3">0</arg> is not included in the Null range, <arg fmt="%d" index="4">0</arg> <arg fmt="%s" index="5">downto</arg> <arg fmt="%d" index="6">31</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3350" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Null range: <arg fmt="%d" index="3">0</arg> downto <arg fmt="%d" index="4">31</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3532" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>.  Ignoring null range. <arg fmt="%d" index="3">1</arg> is not included in the Null range, <arg fmt="%d" index="4">0</arg> <arg fmt="%s" index="5">downto</arg> <arg fmt="%d" index="6">31</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3350" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">78</arg>. Null range: <arg fmt="%d" index="3">0</arg> downto <arg fmt="%d" index="4">31</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3532" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">78</arg>.  Ignoring null range. <arg fmt="%d" index="3">0</arg> is not included in the Null range, <arg fmt="%d" index="4">0</arg> <arg fmt="%s" index="5">downto</arg> <arg fmt="%d" index="6">31</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3350" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">79</arg>. Null range: <arg fmt="%d" index="3">0</arg> downto <arg fmt="%d" index="4">31</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3532" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">79</arg>.  Ignoring null range. <arg fmt="%d" index="3">0</arg> is not included in the Null range, <arg fmt="%d" index="4">0</arg> <arg fmt="%s" index="5">downto</arg> <arg fmt="%d" index="6">31</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3532" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/CPU.vhd</arg>&quot; Line <arg fmt="%d" index="2">182</arg>.  Ignoring null range. <arg fmt="%d" index="3">0</arg> is not included in the Null range, <arg fmt="%d" index="4">0</arg> <arg fmt="%s" index="5">downto</arg> <arg fmt="%d" index="6">31</arg>
-</msg>
-
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">LCD_RW</arg>&gt; in unit &lt;<arg fmt="%s" index="2">LCD</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">stateChanged</arg>&gt; in unit &lt;<arg fmt="%s" index="2">LCD</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/aula.ELE.000/Documents/System/_T_/MapChar.vhd</arg>&quot; line <arg fmt="%d" index="2">396</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd</arg>&quot; line <arg fmt="%d" index="2">394</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -644,12 +614,6 @@
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">opcode_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">CPU</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">state_next_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">state_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">0</arg>&gt;.
 </msg>
 
@@ -663,12 +627,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1294" delta="old" >Latch &lt;<arg fmt="%s" index="1">0</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">4</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">state_next_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">state_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">count_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LCD</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

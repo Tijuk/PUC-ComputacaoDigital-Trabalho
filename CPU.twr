@@ -1,15 +1,15 @@
 --------------------------------------------------------------------------------
-Release 14.5 Trace  (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
-C:/Users/aula.ELE.000/Documents/System/_T_/iseconfig/filter.filter -intstyle
-ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf
-constraints.ucf
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -filter
+/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter
+-intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf
+-ucf constraints.ucf
 
 Design file:              CPU.ncd
 Physical constraint file: CPU.pcf
-Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-03-26)
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -46,8 +46,8 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-RESET       |    3.034(R)|   -0.554(R)|CLK_BUFGP         |   0.000|
-            |    8.212(F)|   -0.726(F)|CLK_BUFGP         |   0.000|
+RESET       |    3.978(R)|   -1.350(R)|CLK_BUFGP         |   0.000|
+            |    7.027(F)|   -0.723(F)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -55,14 +55,14 @@ Clock CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-LCD_E       |    9.952(F)|CLK_BUFGP         |   0.000|
-LCD_RS      |    9.800(F)|CLK_BUFGP         |   0.000|
-NEGATIVE    |   17.415(F)|CLK_BUFGP         |   0.000|
-SF_D<0>     |   11.435(F)|CLK_BUFGP         |   0.000|
-SF_D<1>     |   11.202(F)|CLK_BUFGP         |   0.000|
-SF_D<2>     |   11.072(F)|CLK_BUFGP         |   0.000|
-SF_D<3>     |   10.559(F)|CLK_BUFGP         |   0.000|
-ZERO        |   17.391(F)|CLK_BUFGP         |   0.000|
+LCD_E       |   10.442(F)|CLK_BUFGP         |   0.000|
+LCD_RS      |   10.065(F)|CLK_BUFGP         |   0.000|
+NEGATIVE    |   18.166(F)|CLK_BUFGP         |   0.000|
+SF_D<0>     |   11.106(F)|CLK_BUFGP         |   0.000|
+SF_D<1>     |   11.376(F)|CLK_BUFGP         |   0.000|
+SF_D<2>     |   10.762(F)|CLK_BUFGP         |   0.000|
+SF_D<3>     |   10.762(F)|CLK_BUFGP         |   0.000|
+ZERO        |   18.634(F)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -70,26 +70,26 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.809|    8.178|    8.165|   13.918|
+CLK            |    6.244|    8.467|    8.399|   14.773|
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-RESET          |NEGATIVE       |   10.120|
-RESET          |ZERO           |   10.442|
+RESET          |NEGATIVE       |    9.321|
+RESET          |ZERO           |    9.986|
 ---------------+---------------+---------+
 
 
-Analysis completed Fri Nov 22 14:17:42 2019 
+Analysis completed Sun Nov 24 18:15:04 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4523 MB
+Peak Memory Usage: 354 MB
 
 
 

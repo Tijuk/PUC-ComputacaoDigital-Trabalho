@@ -1,0 +1,17 @@
+Printing stacktrace...
+
+[0] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimStringType::isNull() const+0x4) [0x7f4f0eaf42f4]
+[1] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimVariable::HSimVariable(char const*, HSimType const*, char const*, bool, bool, bool)+0xfa) [0x7f4f0eb2763a]
+[2] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimStringVar::HSimStringVar(char const*, HSimType const*, char const*, bool, bool, bool)+0x39) [0x7f4f0eb27929]
+[3] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimDidat::mkStringVar(void*, char const*, char const*, int)+0x10e) [0x7f4f0ea465ee]
+[4] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimDidat::makeEntyBlk(DuAllInfo*, char const*, HSimConfigDecl*, InstantiationInfo*, char*, char*)+0x9bf) [0x7f4f0ea56f4f]
+[5] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimDidat::makeEntyBlk(char const*, char const*, HSimConfigDecl*, InstantiationInfo*, char*, char*)+0x199) [0x7f4f0ea594e9]
+[6] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimDidat::makeEntyBlk(DuAllInfo*, char const*, HSimConfigDecl*, InstantiationInfo*, char*, char*)+0xc6d) [0x7f4f0ea571fd]
+[7] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimDidat::makeEntyBlk(char const*, char const*, HSimConfigDecl*, InstantiationInfo*, char*, char*)+0x199) [0x7f4f0ea594e9]
+[8] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimDidat::makeEntyBlk(DuAllInfo*, char const*, HSimConfigDecl*, InstantiationInfo*, char*, char*)+0xc6d) [0x7f4f0ea571fd]
+[9] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(HSimDidat::makeEntyBlk(char const*, char const*, HSimConfigDecl*, InstantiationInfo*, char*, char*)+0x199) [0x7f4f0ea594e9]
+[10] /opt/Xilinx/14.7/ISE_DS/ISE/./lib/lin64/libhsimengine.so(xsi_run_simulation+0x110) [0x7f4f0eb94c60]
+[11] CPU_isim_beh.exe(main+0xcc) [0x55a587426476]
+[12] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f4f0e571b97]
+[13] CPU_isim_beh.exe(+0x32ca) [0x55a5874262ca]
+Done

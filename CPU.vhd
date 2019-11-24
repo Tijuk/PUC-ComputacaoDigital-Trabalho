@@ -2,8 +2,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-use work.myPKG.ALL;
-
 entity CPU is
 	generic(
 		CLOCK_COUNT_BUFFER_SIZE : integer := 25
@@ -57,8 +55,8 @@ architecture Behavioral of CPU is
 	signal slow_clk_tick: std_logic := '0';
 	signal slow_clk_count_reg, slow_clk_count_next : unsigned( (CLOCK_COUNT_BUFFER_SIZE - 1) downto 0) := (others => '0');
 
-	signal processCount : integer range 0 downto 31 := 0;
-	signal processCount_next : integer range 0 downto 31 := 1;
+	signal processCount : integer range 0 to 31 := 0;
+	signal processCount_next : integer range 0 to 31 := 1;
 
 	signal state_reg, state_next : cpuState := start;
 	signal instruction_reg, instruction_next : integer range 0 to 31 := 0;
@@ -75,8 +73,8 @@ architecture Behavioral of CPU is
 	signal RAMData : std_logic_vector(4 downto 0) := (others => '0');
 	signal writeEnabled: std_logic := '0';
 	signal dataIn: std_logic_vector(4 downto 0) := (others => '0');
-	signal address: integer range 0 downto 31 := 0;
-	signal address_next: integer range 0 downto 31 := 0;
+	signal address: integer range 0 to 31 := 0;
+	signal address_next: integer range 0 to 31 := 0;
 	signal zero_read: std_logic :='0';
 	signal negative_read: std_logic :='0';
 	signal storedRamData: std_logic_vector(4 downto 0):= (others => '0');

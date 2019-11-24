@@ -2,8 +2,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.ALL;
 
-use work.myPKG.ALL;
-
 entity MapChar is
 	port(
 		CLK: in std_logic;

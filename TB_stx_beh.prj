@@ -1,0 +1,6 @@
+vhdl isim_temp "MapChar.vhd"
+vhdl isim_temp "RAM.vhd"
+vhdl isim_temp "LCD.vhd"
+vhdl isim_temp "ALU.vhd"
+vhdl isim_temp "CPU.vhd"
+vhdl isim_temp "TB.vhd"
