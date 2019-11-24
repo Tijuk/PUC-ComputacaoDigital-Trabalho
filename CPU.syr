@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: CPU.prj
@@ -107,12 +107,8 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd" in Library work.
-Entity <mapchar> compiled.
-Entity <mapchar> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/RAM.vhd" in Library work.
-Entity <ram> compiled.
-Entity <ram> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity ram is up to date.
 Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/LCD.vhd" in Library work.
@@ -134,8 +130,6 @@ Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral
 Analyzing hierarchy for entity <LCD> in library <work> (architecture <behavioral>) with generics.
 	N = 20
 
-Analyzing hierarchy for entity <MapChar> in library <work> (architecture <behavioral>).
-
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -153,13 +147,7 @@ Entity <ALU> analyzed. Unit <ALU> generated.
 
 Analyzing generic Entity <LCD> in library <work> (Architecture <behavioral>).
 	N = 20
-INFO:Xst:2679 - Register <LCD_RW> in unit <LCD> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <stateChanged> in unit <LCD> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <LCD> analyzed. Unit <LCD> generated.
-
-Analyzing Entity <MapChar> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd" line 394: Index value(s) does not match array range, simulation mismatch.
-Entity <MapChar> analyzed. Unit <MapChar> generated.
 
 
 =========================================================================
@@ -171,7 +159,6 @@ Performing bidirectional port resolution...
 Synthesizing Unit <RAM>.
     Related source file is "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/RAM.vhd".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1780 - Signal <initial_ram> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 5-bit latch for signal <ram_i_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -219,37 +206,25 @@ Synthesizing Unit <ALU>.
 Unit <ALU> synthesized.
 
 
-Synthesizing Unit <MapChar>.
-    Related source file is "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd".
-WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 32x12-bit ROM for signal <INSTRUCTION$rom0000>.
-    Found 8-bit 12-to-1 multiplexer for signal <OUTPUT_BUFFER>.
-    Summary:
-	inferred   1 ROM(s).
-	inferred   8 Multiplexer(s).
-Unit <MapChar> synthesized.
-
-
 Synthesizing Unit <LCD>.
     Related source file is "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/LCD.vhd".
+WARNING:Xst:1305 - Output <LCD_E> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <INSTRUCTION> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <LCD_RS> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <LCD_RW> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <SF_D> is never assigned. Tied to value 0000.
+WARNING:Xst:1305 - Output <DISABLE_STRATA_FLASH> is never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <state_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <state_next> is used but never assigned. This sourceless signal will be automatically connected to value 000000.
+WARNING:Xst:1780 - Signal <stateChanged> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data_buffer> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <count_tick> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <count_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <count_next> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000.
+WARNING:Xst:1780 - Signal <count> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <charAt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-    Using one-hot encoding for signal <state_reg>.
-    Found 1-bit register for signal <LCD_E>.
-    Found 1-bit register for signal <LCD_RS>.
-    Found 5-bit up counter for signal <CHAR_AT>.
-    Found 20-bit register for signal <count>.
-    Found 20-bit adder for signal <count_next$addsub0000> created at line 100.
-    Found 20-bit comparator equal for signal <count_next$cmp_eq0000> created at line 100.
-    Found 20-bit subtractor for signal <count_next$sub0000> created at line 100.
-    Found 20-bit register for signal <count_reg>.
-    Found 4-bit register for signal <data_buffer>.
-    Found 46-bit register for signal <state_next>.
-    Found 46-bit register for signal <state_reg>.
-    Summary:
-	inferred   1 Counter(s).
-	inferred 138 D-type flip-flop(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred   1 Comparator(s).
+WARNING:Xst:1780 - Signal <OUTPUT_BUFFER> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <CHAR_AT> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <LCD> synthesized.
 
 
@@ -289,29 +264,18 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 32x12-bit ROM                                         : 1
-# Adders/Subtractors                                   : 6
- 20-bit adder                                          : 1
- 20-bit subtractor                                     : 1
+# Adders/Subtractors                                   : 4
  5-bit adder                                           : 1
  5-bit addsub                                          : 3
-# Counters                                             : 2
+# Counters                                             : 1
  25-bit up counter                                     : 1
- 5-bit up counter                                      : 1
-# Registers                                            : 20
- 1-bit register                                        : 5
- 20-bit register                                       : 2
- 4-bit register                                        : 1
- 46-bit register                                       : 2
+# Registers                                            : 13
+ 1-bit register                                        : 3
  5-bit register                                        : 8
  6-bit register                                        : 2
 # Latches                                              : 32
  5-bit latch                                           : 32
-# Comparators                                          : 1
- 20-bit comparator equal                               : 1
-# Multiplexers                                         : 9
- 1-bit 12-to-1 multiplexer                             : 8
+# Multiplexers                                         : 1
  5-bit 32-to-1 multiplexer                             : 1
 # Xors                                                 : 1
  5-bit xor2                                            : 1
@@ -322,9 +286,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
@@ -341,6 +302,10 @@ WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
@@ -359,8 +324,8 @@ WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
@@ -378,12 +343,6 @@ WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_0> has a constant value of 0 in block <u_LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_15> has a constant value of 0 in block <u_LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_18> has a constant value of 0 in block <u_LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
@@ -399,8 +358,11 @@ WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
@@ -459,7 +421,6 @@ WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <0> has a constant value of 1 in block <1>. This FF/Latch will be trimmed during the optimization process.
@@ -491,24 +452,16 @@ WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 32x12-bit ROM                                         : 1
-# Adders/Subtractors                                   : 6
- 20-bit adder                                          : 1
- 20-bit subtractor                                     : 1
+# Adders/Subtractors                                   : 4
  5-bit adder                                           : 1
  5-bit addsub                                          : 3
-# Counters                                             : 2
+# Counters                                             : 1
  25-bit up counter                                     : 1
- 5-bit up counter                                      : 1
-# Registers                                            : 193
- Flip-Flops                                            : 193
+# Registers                                            : 55
+ Flip-Flops                                            : 55
 # Latches                                              : 32
  5-bit latch                                           : 32
-# Comparators                                          : 1
- 20-bit comparator equal                               : 1
-# Multiplexers                                         : 9
- 1-bit 12-to-1 multiplexer                             : 8
+# Multiplexers                                         : 1
  5-bit 32-to-1 multiplexer                             : 1
 # Xors                                                 : 1
  5-bit xor2                                            : 1
@@ -518,9 +471,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <count_0> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_15> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_18> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <opcode_4> has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <ram_i_27_1> in Unit <RAM> is equivalent to the following 17 FFs/Latches, which will be removed : <ram_i_26_1> <ram_i_25_1> <ram_i_24_1> <ram_i_23_1> <ram_i_22_1> <ram_i_21_1> <ram_i_20_1> <ram_i_19_1> <ram_i_18_1> <ram_i_8_1> <ram_i_7_1> <ram_i_6_1> <ram_i_5_1> <ram_i_4_1> <ram_i_3_1> <ram_i_2_1> <ram_i_1_1> 
 INFO:Xst:2261 - The FF/Latch <ram_i_30_1> in Unit <RAM> is equivalent to the following 11 FFs/Latches, which will be removed : <ram_i_29_1> <ram_i_28_1> <ram_i_17_1> <ram_i_16_1> <ram_i_15_1> <ram_i_14_1> <ram_i_13_1> <ram_i_12_1> <ram_i_11_1> <ram_i_10_1> <ram_i_9_1> 
@@ -552,35 +502,26 @@ WARNING:Xst:1294 - Latch <ram_i_0_1> is equivalent to a wire in block <RAM>.
 WARNING:Xst:1294 - Latch <ram_i_0_2> is equivalent to a wire in block <RAM>.
 WARNING:Xst:1294 - Latch <ram_i_0_3> is equivalent to a wire in block <RAM>.
 WARNING:Xst:1294 - Latch <ram_i_0_4> is equivalent to a wire in block <RAM>.
-WARNING:Xst:1293 - FF/Latch <state_next_6> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_reg_6> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_next_3> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_reg_3> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: ram_i<0><4>, Mmux_dataOut12, dataOut<4>, Mmux_dataOut13.
-WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: Mmux_dataOut11, Mmux_dataOut10, dataOut<3>, ram_i<0><3>.
-WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: Mmux_dataOut5, Mmux_dataOut4, Mmux_dataOut8, ram_i<0><2>, dataOut<2>.
-WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: Mmux_dataOut2, ram_i<0><1>, dataOut<1>.
-WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: ram_i<0><0>, Mmux_dataOut, dataOut<0>, Mmux_dataOut1.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: dataOut<4>, Mmux_dataOut13, ram_i<0><4>, Mmux_dataOut12.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: Mmux_dataOut11, dataOut<3>, ram_i<0><3>, Mmux_dataOut10.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: ram_i<0><2>, Mmux_dataOut5, dataOut<2>, Mmux_dataOut8, Mmux_dataOut4.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: dataOut<1>, Mmux_dataOut2, ram_i<0><1>.
+WARNING:Xst:2170 - Unit RAM : the following signal(s) form a combinatorial loop: Mmux_dataOut1, ram_i<0><0>, dataOut<0>, Mmux_dataOut.
 
 Optimizing unit <CPU> ...
 
 Optimizing unit <ALU> ...
 
-Optimizing unit <MapChar> ...
-
 Optimizing unit <RAM> ...
-
-Optimizing unit <LCD> ...
 WARNING:Xst:2677 - Node <slow_clk> of sequential type is unconnected in block <CPU>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 7.
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 3.
 FlipFlop instruction_reg_0 has been replicated 1 time(s)
-FlipFlop instruction_reg_1 has been replicated 2 time(s)
+FlipFlop instruction_reg_1 has been replicated 1 time(s)
 FlipFlop instruction_reg_2 has been replicated 1 time(s)
-FlipFlop instruction_reg_3 has been replicated 2 time(s)
-FlipFlop instruction_reg_4 has been replicated 1 time(s)
+FlipFlop instruction_reg_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -588,8 +529,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 221
- Flip-Flops                                            : 221
+# Registers                                            : 82
+ Flip-Flops                                            : 82
 
 =========================================================================
 
@@ -618,33 +559,27 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 864
+# BELS                             : 361
 #      GND                         : 1
-#      INV                         : 23
-#      LUT1                        : 44
-#      LUT2                        : 83
-#      LUT2_D                      : 6
+#      INV                         : 3
+#      LUT1                        : 24
+#      LUT2                        : 23
+#      LUT2_D                      : 5
 #      LUT2_L                      : 3
-#      LUT3                        : 86
+#      LUT3                        : 42
 #      LUT3_D                      : 3
-#      LUT3_L                      : 8
-#      LUT4                        : 308
-#      LUT4_D                      : 17
-#      LUT4_L                      : 46
-#      MUXCY                       : 83
-#      MUXF5                       : 78
-#      MUXF6                       : 5
+#      LUT3_L                      : 6
+#      LUT4                        : 129
+#      LUT4_D                      : 16
+#      LUT4_L                      : 25
+#      MUXCY                       : 35
+#      MUXF5                       : 15
 #      VCC                         : 1
-#      XORCY                       : 69
-# FlipFlops/Latches                : 221
-#      FD                          : 69
-#      FD_1                        : 43
-#      FDE                         : 18
+#      XORCY                       : 30
+# FlipFlops/Latches                : 82
+#      FD                          : 25
+#      FDE                         : 15
 #      FDE_1                       : 42
-#      FDR                         : 20
-#      FDR_1                       : 1
-#      FDRE                        : 5
-#      FDS_1                       : 23
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 16
@@ -657,9 +592,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      333  out of   4656     7%  
- Number of Slice Flip Flops:            221  out of   9312     2%  
- Number of 4 input LUTs:                627  out of   9312     6%  
+ Number of Slices:                      146  out of   4656     3%  
+ Number of Slice Flip Flops:             82  out of   9312     0%  
+ Number of 4 input LUTs:                279  out of   9312     2%  
  Number of IOs:                          18
  Number of bonded IOBs:                  17  out of    232     7%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -685,7 +620,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 221   |
+CLK                                | BUFGP                  | 82    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -696,10 +631,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 17.292ns (Maximum Frequency: 57.830MHz)
-   Minimum input arrival time before clock: 8.564ns
-   Maximum output required time after clock: 14.291ns
-   Maximum combinational path delay: 7.076ns
+   Minimum period: 13.727ns (Maximum Frequency: 72.849MHz)
+   Minimum input arrival time before clock: 11.240ns
+   Maximum output required time after clock: 12.111ns
+   Maximum combinational path delay: 11.098ns
 
 Timing Detail:
 --------------
@@ -707,62 +642,61 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 17.292ns (frequency: 57.830MHz)
-  Total number of paths / destination ports: 30746 / 335
+  Clock period: 13.727ns (frequency: 72.849MHz)
+  Total number of paths / destination ports: 5091 / 139
 -------------------------------------------------------------------------
-Delay:               8.646ns (Levels of Logic = 8)
-  Source:            instruction_reg_4_1 (FF)
+Delay:               6.864ns (Levels of Logic = 4)
+  Source:            instruction_reg_4 (FF)
   Destination:       reg_B_4 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK falling
 
-  Data Path: instruction_reg_4_1 to reg_B_4
+  Data Path: instruction_reg_4 to reg_B_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.591   0.610  instruction_reg_4_1 (instruction_reg_4_1)
-     LUT3_L:I1->LO         1   0.704   0.104  Maddsub_reg_B_addsub0000_lut<2>1_SW0 (N403)
-     LUT4:I3->O            4   0.704   0.762  Maddsub_reg_B_addsub0000_lut<2>1 (Maddsub_reg_B_addsub0000_lut<2>)
-     LUT4:I0->O            1   0.704   0.000  Maddsub_reg_B_addsub0000_cy<2>111 (Maddsub_reg_B_addsub0000_cy<2>11)
-     MUXF5:I1->O           2   0.321   0.482  Maddsub_reg_B_addsub0000_cy<2>11_f5 (Maddsub_reg_B_addsub0000_cy<2>)
-     LUT3:I2->O            1   0.704   0.499  reg_B_mux0000<4>54_SW0_SW0 (N431)
-     LUT4:I1->O            1   0.704   0.000  reg_B_mux0000<4>54_SW11 (reg_B_mux0000<4>54_SW1)
-     MUXF5:I1->O           1   0.321   0.424  reg_B_mux0000<4>54_SW1_f5 (N427)
+     FDE:C->Q             33   0.591   1.438  instruction_reg_4 (instruction_reg_4)
+     LUT4:I0->O            8   0.704   0.836  reg_B_cmp_eq00001 (reg_B_cmp_eq0000)
+     LUT2:I1->O            2   0.704   0.451  reg_B_mux0000<4>1 (reg_B_mux0000<4>1)
+     LUT4:I3->O            1   0.704   0.424  reg_B_mux0000<4>27_SW1 (N42)
      LUT4:I3->O            1   0.704   0.000  reg_B_mux0000<4>54 (reg_B_mux0000<4>)
      FDE_1:D                   0.308          reg_B_4
     ----------------------------------------
-    Total                      8.646ns (5.765ns logic, 2.881ns route)
-                                       (66.7% logic, 33.3% route)
+    Total                      6.864ns (3.715ns logic, 3.149ns route)
+                                       (54.1% logic, 45.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 88 / 16
+  Total number of paths / destination ports: 122 / 16
 -------------------------------------------------------------------------
-Offset:              8.564ns (Levels of Logic = 6)
+Offset:              11.240ns (Levels of Logic = 9)
   Source:            RESET (PAD)
-  Destination:       instruction_next_1 (FF)
+  Destination:       processCount_2 (FF)
   Destination Clock: CLK falling
 
-  Data Path: RESET to instruction_next_1
+  Data Path: RESET to processCount_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            25   1.218   1.339  RESET_IBUF (RESET_IBUF)
-     LUT2:I1->O            7   0.704   0.743  u_RAM/address_next<0>1 (u_RAM/address_next<0>)
-     LUT4:I2->O            1   0.704   0.499  u_RAM/Mmux_dataOut641 (u_RAM/Mmux_dataOut641)
-     LUT4:I1->O            1   0.704   0.455  u_RAM/Mmux_dataOut659 (u_RAM/Mmux_dataOut659)
-     LUT3:I2->O            2   0.704   0.482  u_RAM/Mmux_dataOut671 (RAMData<1>)
-     LUT4:I2->O            1   0.704   0.000  instruction_next_mux0000<1>1 (instruction_next_mux0000<1>)
-     FDE_1:D                   0.308          instruction_next_1
+     IBUF:I->O            25   1.218   1.435  RESET_IBUF (RESET_IBUF)
+     LUT2_L:I0->LO         1   0.704   0.104  u_ALU/zero197_SW0_F_SW0 (N217)
+     LUT4:I3->O            1   0.704   0.499  u_ALU/zero197_SW0_F (N207)
+     LUT3:I1->O            1   0.704   0.499  u_ALU/zero197_SW01 (N107)
+     LUT4_L:I1->LO         1   0.704   0.104  u_ALU/zero275_SW0 (N47)
+     LUT4:I3->O            2   0.704   0.482  u_ALU/zero275 (ZERO_OBUF)
+     LUT4_D:I2->O          1   0.704   0.424  processCount_mux0002<0>110 (processCount_mux0002<0>110)
+     LUT4_D:I3->O          3   0.704   0.535  processCount_mux0002<0>1101 (N01)
+     LUT4:I3->O            1   0.704   0.000  processCount_mux0002<1>1 (processCount_mux0002<1>)
+     FDE_1:D                   0.308          processCount_3
     ----------------------------------------
-    Total                      8.564ns (5.046ns logic, 3.518ns route)
-                                       (58.9% logic, 41.1% route)
+    Total                     11.240ns (7.158ns logic, 4.082ns route)
+                                       (63.7% logic, 36.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 317 / 8
+  Total number of paths / destination ports: 384 / 2
 -------------------------------------------------------------------------
-Offset:              14.291ns (Levels of Logic = 13)
+Offset:              12.111ns (Levels of Logic = 8)
   Source:            opcode_1 (FF)
   Destination:       ZERO (PAD)
   Source Clock:      CLK falling
@@ -772,28 +706,23 @@ Offset:              14.291ns (Levels of Logic = 13)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE_1:C->Q           23   0.591   1.377  opcode_1 (opcode_1)
-     LUT2_L:I0->LO         1   0.704   0.104  u_ALU/inResult_mux0000<0>_SW0 (N34)
-     LUT4:I3->O            1   0.704   0.499  u_ALU/inResult_mux0000<0> (u_ALU/inResult_mux0000<0>)
-     LUT3:I1->O            1   0.704   0.000  u_ALU/Maddsub_inResult_addsub0000_lut<0> (u_ALU/Maddsub_inResult_addsub0000_lut<0>)
+     LUT2_L:I0->LO         1   0.704   0.104  u_ALU/inResult_mux0000<0>_SW0 (N18)
+     LUT4:I3->O            1   0.704   0.455  u_ALU/inResult_mux0000<0> (u_ALU/inResult_mux0000<0>)
+     LUT3:I2->O            1   0.704   0.000  u_ALU/Maddsub_inResult_addsub0000_lut<0> (u_ALU/Maddsub_inResult_addsub0000_lut<0>)
      MUXCY:S->O            1   0.464   0.000  u_ALU/Maddsub_inResult_addsub0000_cy<0> (u_ALU/Maddsub_inResult_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  u_ALU/Maddsub_inResult_addsub0000_cy<1> (u_ALU/Maddsub_inResult_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  u_ALU/Maddsub_inResult_addsub0000_cy<2> (u_ALU/Maddsub_inResult_addsub0000_cy<2>)
-     MUXCY:CI->O           0   0.059   0.000  u_ALU/Maddsub_inResult_addsub0000_cy<3> (u_ALU/Maddsub_inResult_addsub0000_cy<3>)
-     XORCY:CI->O           2   0.804   0.526  u_ALU/Maddsub_inResult_addsub0000_xor<4> (u_ALU/inResult_addsub0000<4>)
-     LUT2:I1->O            1   0.704   0.499  u_ALU/zero197_SW0 (N429)
-     LUT4_L:I1->LO         1   0.704   0.179  u_ALU/zero197 (u_ALU/zero197)
-     LUT4:I1->O            1   0.704   0.424  u_ALU/zero275_SW0 (N385)
-     LUT4:I3->O            2   0.704   0.447  u_ALU/zero275 (ZERO_OBUF)
+     XORCY:CI->O           1   0.804   0.420  u_ALU/Maddsub_inResult_addsub0000_xor<1> (u_ALU/inResult_addsub0000<1>)
+     MUXF5:S->O            2   0.739   0.622  u_ALU/inResult<1>120 (result<1>)
+     LUT4:I0->O            2   0.704   0.447  u_ALU/zero275 (ZERO_OBUF)
      OBUF:I->O                 3.272          ZERO_OBUF (ZERO)
     ----------------------------------------
-    Total                     14.291ns (10.236ns logic, 4.055ns route)
-                                       (71.6% logic, 28.4% route)
+    Total                     12.111ns (8.686ns logic, 3.425ns route)
+                                       (71.7% logic, 28.3% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 4 / 2
 -------------------------------------------------------------------------
-Delay:               7.076ns (Levels of Logic = 3)
+Delay:               11.098ns (Levels of Logic = 7)
   Source:            RESET (PAD)
   Destination:       ZERO (PAD)
 
@@ -802,24 +731,28 @@ Delay:               7.076ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            25   1.218   1.435  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.704   0.447  u_ALU/zero275 (ZERO_OBUF)
+     LUT2_L:I0->LO         1   0.704   0.104  u_ALU/zero197_SW0_F_SW0 (N217)
+     LUT4:I3->O            1   0.704   0.499  u_ALU/zero197_SW0_F (N207)
+     LUT3:I1->O            1   0.704   0.499  u_ALU/zero197_SW01 (N107)
+     LUT4_L:I1->LO         1   0.704   0.104  u_ALU/zero275_SW0 (N47)
+     LUT4:I3->O            2   0.704   0.447  u_ALU/zero275 (ZERO_OBUF)
      OBUF:I->O                 3.272          ZERO_OBUF (ZERO)
     ----------------------------------------
-    Total                      7.076ns (5.194ns logic, 1.882ns route)
-                                       (73.4% logic, 26.6% route)
+    Total                     11.098ns (8.010ns logic, 3.088ns route)
+                                       (72.2% logic, 27.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.86 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.45 secs
  
 --> 
 
 
-Total memory usage is 562372 kilobytes
+Total memory usage is 545184 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  239 (   0 filtered)
-Number of infos    :   13 (   0 filtered)
+Number of warnings :  242 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

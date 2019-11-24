@@ -86,7 +86,6 @@ architecture Behavioral of CPU is
 			reset: in std_logic;
 			we: in std_logic;
 			address: in integer range 0 to 31;
-			addressOut: in integer range 0 to 31;
 			dataIn: in std_logic_vector(4 downto 0);
 			dataOut: out std_logic_vector(4 downto 0);
 			dataAt30: out std_logic_vector(4 downto 0)
@@ -124,7 +123,6 @@ begin
 		clk => slow_clk,
 		reset => RESET,
 		address => address_next,
-		addressOut => address,
 		dataOut => RAMData,
 		dataIn => dataIn,
 		dataAt30 => LEDS,
@@ -178,8 +176,8 @@ begin
 				case state_reg is
 					when start =>
 						processCount <= 0;
-						-- reg_a <= "00000";
-						-- reg_B <= "00000";
+						reg_a <= "00100";
+						reg_B <= "10000";
 						state_next <= reading;
 						
 					when reading =>

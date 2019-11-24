@@ -1,4 +1,3 @@
-vhdl work "MapChar.vhd"
 vhdl work "RAM.vhd"
 vhdl work "LCD.vhd"
 vhdl work "ALU.vhd"

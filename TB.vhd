@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   17:34:39 11/24/2019
+-- Create Date:   18:45:13 11/24/2019
 -- Design Name:   
 -- Module Name:   /home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/TB.vhd
 -- Project Name:  trabalho

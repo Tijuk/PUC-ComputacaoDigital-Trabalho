@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (lin64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Sun Nov 24 18:15:01 2019
+#Sun Nov 24 18:26:43 2019
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -34,7 +34,7 @@ A12,,,NC,,,,,,,,,,,,
 A13,,DIFFM,IO_L05P_0,UNUSED,,0,,,,,,,,,
 A14,,DIFFS,IO_L04N_0,UNUSED,,0,,,,,,,,,
 A15,,DIFFSI,IP_L02N_0,UNUSED,,0,,,,,,,,,
-A16,RESET,IBUF,IO_L01N_0,INPUT,LVCMOS25*,0,,,,NONE,,UNLOCATED,NO,NONE,
+A16,,DIFFS,IO_L01N_0,UNUSED,,0,,,,,,,,,
 A17,,,TCK,,,,,,,,,,,,
 A18,,,GND,,,,,,,,,,,,
 B1,,,PROG_B,,,,,,,,,,,,
@@ -52,7 +52,7 @@ B12,,,VCCAUX,,,,,,,,2.5,,,,
 B13,,DIFFS,IO_L05N_0/VREF_0,UNUSED,,0,,,,,,,,,
 B14,,DIFFM,IO_L04P_0,UNUSED,,0,,,,,,,,,
 B15,,DIFFMI,IP_L02P_0,UNUSED,,0,,,,,,,,,
-B16,,DIFFM,IO_L01P_0,UNUSED,,0,,,,,,,,,
+B16,RESET,IBUF,IO_L01P_0,INPUT,LVCMOS25*,0,,,,NONE,,UNLOCATED,NO,NONE,
 B17,,,GND,,,,,,,,,,,,
 B18,,IBUF,IP,UNUSED,,1,,,,,,,,,
 C1,,DIFFM,IO_L01P_3,UNUSED,,3,,,,,,,,,
