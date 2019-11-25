@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: CPU2.prj
 
@@ -114,8 +114,7 @@ Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd" in Library work.
 Architecture behavioral of Entity lcd is up to date.
 Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2.vhd" in Library work.
-Entity <cpu2> compiled.
-Entity <cpu2> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity cpu2 is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -664,11 +663,11 @@ Delay:               8.805ns (Levels of Logic = 5)
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.16 secs
+Total CPU time to Xst completion: 12.05 secs
  
 --> 
 
-Total memory usage is 4489732 kilobytes
+Total memory usage is 4489708 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   18 (   0 filtered)

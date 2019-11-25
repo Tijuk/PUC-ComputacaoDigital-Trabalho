@@ -262,8 +262,8 @@ begin
 		end if;
 	end process update;
 		
-	ZERO<=ZERO_READ;
-	NEGATIVE<=NEGATIVE_READ;
+	ZERO     <= ZERO_READ;
+	NEGATIVE <= NEGATIVE_READ;
 
 end Behavioral;
 
