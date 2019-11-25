@@ -1,0 +1,4 @@
+vhdl work "RAM.vhd"
+vhdl work "ALU.vhd"
+vhdl work "CPU2.vhd"
+vhdl work "CPU2_TB.vhd"

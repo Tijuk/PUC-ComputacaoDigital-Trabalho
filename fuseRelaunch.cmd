@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/TB_isim_beh.exe" -prj "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/TB_beh.prj" "TB" 
+-intstyle "ise" -incremental -o "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2_TB_isim_beh.exe" -prj "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2_TB_beh.prj" "work.CPU2_TB" 

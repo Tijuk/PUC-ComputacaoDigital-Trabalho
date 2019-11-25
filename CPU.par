@@ -1,15 +1,16 @@
-Release 14.7 par P.20131013 (lin64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Release 14.5 par P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-ropumar::  Sun Nov 24 22:16:53 2019
+LPE32::  Mon Nov 25 07:20:32 2019
 
 par -filter
-/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter
--w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
+C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Traba
+lho/iseconfig/filter.filter -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd
+CPU.pcf 
 
 
 Constraints file: CPU.pcf.
-Loading device for application Rf_Device from file '3s500e.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\14.5\ISE_DS\ISE\.
    "CPU" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
 
 Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
@@ -21,7 +22,7 @@ INFO:Par:282 - No user timing constraints were detected or you have set the opti
    reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
    Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
 
-Device speed data version:  "PRODUCTION 1.27 2013-10-13".
+Device speed data version:  "PRODUCTION 1.27 2013-03-26".
 
 
 Design Summary Report:
@@ -63,13 +64,13 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:b86efb08) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:b86efb08) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:b86efb08) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:b86efb08) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:b86efb08) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:b86efb08) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 .......
@@ -94,19 +95,19 @@ Phase 9.8  Global Placement
 .............................................................
 .......
 ..........
-Phase 9.8  Global Placement (Checksum:656cc834) REAL time: 3 secs 
+Phase 9.8  Global Placement (Checksum:656cc834) REAL time: 4 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:656cc834) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:656cc834) REAL time: 4 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:9fdb683f) REAL time: 4 secs 
+Phase 11.18  Placement Optimization (Checksum:9fdb683f) REAL time: 5 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:9fdb683f) REAL time: 4 secs 
+Phase 12.5  Local Placement Optimization (Checksum:9fdb683f) REAL time: 5 secs 
 
-Total REAL time to Placer completion: 4 secs 
-Total CPU  time to Placer completion: 4 secs 
+Total REAL time to Placer completion: 5 secs 
+Total CPU  time to Placer completion: 5 secs 
 Writing design to file CPU.ncd
 
 
@@ -114,32 +115,32 @@ Writing design to file CPU.ncd
 Starting Router
 
 
-Phase  1  : 3267 unrouted;      REAL time: 7 secs 
+Phase  1  : 3267 unrouted;      REAL time: 8 secs 
 
-Phase  2  : 3003 unrouted;      REAL time: 7 secs 
+Phase  2  : 3003 unrouted;      REAL time: 8 secs 
 
-Phase  3  : 804 unrouted;      REAL time: 7 secs 
+Phase  3  : 804 unrouted;      REAL time: 9 secs 
 
-Phase  4  : 816 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  4  : 816 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
 Updating file: CPU.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 WARNING:Route:455 - CLK Net:readingAddress may have excessive skew because 
       0 CLK pins and 10 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 10 secs 
-Total CPU time to Router completion: 10 secs 
+Total REAL time to Router completion: 12 secs 
+Total CPU time to Router completion: 12 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -198,10 +199,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 10 secs 
-Total CPU time to PAR completion: 10 secs 
+Total REAL time to PAR completion: 13 secs 
+Total CPU time to PAR completion: 12 secs 
 
-Peak Memory Usage:  593 MB
+Peak Memory Usage:  4397 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

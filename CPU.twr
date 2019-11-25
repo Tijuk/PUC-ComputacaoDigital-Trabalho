@@ -1,15 +1,15 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (lin64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Release 14.5 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -filter
-/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter
+C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
+C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter
 -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf
 -ucf constraints.ucf
 
 Design file:              CPU.ncd
 Physical constraint file: CPU.pcf
-Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-03-26)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -82,14 +82,14 @@ RESET          |ZERO           |   12.282|
 ---------------+---------------+---------+
 
 
-Analysis completed Sun Nov 24 22:17:06 2019 
+Analysis completed Mon Nov 25 07:20:50 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 357 MB
+Peak Memory Usage: 4523 MB
 
 
 

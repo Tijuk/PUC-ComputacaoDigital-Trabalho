@@ -10,7 +10,7 @@ entity ALU is
 		reset: in std_logic;
 		reg_A: in std_logic_vector(opN-1 downto 0); -- registrador A
 		reg_B: in std_logic_vector(opN-1 downto 0); -- registrador B
-		opcode: in integer range 0 to 31;
+		opcode: in std_logic_vector(4 downto 0);
 		zero: out std_logic;
 		negative: out std_logic;
 		result: out std_logic_vector(opN-1 downto 0)
@@ -19,12 +19,10 @@ end ALU;
 
 architecture Behavioral of ALU is
 	signal inResult : std_logic_vector(opN-1 downto 0) := (others => '0');
-	signal opcode_logic : std_logic_vector(4 downto 0) := (others => '0');
 begin
-	opcode_logic <= std_logic_vector(to_unsigned(opcode, opcode_logic'length));
 
 	-- Result
-	with opcode_logic select inResult <=
+	with opcode select inResult <=
 		std_logic_vector(signed(reg_A) + signed(reg_B)) when "00101",
 		std_logic_vector(signed(reg_A) - signed(reg_B)) when "00110",
 		std_logic_vector(signed(reg_A) + 1) when "10000",

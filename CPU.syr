@@ -1,21 +1,18 @@
-Release 14.7 - xst P.20131013 (lin64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.27 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.27 secs
  
---> 
-Reading design: CPU.prj
+--> Reading design: CPU.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -107,16 +104,25 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/CPU is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/CPU.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU.vhd".
+WARNING:HDLParsers:3607 - Unit work/CPU/Behavioral is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/CPU.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU.vhd".
+WARNING:HDLParsers:3607 - Unit work/ALU is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/ALU.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/ALU.vhd".
+WARNING:HDLParsers:3607 - Unit work/ALU/Behavioral is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/ALU.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/ALU.vhd".
+WARNING:HDLParsers:3607 - Unit work/LCD is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/LCD.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd".
+WARNING:HDLParsers:3607 - Unit work/LCD/Behavioral is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/LCD.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd".
+WARNING:HDLParsers:3607 - Unit work/RAM is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/RAM.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM.vhd".
+WARNING:HDLParsers:3607 - Unit work/RAM/Behavioral is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/RAM.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM.vhd".
+WARNING:HDLParsers:3607 - Unit work/MapChar is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd".
+WARNING:HDLParsers:3607 - Unit work/MapChar/Behavioral is now defined in a different file.  It was defined in "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd", and is now defined in "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd".
+Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd" in Library work.
 Architecture behavioral of Entity mapchar is up to date.
-Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/RAM.vhd" in Library work.
+Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM.vhd" in Library work.
 Architecture behavioral of Entity ram is up to date.
-Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/ALU.vhd" in Library work.
+Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/ALU.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
-Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/LCD.vhd" in Library work.
-Entity <lcd> compiled.
-Entity <lcd> (Architecture <behavioral>) compiled.
-Compiling vhdl file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/CPU.vhd" in Library work.
+Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd" in Library work.
+Architecture behavioral of Entity lcd is up to date.
+Compiling vhdl file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU.vhd" in Library work.
 Entity <cpu> compiled.
 Entity <cpu> (Architecture <behavioral>) compiled.
 
@@ -145,7 +151,7 @@ Analyzing generic Entity <CPU> in library <work> (Architecture <behavioral>).
 Entity <CPU> analyzed. Unit <CPU> generated.
 
 Analyzing Entity <RAM> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/RAM.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <ram_initial>
 Entity <RAM> analyzed. Unit <RAM> generated.
 
@@ -160,7 +166,7 @@ INFO:Xst:2679 - Register <stateChanged> in unit <LCD> has a constant value of 0 
 Entity <LCD> analyzed. Unit <LCD> generated.
 
 Analyzing Entity <MapChar> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd" line 394: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd" line 394: Index value(s) does not match array range, simulation mismatch.
 Entity <MapChar> analyzed. Unit <MapChar> generated.
 
 
@@ -171,7 +177,7 @@ Entity <MapChar> analyzed. Unit <MapChar> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <RAM>.
-    Related source file is "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/RAM.vhd".
+    Related source file is "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM.vhd".
 WARNING:Xst:1781 - Signal <ram_initial> is used but never assigned. Tied to default value.
     Found 5-bit 32-to-1 multiplexer for signal <dataOut>.
     Found 5-bit register for signal <inAddr>.
@@ -182,7 +188,7 @@ Unit <RAM> synthesized.
 
 
 Synthesizing Unit <ALU>.
-    Related source file is "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/ALU.vhd".
+    Related source file is "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/ALU.vhd".
     Found 5-bit addsub for signal <inResult$addsub0000>.
     Found 5-bit xor2 for signal <inResult$xor0000> created at line 27.
     Summary:
@@ -191,7 +197,7 @@ Unit <ALU> synthesized.
 
 
 Synthesizing Unit <MapChar>.
-    Related source file is "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/MapChar.vhd".
+    Related source file is "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd".
 WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32x12-bit ROM for signal <INSTRUCTION$rom0000>.
     Found 8-bit 12-to-1 multiplexer for signal <OUTPUT_BUFFER>.
@@ -202,7 +208,7 @@ Unit <MapChar> synthesized.
 
 
 Synthesizing Unit <LCD>.
-    Related source file is "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/LCD.vhd".
+    Related source file is "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd".
 WARNING:Xst:1780 - Signal <charAt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Using one-hot encoding for signal <state_reg>.
     Found 1-bit register for signal <LCD_E>.
@@ -225,7 +231,7 @@ Unit <LCD> synthesized.
 
 
 Synthesizing Unit <CPU>.
-    Related source file is "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/CPU.vhd".
+    Related source file is "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU.vhd".
 WARNING:Xst:1306 - Output <CLK_OUT> is never assigned.
 WARNING:Xst:1780 - Signal <storedRamData> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1781 - Signal <instruction_array> is used but never assigned. Tied to default value.
@@ -612,15 +618,14 @@ Delay:               8.336ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.71 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.89 secs
  
 --> 
 
-
-Total memory usage is 546820 kilobytes
+Total memory usage is 4489696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   21 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 

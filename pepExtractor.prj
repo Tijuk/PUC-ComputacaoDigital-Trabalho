@@ -1,4 +1,5 @@
 work	"ALU.vhd"
-work	"CPU.vhd"
+work	"CPU2.vhd"
 work	"LCD.vhd"
+work	"MapChar.vhd"
 work	"RAM.vhd"

@@ -169,9 +169,6 @@ begin
 		we => writeEnabled
 	);
 
-	slow_clk_count_next <= slow_clk_count_reg + 1;
-	slow_clk_tick <= '1' when slow_clk_count_reg = to_unsigned(0, CLOCK_COUNT_BUFFER_SIZE) else '0';
-
 	u_ALU: ALU port map (
 		reset => RESET,
 		reg_A => reg_A,
@@ -206,6 +203,9 @@ begin
 			slow_clk_count_reg <= slow_clk_count_next;
 		end if;
 	end process slowClockUpdate;
+
+	slow_clk_count_next <= slow_clk_count_reg + 1;
+	slow_clk_tick <= '1' when slow_clk_count_reg = to_unsigned(0, CLOCK_COUNT_BUFFER_SIZE) else '0';
 	
 	update: process (CLK)
 	begin
