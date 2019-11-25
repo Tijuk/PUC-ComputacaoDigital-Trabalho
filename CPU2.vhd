@@ -64,12 +64,13 @@ architecture Behavioral of CPU2 is
 	signal address: integer range 0 to 31 := 0;
 	signal dataIn: std_logic_vector(4 downto 0) := (others => '0');
 	signal dataOut: std_logic_vector(4 downto 0):= (others => '0');
+	signal dataAt30: std_logic_vector(4 downto 0):= (others => '0');
 
 	signal zero_read: std_logic :='0';
 	signal negative_read: std_logic :='0';
 	signal readingAddress: std_logic := '0';
 
-	component RAM
+	component RAM2
 		port(
 			clk: in std_logic;
 			reset: in std_logic;
@@ -108,15 +109,16 @@ architecture Behavioral of CPU2 is
 	
 begin
 
-	u_RAM : RAM port map (
+	u_RAM : RAM2 port map (
 		clk => slow_clk,
 		reset => RESET,
 		address => address,
 		dataOut => dataOut,
 		dataIn => dataIn,
-		dataAt30 => LEDS,
+		dataAt30 => dataAt30, -- LEDS,
 		we => we
 	);
+	LEDS <= dataAt30;
 
 	u_ALU: ALU port map (
 		reset => RESET,
@@ -128,15 +130,15 @@ begin
 		result => result
 	);
 
---	u_LCD: LCD port map (
---		CLK => CLK,
---		LCD_E => LCD_E,
---		LCD_RW => LCD_RW,
---		LCD_RS => LCD_RS,
---		DISABLE_STRATA_FLASH => DISABLE_STRATA_FLASH,
---		SF_D => SF_D,
---		INSTRUCTION => INSTRUCTION
---	);
+	u_LCD: LCD port map (
+		CLK => CLK,
+		LCD_E => LCD_E,
+		LCD_RW => LCD_RW,
+		LCD_RS => LCD_RS,
+		DISABLE_STRATA_FLASH => DISABLE_STRATA_FLASH,
+		SF_D => SF_D,
+		INSTRUCTION => INSTRUCTION
+	);
 
 	slowClockUpdate: process (CLK)
 	begin
@@ -144,8 +146,8 @@ begin
 			slow_clk_counter <= slow_clk_counter + 1;
 		end if;
 	end process slowClockUpdate;
-	slow_clk <= slow_clk_counter(slow_clk_counter'left);
-	
+	slow_clk <= slow_clk_counter(CLOCK_COUNT_BUFFER_SIZE - 1);
+
 	update: process (slow_clk)
 	begin
 		if rising_edge(slow_clk) then
@@ -154,13 +156,12 @@ begin
 					we <= '0';
 					address <= 0;
 					state_reg <= fetch;
-				
 				when fetch =>
 					reg_IR <= dataOut;
 					programCounter <= programCounter + 1;
 					address <= address + 1;
 					state_reg <= decode;
-				
+					INSTRUCTION <= to_integer(unsigned(dataOut));
 				when decode =>
 					case reg_IR is
 						when mov_a_from_end =>

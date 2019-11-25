@@ -5,7 +5,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -filter
 C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/iseconfig/filter.filter
 -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CPU2.twx CPU2.ncd -o CPU2.twr
-CPU2.pcf
+CPU2.pcf -ucf constraints.ucf
 
 Design file:              CPU2.ncd
 Physical constraint file: CPU2.pcf
@@ -41,31 +41,44 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Clock CLK to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+LCD_E       |   10.161(F)|CLK_BUFGP         |   0.000|
+LCD_RS      |   10.129(F)|CLK_BUFGP         |   0.000|
+SF_D<0>     |   10.390(F)|CLK_BUFGP         |   0.000|
+SF_D<1>     |   10.516(F)|CLK_BUFGP         |   0.000|
+SF_D<2>     |   10.074(F)|CLK_BUFGP         |   0.000|
+SF_D<3>     |    9.680(F)|CLK_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
 Clock to Setup on destination clock CLK
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    4.299|         |         |         |
+CLK            |    5.774|    8.628|    8.304|   11.150|
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-RESET          |NEGATIVE       |    9.986|
-RESET          |ZERO           |   12.031|
+RESET          |NEGATIVE       |    8.580|
+RESET          |ZERO           |   10.398|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon Nov 25 08:33:20 2019 
+Analysis completed Mon Nov 25 09:42:56 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4506 MB
+Peak Memory Usage: 4523 MB
 
 
 
