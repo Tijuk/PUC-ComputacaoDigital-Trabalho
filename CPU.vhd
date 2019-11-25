@@ -22,47 +22,87 @@ end CPU;
 
 architecture Behavioral of CPU is
 
-	constant mov_a_from_end 		: integer range 0 to 31 :=  1; -- std_logic_vector(4 downto 0) := "00001";
-	constant mov_end_from_a			: integer range 0 to 31 :=  2; -- std_logic_vector(4 downto 0) := "00010";
-	constant mov_a_from_b			: integer range 0 to 31 :=  3; -- std_logic_vector(4 downto 0) := "00011";
-	constant mov_b_from_a			: integer range 0 to 31 :=  4; -- std_logic_vector(4 downto 0) := "00100";
-	constant add_a_to_b 			: integer range 0 to 31 :=  5; -- std_logic_vector(4 downto 0) := "00101";
-	constant sub_a_to_b 			: integer range 0 to 31 :=  6; -- std_logic_vector(4 downto 0) := "00110";
-	constant and_a_b 				: integer range 0 to 31 :=  7; -- std_logic_vector(4 downto 0) := "00111";
-	constant or_a_b 				: integer range 0 to 31 :=  8; -- std_logic_vector(4 downto 0) := "01000";
-	constant xor_a_b 				: integer range 0 to 31 :=  9; -- std_logic_vector(4 downto 0) := "01001";
-	constant not_a 					: integer range 0 to 31 := 10; -- std_logic_vector(4 downto 0) := "01010";
-	constant nand_a_b 				: integer range 0 to 31 := 11; -- std_logic_vector(4 downto 0) := "01011";
-	constant jz_end 				: integer range 0 to 31 := 12; -- std_logic_vector(4 downto 0) := "01100";
-	constant jn_end 				: integer range 0 to 31 := 13; -- std_logic_vector(4 downto 0) := "01101";
-	constant halt 					: integer range 0 to 31 := 14; -- std_logic_vector(4 downto 0) := "01110";
-	constant jmp_end 				: integer range 0 to 31 := 15; -- std_logic_vector(4 downto 0) := "01111";
-	constant inc_a 					: integer range 0 to 31 := 16; -- std_logic_vector(4 downto 0) := "10000";
-	constant inc_b 					: integer range 0 to 31 := 17; -- std_logic_vector(4 downto 0) := "10001";
-	constant dec_a 					: integer range 0 to 31 := 18; -- std_logic_vector(4 downto 0) := "10010";
-	constant dec_b 					: integer range 0 to 31 := 19; -- std_logic_vector(4 downto 0) := "10011";
+--	constant mov_a_from_end 		: integer range 0 to 31 :=  1; -- std_logic_vector(4 downto 0) := "00001";
+--	constant mov_end_from_a			: integer range 0 to 31 :=  2; -- std_logic_vector(4 downto 0) := "00010";
+--	constant mov_a_from_b			: integer range 0 to 31 :=  3; -- std_logic_vector(4 downto 0) := "00011";
+--	constant mov_b_from_a			: integer range 0 to 31 :=  4; -- std_logic_vector(4 downto 0) := "00100";
+--	constant add_a_to_b 			: integer range 0 to 31 :=  5; -- std_logic_vector(4 downto 0) := "00101";
+--	constant sub_a_to_b 			: integer range 0 to 31 :=  6; -- std_logic_vector(4 downto 0) := "00110";
+--	constant and_a_b 				: integer range 0 to 31 :=  7; -- std_logic_vector(4 downto 0) := "00111";
+--	constant or_a_b 				: integer range 0 to 31 :=  8; -- std_logic_vector(4 downto 0) := "01000";
+--	constant xor_a_b 				: integer range 0 to 31 :=  9; -- std_logic_vector(4 downto 0) := "01001";
+--	constant not_a 					: integer range 0 to 31 := 10; -- std_logic_vector(4 downto 0) := "01010";
+--	constant nand_a_b 				: integer range 0 to 31 := 11; -- std_logic_vector(4 downto 0) := "01011";
+--	constant jz_end 				: integer range 0 to 31 := 12; -- std_logic_vector(4 downto 0) := "01100";
+--	constant jn_end 				: integer range 0 to 31 := 13; -- std_logic_vector(4 downto 0) := "01101";
+--	constant halt 					: integer range 0 to 31 := 14; -- std_logic_vector(4 downto 0) := "01110";
+--	constant jmp_end 				: integer range 0 to 31 := 15; -- std_logic_vector(4 downto 0) := "01111";
+--	constant inc_a 					: integer range 0 to 31 := 16; -- std_logic_vector(4 downto 0) := "10000";
+--	constant inc_b 					: integer range 0 to 31 := 17; -- std_logic_vector(4 downto 0) := "10001";
+--	constant dec_a 					: integer range 0 to 31 := 18; -- std_logic_vector(4 downto 0) := "10010";
+--	constant dec_b 					: integer range 0 to 31 := 19; -- std_logic_vector(4 downto 0) := "10011";
 
 	type cpuState is (
 		start,
 		reading,
 		processInstruction,
-		running,
-		loadResult,
-		haltState
+		mov_a_from_end, 
+		mov_end_from_a, 
+		mov_a_from_b, 
+		mov_b_from_a, 
+		add_a_to_b, 
+		sub_a_to_b, 
+		and_a_b, 
+		or_a_b, 
+		xor_a_b, 
+		not_a, 
+		nand_a_b, 
+		jz_end, 
+		jn_end,
+		halt,
+		jmp_end,
+		inc_a,
+		inc_b,
+		dec_a,
+		dec_b,
+		load_result_A,
+		load_result_B
 	);
+	
+	type instruction_array_type is array (1 to 19) of cpuState;
+	signal instruction_array : instruction_array_type := (
+		1=>mov_a_from_end, 
+		2=>mov_end_from_a, 
+		3=>mov_a_from_b, 
+		4=>mov_b_from_a, 
+		5=>add_a_to_b, 
+		6=>sub_a_to_b, 
+		7=>and_a_b, 
+		8=>or_a_b, 
+		9=>xor_a_b, 
+		10=>not_a, 
+		11=>nand_a_b, 
+		12=>jz_end, 
+		13=>jn_end,
+		14=>halt,
+		15=>jmp_end,
+		16=>inc_a,
+		17=>inc_b,
+		18=>dec_a,
+		19=>dec_b
+		);
 
 	signal slow_clk : std_logic := '0';
 	signal slow_clk_tick: std_logic := '0';
 	signal slow_clk_count_reg, slow_clk_count_next : unsigned( (CLOCK_COUNT_BUFFER_SIZE - 1) downto 0) := (others => '0');
 
 	signal processCount : integer range 0 to 31 := 0;
-	signal processCount_next : integer range 0 to 31 := 1;
 
 	signal state_reg, state_next : cpuState := start;
-	signal instruction_reg, instruction_next : integer range 0 to 31 := 0;
+	signal instruction_reg, reg_end : integer range 0 to 31 := 0;
 
 	-- ALU Signals
-	signal reg_A, reg_B, result : std_logic_vector(4 downto 0) := (others => '0');
+	signal reg_A, reg_B, result: std_logic_vector(4 downto 0) := (others => '0');
 	signal opcode : integer range 0 to 31 := 0;
 
 	-- LCD Signals
@@ -129,10 +169,6 @@ begin
 		we => writeEnabled
 	);
 
-	slow_clk_count_next <= slow_clk_count_reg + 1;
-	processCount_next <= processCount + 1;
-	slow_clk_tick <= '1' when slow_clk_count_reg = to_unsigned(0, CLOCK_COUNT_BUFFER_SIZE) else '0';
-
 	u_ALU: ALU port map (
 		reset => RESET,
 		reg_A => reg_A,
@@ -163,132 +199,144 @@ begin
 				else
 					state_reg <= state_next;
 				end if;
-				instruction_reg <= instruction_next;
 			end if;
 			slow_clk_count_reg <= slow_clk_count_next;
 		end if;
 	end process slowClockUpdate;
+
+	slow_clk_count_next <= slow_clk_count_reg + 1;
+	slow_clk_tick <= '1' when slow_clk_count_reg = to_unsigned(0, CLOCK_COUNT_BUFFER_SIZE) else '0';
 	
 	update: process (CLK)
 	begin
 		if falling_edge(CLK) then
 			if slow_clk_tick = '1' then
+				readingAddress <= '0';
 				case state_reg is
 					when start =>
+						writeEnabled <= '0';
 						processCount <= 0;
 						reg_a <= "00100";
 						reg_B <= "10000";
 						state_next <= reading;
 						
 					when reading =>
-
+						writeEnabled <= '0';
+						instruction_reg <= to_integer(unsigned(RAMData));
 						address_next <= processCount;
 						state_next <= processInstruction;
-
+						
 					when processInstruction =>
-
-						processCount <= processCount_next;
-						instruction_next <= to_integer(unsigned(RAMData));
-						state_next <= running;
-
-					when running =>
-						 case instruction_reg is
-							when mov_a_from_end =>
-								if readingAddress = '0' then
-									writeEnabled <= '1';
-									dataIn <= reg_a;
-									processCount <= processCount_next;
-									instruction_next <= to_integer(unsigned(RAMData));
-								else
-									writeEnabled <= '0';
-									state_next <= reading;
-								end if;
-								readingAddress <= not readingAddress;
-							when mov_end_from_a =>
-								-- todo
-								processCount <= processCount_next;
-								state_next <= reading;
-						 	when mov_a_from_b =>
-								reg_A <= reg_B;
-								state_next <= reading;
-								processCount <= processCount_next;
-						 	when mov_b_from_a =>
-							 	reg_B <= reg_A;
-								state_next <= reading; 
-								processCount <= processCount_next;
-						 	when add_a_to_b =>
-						 		opcode <= add_a_to_b;
-						 		state_next <= loadResult;
-						 	when sub_a_to_b =>
-						 		opcode <= sub_a_to_b;
-						 		state_next <= loadResult;
-						 	when and_a_b =>
-						 		opcode <= and_a_b;
-						 		state_next <= loadResult;
-						 	when or_a_b =>
-						 		opcode <= or_a_b;
-						 		state_next <= loadResult;
-						 	when xor_a_b =>
-						 		opcode <= xor_a_b;
-						 		state_next <= loadResult;
-						 	when not_a =>
-						 		opcode <= not_a;
-						 		state_next <= loadResult;
-						 	when nand_a_b =>
-						 		opcode <= nand_a_b;
-						 		state_next <= loadResult;
-						 	when jn_end =>
-								if readingAddress = '0' then
-									readingAddress <= '1';
-								else
-									if NEGATIVE_READ = '1' then
-										processCount <= address;
-									else
-										processCount <= processCount_next;
-									end if;
-									state_next <= reading;
-								end if;
-						 	when jz_end =>
-								if readingAddress = '0' then
-									readingAddress <= '1';
-								else
-									if ZERO_READ = '1' then
-										processCount <= address;
-									else
-										processCount <= processCount_next;
-									end if;
-									state_next <= reading;
-								end if;
-						 	when halt =>
-								state_next <= haltState;
-							when inc_a =>
-								reg_a <= std_logic_vector(signed(reg_a) + 1);
-								state_next <= reading;
-							when inc_b =>
-								reg_b <= std_logic_vector(signed(reg_b) + 1);
-								state_next <= reading;
-							when dec_a =>
-								reg_a <= std_logic_vector(signed(reg_a) - 1);
-								state_next <= reading;
-							when dec_b =>
-								reg_b <= std_logic_vector(signed(reg_b) - 1);
-								state_next <= reading;
-							when others =>
-								state_next <= reading;
-						 end case;
-					when haltState =>
-						-- todo
-						state_next <= haltState;
-					when loadResult =>
-						-- todo
+						state_next <= instruction_array(instruction_reg);
+					when mov_a_from_end =>
+						if readingAddress = '0' then
+							readingAddress <= '1';
+						else
+							state_next <= reading;
+							reg_a <= RAMData;
+						end if;
+						processCount <= processCount + 1;
+					when mov_end_from_a =>
+						if readingAddress = '0' then
+							readingAddress <= '1';
+						else
+							writeEnabled <= '1';
+							dataIn <= reg_a;
+							state_next <= reading;
+						end if;
+						processCount <= processCount + 1;
+					when mov_a_from_b =>
+						reg_A <= reg_B;
+						state_next <= reading;
+						processCount <= processCount + 1;
+					when mov_b_from_a =>
+						reg_B <= reg_A;
+						state_next <= reading; 
+						processCount <= processCount + 1;
+					when add_a_to_b =>
+						opcode <= 5;
+						state_next <= load_result_A;
+					when sub_a_to_b =>
+						opcode <= 6;
+						state_next <= load_result_A;
+					when and_a_b =>
+						opcode <= 7;
+						state_next <= load_result_A;
+					when or_a_b =>
+						opcode <= 8;
+						state_next <= load_result_A;
+					when xor_a_b =>
+						opcode <= 9;
+						state_next <= load_result_A;
+					when not_a =>
+						opcode <= 10;
+						state_next <= load_result_A;
+					when nand_a_b =>
+						opcode <= 11;
+						state_next <= load_result_A;
+					when jn_end =>
+						if readingAddress = '0' then
+							readingAddress <= '1';
+							processCount <= processCount + 1;
+						else
+							if NEGATIVE_READ = '1' then
+								processCount <= reg_end;
+							else
+								processCount <= processCount + 1;
+							end if;
+							state_next <= reading;
+						end if;
+					when jz_end =>
+						if readingAddress = '0' then
+							readingAddress <= '1';
+						else
+							if ZERO_READ = '1' then
+								processCount <= reg_end;
+							else
+								processCount <= processCount + 1;
+							end if;
+							state_next <= reading;
+						end if;
+					when inc_a =>
+						opcode <= 16;
+						state_next <= load_result_A;
+						state_next <= reading;
+					when inc_b =>
+						opcode <= 17;
+						state_next <= load_result_B;
+						state_next <= reading;
+					when dec_a =>
+						opcode <= 18;
+						state_next <= load_result_A;
+						state_next <= reading;
+					when dec_b =>
+						opcode <= 19;
+						state_next <= load_result_B;
+						state_next <= reading;
+					when halt =>
+						state_next <= halt;
+					when load_result_A =>
 						reg_A <= result;
+						processCount <= processCount + 1;
+						state_next <= reading;
+					when load_result_B =>
+						reg_B <= result;
+						processCount <= processCount + 1;
 						state_next <= reading;
 					when others =>
-						state_next <= reading;
+						state_next <= start;
 				end case;
 			end if;
 		end if;
 	end process update;
+	
+	readingAddressProcess: process(readingAddress)
+	begin
+		if readingAddress = '1' then
+			reg_end <= to_integer(unsigned(RAMData));
+		end if;
+	end process readingAddressProcess;
+	
 	ZERO<=ZERO_READ;
 	NEGATIVE<=NEGATIVE_READ;
 end Behavioral;

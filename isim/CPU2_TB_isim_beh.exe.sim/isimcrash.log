@@ -1,0 +1,7 @@
+Exception at PC 0x00000001800AEBD6
+Attemped to read address 0x000000000000000C
+Printing stacktrace...
+
+[0] (HSimEntyBlk::reset+0x3cd6) [0x0x00000001800aebd6]
+[1] (HSimEntyBlk::reset+0x3cd6) [0x0x00000001800aebd6]
+Done

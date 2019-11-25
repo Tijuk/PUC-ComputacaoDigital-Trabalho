@@ -1,0 +1,24 @@
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design CPU.ngc ...
+WARNING:NetListWriters:298 - No output is written to CPU.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus u_LCD/Msub_count_next_sub0000_lut<19 :
+   1> on block CPU is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus u_LCD/count<19 : 1> on block CPU is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u_LCD/count_mux0000<19 : 12> on block
+   CPU is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u_LCD/state_next<45 : 0> on block CPU is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u_LCD/state_next_mux0001<44 : 1> on
+   block CPU is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u_LCD/state_reg<45 : 0> on block CPU is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file CPU.edif ...
+ngc2edif: Total memory usage is 106912 kilobytes
+

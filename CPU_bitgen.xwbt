@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/CPU.ncd
-OUTFILE=/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/CPU.bit
+INFILE=C:\Users\aula.ELE.000\Documents\System\trabalho-novo\PUC-ComputacaoDigital-Trabalho\CPU.ncd
+OUTFILE=C:\Users\aula.ELE.000\Documents\System\trabalho-novo\PUC-ComputacaoDigital-Trabalho\CPU.bit
 FAMILY=Spartan3E
 PART=xc3s500e-4fg320
-WORKINGDIR=/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho
+WORKINGDIR=C:\Users\aula.ELE.000\Documents\System\trabalho-novo\PUC-ComputacaoDigital-Trabalho
 LICENSE=WebPack
-USER_INFO=211850951_0_0_658
+USER_INFO=__0_0_0

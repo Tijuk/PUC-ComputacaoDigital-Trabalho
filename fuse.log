@@ -1,28 +1,27 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/TB_isim_beh.exe -prj /home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/TB_beh.prj TB 
-ISim P.20131013 (signature 0xfbc00daa)
-Number of CPUs detected in this system: 4
-Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2_TB_isim_beh.exe -prj C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2_TB_beh.prj work.CPU2_TB 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/RAM.vhd" into library work
-Parsing VHDL file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/LCD.vhd" into library work
-Parsing VHDL file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/ALU.vhd" into library work
-Parsing VHDL file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/CPU.vhd" into library work
-Parsing VHDL file "/home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/TB.vhd" into library work
+Parsing VHDL file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd" into library work
+Parsing VHDL file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM2.vhd" into library work
+Parsing VHDL file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd" into library work
+Parsing VHDL file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2.vhd" into library work
+Parsing VHDL file "C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2_TB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 97572 KB
-Fuse CPU Usage: 1140 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling architecture behavioral of entity RAM [ram_default]
+Compiling architecture rtl of entity RAM2 [ram2_default]
 Compiling architecture behavioral of entity ALU [\ALU(5)\]
+Compiling architecture behavioral of entity MapChar [mapchar_default]
 Compiling architecture behavioral of entity LCD [\LCD(20)\]
-Compiling architecture behavioral of entity CPU [\CPU(25)\]
-Compiling architecture behavior of entity tb
+Compiling architecture behavioral of entity CPU2 [\CPU2(2)\]
+Compiling architecture behavior of entity cpu2_tb
 Time Resolution for simulation is 1ps.
-Compiled 12 VHDL Units
-Built simulation executable /home/ropumar/Documents/PUC-ComputacaoDigital-Trabalho/TB_isim_beh.exe
-Fuse Memory Usage: 669504 KB
-Fuse CPU Usage: 1220 ms
-GCC CPU Usage: 490 ms
+Compiled 14 VHDL Units
+Built simulation executable C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2_TB_isim_beh.exe
+Fuse Memory Usage: 36652 KB
+Fuse CPU Usage: 812 ms
