@@ -1,7 +1,7 @@
 Release 14.5 par P.58f (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-LPE32::  Mon Nov 25 09:42:26 2019
+LPE32::  Mon Nov 25 10:29:43 2019
 
 par -filter
 C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Traba
@@ -64,13 +64,13 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:37d3293) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:37d3293) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:37d3293) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:37d3293) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:37d3293) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:37d3293) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 ..........

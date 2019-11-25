@@ -1,43 +1,36 @@
-V3 22
+V3 19
 FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/ALU.vhd 2019/11/25.07:46:12 P.58f
-EN work/ALU 1574685724 \
+EN work/ALU 1574688561 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/ALU.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
-AR work/ALU/Behavioral 1574685725 \
+AR work/ALU/Behavioral 1574688562 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/ALU.vhd \
-      EN work/ALU 1574685724
-FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2.vhd 2019/11/25.09:41:01 P.58f
-EN work/CPU2 1574685728 \
+      EN work/ALU 1574688561
+FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2.vhd 2019/11/25.10:23:01 P.58f
+EN work/CPU2 1574688565 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
-AR work/CPU2/Behavioral 1574685729 \
+AR work/CPU2/Behavioral 1574688566 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/CPU2.vhd \
-      EN work/CPU2 1574685728 CP RAM2 CP ALU CP LCD
+      EN work/CPU2 1574688565 CP RAM2 CP ALU CP LCD
 FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd 2019/11/25.09:23:42 P.58f
-EN work/LCD 1574685726 \
+EN work/LCD 1574688563 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
-AR work/LCD/Behavioral 1574685727 \
+AR work/LCD/Behavioral 1574688564 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/LCD.vhd \
-      EN work/LCD 1574685726 CP MapChar
+      EN work/LCD 1574688563 CP MapChar
 FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd 2019/11/25.07:16:45 P.58f
-EN work/MapChar 1574685720 \
+EN work/MapChar 1574688557 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
-AR work/MapChar/Behavioral 1574685721 \
+AR work/MapChar/Behavioral 1574688558 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/MapChar.vhd \
-      EN work/MapChar 1574685720
-FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM.vhd 2019/11/25.09:19:33 P.58f
-EN work/RAM 1574684960 \
-      FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM.vhd \
-      PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
-AR work/RAM/Behavioral 1574684961 \
-      FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM.vhd \
-      EN work/RAM 1574684960
-FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM2.vhd 2019/11/25.09:41:51 P.58f
-EN work/RAM2 1574685722 \
+      EN work/MapChar 1574688557
+FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM2.vhd 2019/11/25.10:29:10 P.58f
+EN work/RAM2 1574688559 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM2.vhd \
       PB ieee/std_logic_1164 1364358218 PB ieee/NUMERIC_STD 1364358223
-AR work/RAM2/RTL 1574685723 \
+AR work/RAM2/RTL 1574688560 \
       FL C:/Users/aula.ELE.000/Documents/System/trabalho-novo/PUC-ComputacaoDigital-Trabalho/RAM2.vhd \
-      EN work/RAM2 1574685722
+      EN work/RAM2 1574688559
