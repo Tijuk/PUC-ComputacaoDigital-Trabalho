@@ -76,13 +76,13 @@ architecture Behavioral of LCD is
 
 begin
 	
---	u_MapChar : MapChar port map (
---		CLK => CLK,
---		INSTRUCTION => INSTRUCTION,
---		CHAR_AT => CHAR_AT,
---		OUTPUT_BUFFER => OUTPUT_BUFFER
---	);
---
+	u_MapChar : MapChar port map (
+		CLK => CLK,
+		INSTRUCTION => INSTRUCTION,
+		CHAR_AT => CHAR_AT,
+		OUTPUT_BUFFER => OUTPUT_BUFFER
+	);
+
 
 	sincrono: process (CLK)
 	begin
@@ -96,325 +96,325 @@ begin
 		end if;
 		
 	end process sincrono;
---
---	count_next <= to_unsigned(0,N) when count_reg = (count - 1) else count_reg + 1;
---	count_tick <='1' when count_reg = (count - 1) else '0';
---
---	onInstructionChange: process (INSTRUCTION)
---	begin
---		stateChanged <= '1';
---	end process onInstructionChange;
---
---	combinatorial: process (CLK)
---	begin
---		if (falling_edge(CLK)) then
---			LCD_RW <= '0';
---			LCD_RS <= '0';
---			case state_reg is
---				-- Initialization steps
---				when initial =>
---					if (count_tick = '1') then
---						state_next <= write_1;
---					end if;
---				when write_1 =>
---					LCD_E <= '1';
---					data_buffer <= "0011";
---					count <= to_unsigned(12,N);
---					if (count_tick = '1') then
---						state_next <= wait_1;
---						LCD_E <= '0';
---					end if;
---				when wait_1 =>
---					count <= to_unsigned(205000,N);
---					if (count_tick = '1') then
---						state_next <= write_2;
---					end if;
---				when write_2 =>
---					LCD_E <= '1';
---					data_buffer <= "0011";
---					count <= to_unsigned(12,N);
---					if (count_tick = '1') then
---						state_next <= wait_3;
---						LCD_E <= '0';
---					end if;
---				when wait_2 =>
---					count <= to_unsigned(5000,N);
---					if (count_tick = '1') then
---						state_next <= write_3;
---					end if;
---				when write_3 =>
---					LCD_E <= '1';
---					data_buffer <= "0011";
---					count <= to_unsigned(12,N);
---					if (count_tick = '1') then
---						state_next <= wait_3;
---						LCD_E <= '0';
---					end if;
---				when wait_3 =>
---					count <= to_unsigned(2000,N);
---					if (count_tick = '1') then
---						state_next <= write_4;
---					end if;
---				when write_4 =>
---					LCD_E <= '1';
---					data_buffer <= "0010";
---					count <= to_unsigned(12,N);
---					if (count_tick = '1') then
---						state_next <= wait_4;
---						LCD_E <= '0';
---					end if;
---				when wait_4 =>
---					count <= to_unsigned(2000,N);
---					if (count_tick = '1') then
---						state_next <= function_set_1;
---					end if;
---					
---				-- Function Set Steps
---				when function_set_1 =>
---					data_buffer <= "0010";
---					count <= to_unsigned(10,N); -- wait for signal estabilization
---					if (count_tick = '1') then
---						state_next <= function_set_2;
---					end if;
---				when function_set_2 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= function_wait_long;
---						LCD_E <= '0';
---					end if;
---				when function_wait_long =>
---					count <= to_unsigned(50,N);
---					if (count_tick = '1') then
---						state_next <= function_set_3;
---					end if;
---				when function_set_3 =>
---					data_buffer <= "1000";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= function_set_4;
---					end if;
---				when function_set_4 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= wait_function_set_operation_time;
---						LCD_E <= '0';
---					end if;
---				when wait_function_set_operation_time =>
---					count <= to_unsigned(2500,N);
---						if (count_tick = '1') then
---							state_next <= entry_set_1;
---						end if;
---						
---			-- Entry Set Steps
---				when entry_set_1 =>
---					data_buffer <= "0000";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= entry_set_2;
---					end if;
---				when entry_set_2 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= entry_wait_long;
---						LCD_E <= '0';
---					end if;
---				when entry_wait_long =>
---					count <= to_unsigned(50,N);
---					if (count_tick = '1') then
---						state_next <= entry_set_3;
---					end if;
---				when entry_set_3 =>
---					data_buffer <= "0110";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= entry_set_4;
---					end if;
---				when entry_set_4 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= wait_entry_set_operation_time;
---						LCD_E <= '0';
---					end if;
---				when wait_entry_set_operation_time =>
---					count <= to_unsigned(2500,N);
---						if (count_tick = '1') then
---							state_next <= display_on_off_1;
---						end if;		
---						
---			-- Display On/Off Steps
---				when display_on_off_1 =>
---					data_buffer <= "0000";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= display_on_off_2;
---					end if;
---				when display_on_off_2 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= display_on_off_wait_long;
---						LCD_E <= '0';
---					end if;
---				when display_on_off_wait_long =>
---					count <= to_unsigned(50,N);
---					if (count_tick = '1') then
---						state_next <= display_on_off_3;
---					end if;
---				when display_on_off_3 =>
---					data_buffer <= "1111";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= display_on_off_4;
---					end if;
---				when display_on_off_4 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= wait_display_on_off_operation_time;
---						LCD_E <= '0';
---					end if;
---				when wait_display_on_off_operation_time =>
---					count <= to_unsigned(2500,N);
---						if (count_tick = '1') then
---							state_next <= clear_display_1;
---						end if;
---				-- Clear Display
---				when clear_display_1 =>
---					data_buffer <= "0000";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= clear_display_2;
---					end if;
---				when clear_display_2 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= clear_display_wait_long;
---						LCD_E <= '0';
---					end if;
---				when clear_display_wait_long =>
---					count <= to_unsigned(50,N);
---					if (count_tick = '1') then
---						state_next <= clear_display_3;
---					end if;
---				when clear_display_3 =>
---					data_buffer <= "0001";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= clear_display_4;
---					end if;
---				when clear_display_4 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= wait_clear_display_operation_time;
---						LCD_E <= '0';
---					end if;
---				when wait_clear_display_operation_time =>
---					count <= to_unsigned(85000,N);
---						if (count_tick = '1') then
---							state_next <= set_dd_ram_1_1;
---						end if;
---				
---				-- Set DD RAM #
---				when set_dd_ram_1_1 =>
---					data_buffer <= "1000";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= set_dd_ram_1_2;
---					end if;
---				when set_dd_ram_1_2 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= set_dd_ram_1_wait_long;
---						LCD_E <= '0';
---					end if;
---				when set_dd_ram_1_wait_long =>
---					count <= to_unsigned(50,N);
---					if (count_tick = '1') then
---						state_next <= set_dd_ram_1_3;
---					end if;
---				when set_dd_ram_1_3 =>
---					data_buffer <= "0000";
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= set_dd_ram_1_4;
---					end if;
---				when set_dd_ram_1_4 =>
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= wait_set_dd_ram_1_operation_time;
---						LCD_E <= '0';
---					end if;
---				when wait_set_dd_ram_1_operation_time =>
---					count <= to_unsigned(85000,N);
---						if (count_tick = '1') then
---							state_next <= writingChar_1;
---						end if;
---				-- Write Character
---				when writingChar_1 =>
---					LCD_RS <= '1';
---					data_buffer <= OUTPUT_BUFFER(7 downto 4);
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= writingChar_2;
---					end if;
---				when writingChar_2 =>
---					LCD_RS <= '1';
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= writingChar_3;
---						LCD_E <= '0';
---					end if;
---				when writingChar_3 =>
---					LCD_RS <= '1';
---					count <= to_unsigned(50,N);
---					if (count_tick = '1') then
---						state_next <= writingChar_4;
---					end if;
---				when writingChar_4 =>
---					LCD_RS <= '1';
---					data_buffer <= OUTPUT_BUFFER(3 downto 0);
---					count <= to_unsigned(10,N);
---					if (count_tick = '1') then
---						state_next <= writingChar_5;
---					end if;
---				when writingChar_5 =>
---					LCD_RS <= '1';
---					LCD_E <= '1';
---					count <= to_unsigned(120,N);
---					if (count_tick = '1') then
---						state_next <= writingChar_6;
---						LCD_E <= '0';
---					end if;
---				when writingChar_6 =>
---					count <= to_unsigned(85000,N);
---						if (count_tick = '1') then
---							if CHAR_AT = 11 then
---								CHAR_AT <= to_unsigned(0, CHAR_AT'length);
---								state_next <= idle;
---							else
---								CHAR_AT <= CHAR_AT + 1;
---								state_next <= writingChar_1;
---
---							end if;
---						end if;
---				when idle =>
---					if (stateChanged = '1') then
---						stateChanged <= '0';
---						state_next <= clear_display_1;
---					end if;
---			end case;
---		end if;
---	end process combinatorial;
---		DISABLE_STRATA_FLASH <= '1';
---		SF_D <= data_buffer;
+
+	count_next <= to_unsigned(0,N) when count_reg = (count - 1) else count_reg + 1;
+	count_tick <='1' when count_reg = (count - 1) else '0';
+
+	onInstructionChange: process (INSTRUCTION)
+	begin
+		stateChanged <= '1';
+	end process onInstructionChange;
+
+	combinatorial: process (CLK)
+	begin
+		if (falling_edge(CLK)) then
+			LCD_RW <= '0';
+			LCD_RS <= '0';
+			case state_reg is
+				-- Initialization steps
+				when initial =>
+					if (count_tick = '1') then
+						state_next <= write_1;
+					end if;
+				when write_1 =>
+					LCD_E <= '1';
+					data_buffer <= "0011";
+					count <= to_unsigned(12,N);
+					if (count_tick = '1') then
+						state_next <= wait_1;
+						LCD_E <= '0';
+					end if;
+				when wait_1 =>
+					count <= to_unsigned(205000,N);
+					if (count_tick = '1') then
+						state_next <= write_2;
+					end if;
+				when write_2 =>
+					LCD_E <= '1';
+					data_buffer <= "0011";
+					count <= to_unsigned(12,N);
+					if (count_tick = '1') then
+						state_next <= wait_3;
+						LCD_E <= '0';
+					end if;
+				when wait_2 =>
+					count <= to_unsigned(5000,N);
+					if (count_tick = '1') then
+						state_next <= write_3;
+					end if;
+				when write_3 =>
+					LCD_E <= '1';
+					data_buffer <= "0011";
+					count <= to_unsigned(12,N);
+					if (count_tick = '1') then
+						state_next <= wait_3;
+						LCD_E <= '0';
+					end if;
+				when wait_3 =>
+					count <= to_unsigned(2000,N);
+					if (count_tick = '1') then
+						state_next <= write_4;
+					end if;
+				when write_4 =>
+					LCD_E <= '1';
+					data_buffer <= "0010";
+					count <= to_unsigned(12,N);
+					if (count_tick = '1') then
+						state_next <= wait_4;
+						LCD_E <= '0';
+					end if;
+				when wait_4 =>
+					count <= to_unsigned(2000,N);
+					if (count_tick = '1') then
+						state_next <= function_set_1;
+					end if;
+					
+				-- Function Set Steps
+				when function_set_1 =>
+					data_buffer <= "0010";
+					count <= to_unsigned(10,N); -- wait for signal estabilization
+					if (count_tick = '1') then
+						state_next <= function_set_2;
+					end if;
+				when function_set_2 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= function_wait_long;
+						LCD_E <= '0';
+					end if;
+				when function_wait_long =>
+					count <= to_unsigned(50,N);
+					if (count_tick = '1') then
+						state_next <= function_set_3;
+					end if;
+				when function_set_3 =>
+					data_buffer <= "1000";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= function_set_4;
+					end if;
+				when function_set_4 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= wait_function_set_operation_time;
+						LCD_E <= '0';
+					end if;
+				when wait_function_set_operation_time =>
+					count <= to_unsigned(2500,N);
+						if (count_tick = '1') then
+							state_next <= entry_set_1;
+						end if;
+						
+			-- Entry Set Steps
+				when entry_set_1 =>
+					data_buffer <= "0000";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= entry_set_2;
+					end if;
+				when entry_set_2 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= entry_wait_long;
+						LCD_E <= '0';
+					end if;
+				when entry_wait_long =>
+					count <= to_unsigned(50,N);
+					if (count_tick = '1') then
+						state_next <= entry_set_3;
+					end if;
+				when entry_set_3 =>
+					data_buffer <= "0110";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= entry_set_4;
+					end if;
+				when entry_set_4 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= wait_entry_set_operation_time;
+						LCD_E <= '0';
+					end if;
+				when wait_entry_set_operation_time =>
+					count <= to_unsigned(2500,N);
+						if (count_tick = '1') then
+							state_next <= display_on_off_1;
+						end if;		
+						
+			-- Display On/Off Steps
+				when display_on_off_1 =>
+					data_buffer <= "0000";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= display_on_off_2;
+					end if;
+				when display_on_off_2 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= display_on_off_wait_long;
+						LCD_E <= '0';
+					end if;
+				when display_on_off_wait_long =>
+					count <= to_unsigned(50,N);
+					if (count_tick = '1') then
+						state_next <= display_on_off_3;
+					end if;
+				when display_on_off_3 =>
+					data_buffer <= "1111";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= display_on_off_4;
+					end if;
+				when display_on_off_4 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= wait_display_on_off_operation_time;
+						LCD_E <= '0';
+					end if;
+				when wait_display_on_off_operation_time =>
+					count <= to_unsigned(2500,N);
+						if (count_tick = '1') then
+							state_next <= clear_display_1;
+						end if;
+				-- Clear Display
+				when clear_display_1 =>
+					data_buffer <= "0000";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= clear_display_2;
+					end if;
+				when clear_display_2 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= clear_display_wait_long;
+						LCD_E <= '0';
+					end if;
+				when clear_display_wait_long =>
+					count <= to_unsigned(50,N);
+					if (count_tick = '1') then
+						state_next <= clear_display_3;
+					end if;
+				when clear_display_3 =>
+					data_buffer <= "0001";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= clear_display_4;
+					end if;
+				when clear_display_4 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= wait_clear_display_operation_time;
+						LCD_E <= '0';
+					end if;
+				when wait_clear_display_operation_time =>
+					count <= to_unsigned(85000,N);
+						if (count_tick = '1') then
+							state_next <= set_dd_ram_1_1;
+						end if;
+				
+				-- Set DD RAM #
+				when set_dd_ram_1_1 =>
+					data_buffer <= "1000";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= set_dd_ram_1_2;
+					end if;
+				when set_dd_ram_1_2 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= set_dd_ram_1_wait_long;
+						LCD_E <= '0';
+					end if;
+				when set_dd_ram_1_wait_long =>
+					count <= to_unsigned(50,N);
+					if (count_tick = '1') then
+						state_next <= set_dd_ram_1_3;
+					end if;
+				when set_dd_ram_1_3 =>
+					data_buffer <= "0000";
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= set_dd_ram_1_4;
+					end if;
+				when set_dd_ram_1_4 =>
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= wait_set_dd_ram_1_operation_time;
+						LCD_E <= '0';
+					end if;
+				when wait_set_dd_ram_1_operation_time =>
+					count <= to_unsigned(85000,N);
+						if (count_tick = '1') then
+							state_next <= writingChar_1;
+						end if;
+				-- Write Character
+				when writingChar_1 =>
+					LCD_RS <= '1';
+					data_buffer <= OUTPUT_BUFFER(7 downto 4);
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= writingChar_2;
+					end if;
+				when writingChar_2 =>
+					LCD_RS <= '1';
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= writingChar_3;
+						LCD_E <= '0';
+					end if;
+				when writingChar_3 =>
+					LCD_RS <= '1';
+					count <= to_unsigned(50,N);
+					if (count_tick = '1') then
+						state_next <= writingChar_4;
+					end if;
+				when writingChar_4 =>
+					LCD_RS <= '1';
+					data_buffer <= OUTPUT_BUFFER(3 downto 0);
+					count <= to_unsigned(10,N);
+					if (count_tick = '1') then
+						state_next <= writingChar_5;
+					end if;
+				when writingChar_5 =>
+					LCD_RS <= '1';
+					LCD_E <= '1';
+					count <= to_unsigned(120,N);
+					if (count_tick = '1') then
+						state_next <= writingChar_6;
+						LCD_E <= '0';
+					end if;
+				when writingChar_6 =>
+					count <= to_unsigned(85000,N);
+						if (count_tick = '1') then
+							if CHAR_AT = 11 then
+								CHAR_AT <= to_unsigned(0, CHAR_AT'length);
+								state_next <= idle;
+							else
+								CHAR_AT <= CHAR_AT + 1;
+								state_next <= writingChar_1;
+
+							end if;
+						end if;
+				when idle =>
+					if (stateChanged = '1') then
+						stateChanged <= '0';
+						state_next <= clear_display_1;
+					end if;
+			end case;
+		end if;
+	end process combinatorial;
+		DISABLE_STRATA_FLASH <= '1';
+		SF_D <= data_buffer;
 end Behavioral;
 

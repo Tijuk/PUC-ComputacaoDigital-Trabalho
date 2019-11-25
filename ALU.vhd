@@ -29,6 +29,8 @@ begin
 		std_logic_vector(signed(reg_A) - signed(reg_B)) when "00110",
 		std_logic_vector(signed(reg_A) + 1) when "10000",
 		std_logic_vector(signed(reg_A) - 1) when "10010",
+		std_logic_vector(signed(reg_B) + 1) when "10001",
+		std_logic_vector(signed(reg_B) - 1) when "10011",
 		reg_A and reg_B when "00111",
 		reg_A or reg_B when "01000",
 		reg_A nand reg_B when "01011",

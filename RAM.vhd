@@ -67,6 +67,6 @@ begin
 	end process;
 	
 	dataOut <= ram_i(inAddr);
-	dataAt30 <= ram(30);
+	dataAt30 <= ram_i(30);
 end Behavioral;
 

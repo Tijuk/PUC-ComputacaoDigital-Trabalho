@@ -46,8 +46,8 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-RESET       |    2.781(R)|   -0.802(R)|CLK_BUFGP         |   0.000|
-            |   11.456(F)|   -2.169(F)|CLK_BUFGP         |   0.000|
+RESET       |    3.400(R)|   -1.250(R)|CLK_BUFGP         |   0.000|
+            |   10.197(F)|   -4.636(F)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock CLK to Pad
@@ -55,8 +55,14 @@ Clock CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-NEGATIVE    |   15.910(F)|CLK_BUFGP         |   0.000|
-ZERO        |   19.395(F)|CLK_BUFGP         |   0.000|
+LCD_E       |   10.860(F)|CLK_BUFGP         |   0.000|
+LCD_RS      |   10.771(F)|CLK_BUFGP         |   0.000|
+NEGATIVE    |   17.097(F)|CLK_BUFGP         |   0.000|
+SF_D<0>     |   10.592(F)|CLK_BUFGP         |   0.000|
+SF_D<1>     |   10.289(F)|CLK_BUFGP         |   0.000|
+SF_D<2>     |   10.033(F)|CLK_BUFGP         |   0.000|
+SF_D<3>     |   10.014(F)|CLK_BUFGP         |   0.000|
+ZERO        |   18.902(F)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -64,26 +70,26 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.367|    3.225|    6.048|   11.948|
+CLK            |    6.929|    8.128|    8.139|   16.193|
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-RESET          |NEGATIVE       |   11.410|
-RESET          |ZERO           |   18.310|
+RESET          |NEGATIVE       |   10.860|
+RESET          |ZERO           |   12.282|
 ---------------+---------------+---------+
 
 
-Analysis completed Sun Nov 24 18:26:47 2019 
+Analysis completed Sun Nov 24 22:17:06 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 350 MB
+Peak Memory Usage: 357 MB
 
 
 
