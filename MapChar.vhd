@@ -4,10 +4,10 @@ use IEEE.numeric_std.ALL;
 
 entity MapChar is
 	port(
-		CLK: in std_logic;
-		INSTRUCTION: in integer range 0 to 31;
-		CHAR_AT: in unsigned(4 downto 0);
-		OUTPUT_BUFFER: out std_logic_vector(7 downto 0)
+		CLK: in std_logic; -- clock
+		INSTRUCTION: in integer range 0 to 31; -- current instruction
+		CHAR_AT: in unsigned(4 downto 0); -- position of char to be written
+		OUTPUT_BUFFER: out std_logic_vector(7 downto 0) -- data sent to LCD
 	);
 
 end MapChar;

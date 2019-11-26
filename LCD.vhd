@@ -5,13 +5,13 @@ use IEEE.numeric_std.ALL;
 entity LCD is
 	generic(	N: integer :=20 );
 	port(	
-		CLK : in std_logic;
+		CLK : in std_logic; -- clk for display
 		LCD_E : out std_logic; -- Enable do LCD
 		LCD_RW : out std_logic; -- read or write
 		LCD_RS : out std_logic; -- data manipulation or addressing
-		DISABLE_STRATA_FLASH: out std_logic;
-		SF_D: out std_logic_vector(3 downto 0);
-		INSTRUCTION: in integer range 0 to 31
+		DISABLE_STRATA_FLASH: out std_logic; -- Disable StrataFlash for display
+		SF_D: out std_logic_vector(3 downto 0); -- Data sent to display
+		INSTRUCTION: in integer range 0 to 31 --Current Intruction to be displayed
 	);
 end LCD;
 

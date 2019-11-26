@@ -10,18 +10,17 @@ entity ALU is
 		reset: in std_logic;
 		reg_A: in std_logic_vector(opN-1 downto 0); -- registrador A
 		reg_B: in std_logic_vector(opN-1 downto 0); -- registrador B
-		opcode: in std_logic_vector(4 downto 0);
-		zero: out std_logic;
-		negative: out std_logic;
-		result: out std_logic_vector(opN-1 downto 0)
+		opcode: in std_logic_vector(4 downto 0); -- codigo da instrução
+		zero: out std_logic; -- flag de que operação resultou em zero
+		negative: out std_logic;-- flag de que operação resultou em negativo
+		result: out std_logic_vector(opN-1 downto 0) -- resultado da operação da ALU
 	);
 end ALU;
 
 architecture Behavioral of ALU is
 	signal inResult : std_logic_vector(opN-1 downto 0) := (others => '0');
 begin
-
-	-- Result
+	--Retorna resultado de operação dependendo do codigo desta
 	with opcode select inResult <=
 		std_logic_vector(signed(reg_A) + signed(reg_B)) when "00101",
 		std_logic_vector(signed(reg_A) - signed(reg_B)) when "00110",
@@ -42,7 +41,7 @@ begin
 		'1' when inResult = std_logic_vector(to_unsigned(0, inResult'length))
 		else '0';
 	
-	-- Negative
+	-- Negativo
 	negative <=
 		'0' when reset = '1'
 		else inResult(inResult'high);

@@ -4,13 +4,13 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RAM is
 	port(
-		clk: in std_logic;
-		reset: in std_logic;
-		we: in std_logic;
-		address: in integer range 0 to 31;
-		dataIn: in std_logic_vector(4 downto 0);
-		dataOut: out std_logic_vector(4 downto 0);
-		dataAt30: out std_logic_vector(4 downto 0)
+		clk: in std_logic; -- clk from CPU
+		reset: in std_logic; -- reset
+		we: in std_logic; -- write enable
+		address: in integer range 0 to 31; -- adress for current instruction
+		dataIn: in std_logic_vector(4 downto 0); -- data to be written
+		dataOut: out std_logic_vector(4 downto 0); --data read from ram
+		dataAt30: out std_logic_vector(4 downto 0) -- data at position 30
 	);
 end RAM;
 

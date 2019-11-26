@@ -6,17 +6,16 @@ entity CPU2 is
 	generic(
 		CLOCK_COUNT_BUFFER_SIZE : integer := 25
 	);
-	port(CLK : in std_logic;
+	port(CLK : in std_logic; -- clock do programa
 		LCD_E : out std_logic; -- Enable do LCD
 		LCD_RW : out std_logic; -- read or write
 		LCD_RS : out std_logic; -- data manipulation or addressing
-		DISABLE_STRATA_FLASH: out std_logic;
-		SF_D: out std_logic_vector(3 downto 0);
-		ZERO: out std_logic;
-		NEGATIVE: out std_logic;
-		CLK_OUT: out std_logic;
-		RESET: in std_logic;
-		LEDS: out std_logic_vector(4 downto 0)
+		DISABLE_STRATA_FLASH: out std_logic; -- desabilita a StrataFlash por conflito com LCD
+		SF_D: out std_logic_vector(3 downto 0); -- led que indica zero
+		ZERO: out std_logic; -- led que indica zero
+		NEGATIVE: out std_logic; -- led que indica negativo
+		RESET: in std_logic; -- reset
+		LEDS: out std_logic_vector(4 downto 0) -- leds data is mirror of data in ram position 30
 	);
 end CPU2;
 
@@ -25,6 +24,7 @@ architecture Behavioral of CPU2 is
 	type cpuState is (start, fetch, decode, execute);
 	signal state_reg : cpuState := start;
 	
+	--codigos/intruções aceitos pela CPU
 	constant mov_a_from_end 		: std_logic_vector(4 downto 0) := "00001";
 	constant mov_end_from_a			: std_logic_vector(4 downto 0) := "00010";
 	constant mov_a_from_b			: std_logic_vector(4 downto 0) := "00011";
@@ -49,8 +49,8 @@ architecture Behavioral of CPU2 is
 	signal slow_clk_counter : unsigned( (CLOCK_COUNT_BUFFER_SIZE - 1) downto 0) := (others => '0');
 
 	signal programCounter : integer range 0 to 31 := 0;
-	signal reg_end : integer range 0 to 31 := 0;
-	signal reg_IR : std_logic_vector(4 downto 0) := (others => '0');
+	signal reg_end : integer range 0 to 31 := 0; --guarda o endereço para manuseio
+	signal reg_IR : std_logic_vector(4 downto 0) := (others => '0'); --guarda instrução
 
 	-- ALU Signals
 	signal reg_A, reg_B, result: std_logic_vector(4 downto 0) := (others => '0');
@@ -60,9 +60,9 @@ architecture Behavioral of CPU2 is
 	signal INSTRUCTION : integer range 0 to 31 := 0;
 
 	-- RAM Signals
-	signal we: std_logic := '0';
-	signal address: integer range 0 to 31 := 0;
-	signal dataIn: std_logic_vector(4 downto 0) := (others => '0');
+	signal we: std_logic := '0'; -- write enable na ram
+	signal address: integer range 0 to 31 := 0; --endereço da ram
+	signal dataIn: std_logic_vector(4 downto 0) := (others => '0'); --data da ram
 	signal dataOut: std_logic_vector(4 downto 0):= (others => '0');
 	signal dataAt30: std_logic_vector(4 downto 0):= (others => '0');
 
@@ -72,7 +72,7 @@ architecture Behavioral of CPU2 is
 
 	component RAM2
 		port(
-			clk: in std_logic;
+			clk: in std_logic; -- Clk to bv
 			reset: in std_logic;
 			we: in std_logic;
 			address: in integer range 0 to 31;
@@ -97,13 +97,13 @@ architecture Behavioral of CPU2 is
 
 	component LCD
 		port (
-			CLK : in std_logic;
+			CLK : in std_logic; -- clk for display
 			LCD_E : out std_logic; -- Enable do LCD
 			LCD_RW : out std_logic; -- read or write
 			LCD_RS : out std_logic; -- data manipulation or addressing
-			DISABLE_STRATA_FLASH: out std_logic;
-			SF_D: out std_logic_vector(3 downto 0);
-			INSTRUCTION: in integer range 0 to 31
+			DISABLE_STRATA_FLASH: out std_logic; -- Disable StrataFlash for display
+			SF_D: out std_logic_vector(3 downto 0); -- Data sent to display
+			INSTRUCTION: in integer range 0 to 31 --Current Intruction to be displayed
 		);
 	end component;
 	

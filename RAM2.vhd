@@ -4,13 +4,13 @@ use IEEE.Numeric_Std.all;
 
 entity RAM2 is
   port (
-    clk      : in  std_logic;
-	 reset    : in  std_logic;
-    we       : in  std_logic;
-    address  : in  integer range 0 to 31;
-    datain   : in  std_logic_vector(4 downto 0);
-    dataout  : out std_logic_vector(4 downto 0);
-	 dataAt30 : out std_logic_vector(4 downto 0)
+    clk      : in  std_logic;-- clk from CPU
+	reset    : in  std_logic;-- reset
+    we       : in  std_logic;  -- write enable
+    address  : in  integer range 0 to 31; -- adress for current instruction
+    datain   : in  std_logic_vector(4 downto 0);-- data to be written
+    dataout  : out std_logic_vector(4 downto 0); --data read from ram
+	 dataAt30 : out std_logic_vector(4 downto 0) -- data at position 30 of ram
   );
 end entity RAM2;
 
@@ -40,7 +40,7 @@ architecture RTL of RAM2 is
 		19 => 	"00010", -- 2
 		others=> (others => '0')
 	);
-   signal read_address : integer range 0 to 31 := 0; --std_logic_vector(address'range);
+   signal read_address : integer range 0 to 31 := 0;
 
 begin
 
